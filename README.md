@@ -39,5 +39,6 @@ Testen ist am besten.
 Zur Überprüfung meiner Überlegungen und zur Ermittlung des richtigen/besten Lieferintervalls für Zufallszahlen habe ich ein bisschen mit ChatGPT geplaudert und wir haben uns auf folgendes Python-Programm (für den Raspi) geeinigt. Meine prgrammtechnische Eigenleistung bestand darin, die richtigen GPIOs einzutragen. 
 
 
+Annahmen
 
-
+What if? Zahlen von 0-9 werden geliefert. Aber werden sie auch eingelesen? ASSERT gibt es im Microtronic Befehlssatz nicht. Im Programmcode wird auf das letzte CMPI verzichtet, weil andernfalls "es ja eine Null/Neun sein muss". Aber was wenn nicht? 
