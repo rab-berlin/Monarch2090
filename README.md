@@ -154,7 +154,7 @@ if __name__ == "__main__":
 
 What if? Zahlen von 0-9 werden geliefert. Aber werden sie auch eingelesen? ASSERT gibt es im Microtronic Befehlssatz nicht. Im Programmcode wird auf das letzte CMPI verzichtet, weil andernfalls "es ja eine Null/Neun sein muss". Aber was wenn nicht? 
 
-## Addition und Subtraktion
+## Addition und Subtraktion, Schiebung und Anzeige
 
 Im Programm müssen 
 
@@ -165,14 +165,30 @@ Im Programm müssen
 
 Zunächst hatte ich für Addition und Subtraktion - schön ordentlich und strukturiert - jeweils separate Unterprogramme geschrieben. Der 2090 rechnet Plus und Minus registerweise hexadezimal, also mussten für eine dezimale Darstellung jeweils Dezimalkorrektur und Carry-Flag-Übertrag berücksichtigt werden. Kurzum komplex, die Routinen für eine bis zu 3-stellige dezimale Plus- oder Minus-Operation waren lang und belegten deutlich zu viel Platz im Programmspeicher. So wird das nix.
 
-Die erste Entscheidung war: Ich halte alles hexadezimal in den Registern und wandele es nur bei Bedarf, also für die Anzeige, in Dezimalwerte um. Dazu stehen im Befehlssatz glücklicherweise zwei formschöne Instruktionen zur Verfügung: HXDZ und DZHX, die den Inhalt der Register D bis F jeweils umrechnen. Damit war auch klar, dass der _Münzspeicher_ in den Registern D bis F residieren wird, denn dadurch konnte ich die vielen MOV-Befehle sparen, mit denen ich sonst Werte in den Registern hätte hin- und herschieben müssen. 
+Die erste Entscheidung war: Ich halte alles hexadezimal in den Registern und wandele es nur bei Bedarf, also für die Anzeige, in Dezimalwerte um. Dazu stehen im Befehlssatz erfreulicherweise zwei formschöne Instruktionen zur Verfügung: HXDZ und DZHX, die den Inhalt der Register D bis F jeweils umrechnen. Damit war auch klar, dass der _Münzspeicher_ in den Registern D bis F residieren wird, denn dadurch konnte ich die vielen MOV-Befehle sparen, mit denen ich sonst Werte in den Registern hätte hin- und herschieben müssen. 
 
-Aber ich habe ja nicht nur den 3-stelligen Münzspeicher, sondern auch den _Sonderspiele-Zähler_... Wohin damit? Ich müsste den ja temporär in die Register D-F schieben, damit Umrechnung und Anzeige erfolgen können. Schon wieder jede Menge MOVes :-( Halt, es gibt ja EXRA, den Befehl, mit dem in einem Rutsch alle Speicherregister von 0-7 mit denen von 8-F getauscht werden. Spart viel "Schiebung", dann müsste der Sonderspiele-Zähler also notwendigerweise in die Register 5 bis 7... Hmmm... Check.
+```
+Anzeige		HXDZ				Konvertierung in Dez
+		MOVI #F,ZÄHLER	
+pause1		SUBI #1,ZÄHLER	
+		BRZ pauseEnde	
+		GOTO pause1	
+pauseEnde	DZHX				Konvertierung in Hex
+		RET				
+```
+
+Aber ich habe ja nicht nur den 3-stelligen Münzspeicher, sondern auch den _Sonderspiele-Zähler_... Wohin damit? Ich müsste den ja temporär in die Register D-F schieben, damit Umrechnung und Anzeige erfolgen können. Schon wieder jede Menge MOVes :-( 
+
+Neben den 16 Arbeitsregistern gibt es beim Microtronic noch 16 Speicherregister. Spricht irgendwas dagegen, die Sonderspiele (die man meistens sowieso nicht hat), im "Schatten", also in den Speicherregistern D-F zu halten und diese bei Bedarf zur Anzeige oder Berechnung einfach elegant einzublenden mit dem formschönen Befehl EXRM, der in einem Rutsch alle Arbeitsregister 8-F mit den entsprechenden Speicherregistern 8-F tauscht? Nein? Spart viel "Schiebung", also ist das so beschlossen.
+
+
+
+Halt, es gibt ja EXRA, den Befehl, mit dem in einem Rutsch alle Speicherregister von 0-7 mit denen von 8-F getauscht werden. Spart viel "Schiebung", dann müsste der Sonderspiele-Zähler also notwendigerweise in die Register 5 bis 7... Hmmm... Check.
 
 Mir war noch vage von der Uni in Erinnerung, dass binäre Subtraktion ja auch nichts anderes als Addition mit der Inversen des Subtrahenden plus 1 ist. Wer´s nicht glaubt, prüft es nach. Also konnte ich die Rechen-Routinen zu einer einzigen zusammenfassen; es wird nur addiert. Da nur zwei feste Werte (20 Pf, 1 Spiel) ggf. zu subtrahieren sind, konnte ich diese im Programm "fest verdrahten" (die Werte FFE und FFF werden _subtraddiert_<sup>TM</sup>). Insgesamt wurde dadurch das _Rechenwerk_ des Monarchen angenehm schlank und viele Programmschritte wurden eingespart. Ob das Programm dadurch auch übersichtlicher wurde, darf allerdings bezweifelt werden.
 
 ```
-DeltaSub	MOVI #F,DELTA_E	              Einsprungadresse für Subtraktion (Addition mit invertiertem HEX-Wert + 1)
+DeltaSub	MOVI #F,DELTA_E			Einsprungadresse für Subtraktion (Addition mit invertiertem HEX-Wert + 1)
 	        MOVI #F,DELTA_F	
 DeltaAdd	ADD DELTA_D,rD	
 	        ADC rE	
