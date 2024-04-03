@@ -14,7 +14,7 @@ Die Geräuschkulisse solcher Automaten ist wirklich faszinierend. Ein ständiges
 
 II.
 
-
+Wie gerne hätte ich damals auch so einen Automaten in meinem Zimmer gehabt. Aber eBay gab´s damals nicht und offenbar kannte ich nicht die richtigen Leute. Matthias hatte einen "Trianon" und Jürgen hatte eine "Exquisit Gold". Aber ich hatte... ein Yps-Radio, dann einen Philips EE2050 Elektronik-Baukasten, dann die ganze Serie Baukästen von Busch und schließlich - den Microtronic 2090. Ein Lerncomputer, mit dem man selbst programmieren (lernen) konnte. 
 
 Der Kreis derjenigen, die ebenfalls vom 2090 fasziniert waren (und womöglich noch sind), dürfte ohnehin überschaubar sein. Wenn man dann noch die Schnittmenge bildet mit denjenigen, die bei elektromechanischen Spielautomaten ins Schwärmen geraten, wäre eine Abschätzung der verbleibenden Interessengruppe inetwa mit der Größe 1 zu beziffern - also bin ich wohl alleine :-) Aber egal, andere lösen Kreuzworträtsel. 
 
