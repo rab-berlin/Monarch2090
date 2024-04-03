@@ -107,7 +107,7 @@ Eine saubere Lösung, um Timing-Probleme zu vermeiden, wäre: Immer wenn ein Zuf
 
 ## Testen ist am besten
 
-Zur Überprüfung meiner Überlegungen und zur Ermittlung des richtigen/besten Lieferintervalls für Zufallszahlen habe ich ein bisschen mit ChatGPT geplaudert und wir haben uns auf folgendes Python-Programm geeinigt (für den Raspi, der Arduino wanderte erstmal zurück in die Schublade). Meine programmiertechnische Eigenleistung bestand darin, die richtigen GPIOs einzutragen und die Warteintervall zwischen den erzeugten Zahlen zu wählen. 
+Zur Überprüfung meiner Überlegungen und zur Ermittlung des richtigen/besten Lieferintervalls für Zufallszahlen habe ich ein bisschen mit ChatGPT geplaudert und wir haben uns auf folgendes Python-Programm geeinigt (für den Raspi, der Arduino wanderte erstmal zurück in die Schublade). Meine programmiertechnische Eigenleistung bestand darin, die richtigen GPIOs einzutragen und das Intervall zwischen den erzeugten Zahlen zu wählen. 
 
 ```
 import RPi.GPIO as GPIO
