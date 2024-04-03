@@ -44,6 +44,38 @@ Eine Möglichkeit wäre natürlich, nach jeder zufälligen Aktion auf eine Benut
 
 Der erste Gedanke war, den Baukasten 2075 zu nutzen. Damit wäre ich auch schön im Busch-Universum geblieben. Theoretisch ein Rauschen auf den Takteingang des Zählerbausteins und seine Ausgänge A-D dann auf die Eingänge des 2090 legen. Aber... ich konnte ihn im Keller nicht mehr finden. Irgendwie hat meine Busch-Kiste einen der letzten Umzüge nicht überlebt oder wurde aus dem Keller geklaut. Falls letzteres, wer tut sowas? Möge der Blitz dich bei was-auch-immer treffen. Das ist ein echter Verlust für mich :-(((
 
+Was gibt die Schublade her? Da fanden sich doch tatsächlich noch ein paar Arduino Nanos (Arduini Nani?) 128p, die ich eigentlich schon abgeschrieben hatte, da ein arglistiger Händler mir jene statt der gewünschten und bestellten 328p geliefert hatte. Aber um ne Zufallszahl zu erzeugen, müssten die doch...
+
+'''
+unsigned int z;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(5, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(2, OUTPUT);
+  randomSeed(analogRead(A0));
+}
+ 
+void loop() {
+  
+  z = random(10);
+  Serial.print ("Nächste Zufallszahl zwischen 0 und 9: ");
+  Serial.println (z); 
+
+  // an Ausgänge binär legen
+  digitalWrite(5,z&1);
+  z = z >> 1;
+  digitalWrite(4,z&1);
+  z = z >> 1;
+  digitalWrite(3,z&1);
+  z = z >> 1;
+  digitalWrite(2,z&1);
+
+  delay(100);
+}
+'''
 
 
 ## Timing des Arduino/Raspi
