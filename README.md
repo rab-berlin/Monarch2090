@@ -44,7 +44,7 @@ Eine Möglichkeit wäre natürlich, nach jeder zufälligen Aktion auf eine Benut
 
 ## Peripherie muss her
 
-Der erste Gedanke war, den Busch-Baukasten Digitaltechnik 2075 zu nutzen. Damit wäre ich auch schön im Busch-Universum geblieben. Theoretisch ein Rauschen auf den Takteingang des Zählerbausteins und seine Ausgänge A-D dann auf die Eingänge des 2090 legen. Aber... ich konnte ihn im Keller nicht mehr finden. Irgendwie hat meine Busch-Kiste einen der letzten Umzüge nicht überlebt oder wurde aus dem Keller geklaut. Falls letzteres, wer tut sowas? Möge der Blitz dich bei was-auch-immer treffen. Das ist ein echter Verlust für mich :-(((
+Der erste Gedanke war, den Busch-Baukasten Digitaltechnik 2075 zu nutzen. Damit wäre ich auch schön im Busch-Universum geblieben. Theoretisch ein Rauschen auf den Takteingang des Zählerbausteins und seine Ausgänge A-D dann auf die Eingänge des 2090 legen. Aber... ich konnte ihn im Keller nicht mehr finden. Irgendwie hat meine Busch-Kiste einen der letzten Umzüge nicht überlebt oder wurde aus dem Keller geklaut. Falls letzteres, wer tut sowas? Möge der Blitz dich beim ~~Schei~~ was-auch-immer treffen. Das ist ein echter Verlust für mich :-(((
 
 Was gibt die Schublade her? Da fanden sich doch tatsächlich noch ein paar Arduino Nanos (Arduini Nani?) 128p, die ich eigentlich schon abgeschrieben hatte, da ein arglistiger Händler aus Fernost mir jene statt der gewünschten und bestellten 328p geliefert hatte. Aber um mal eben schnell ne Zufallszahl zu erzeugen, müssten die doch...
 
