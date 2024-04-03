@@ -44,7 +44,7 @@ Eine Möglichkeit wäre natürlich, nach jeder zufälligen Aktion auf eine Benut
 
 ## Peripherie muss her
 
-Der erste Gedanke war, den Baukasten 2075 zu nutzen. Damit wäre ich auch schön im Busch-Universum geblieben. Theoretisch ein Rauschen auf den Takteingang des Zählerbausteins und seine Ausgänge A-D dann auf die Eingänge des 2090 legen. Aber... ich konnte ihn im Keller nicht mehr finden. Irgendwie hat meine Busch-Kiste einen der letzten Umzüge nicht überlebt oder wurde aus dem Keller geklaut. Falls letzteres, wer tut sowas? Möge der Blitz dich bei was-auch-immer treffen. Das ist ein echter Verlust für mich :-(((
+Der erste Gedanke war, den Busch-Baukasten Digitaltechnik 2075 zu nutzen. Damit wäre ich auch schön im Busch-Universum geblieben. Theoretisch ein Rauschen auf den Takteingang des Zählerbausteins und seine Ausgänge A-D dann auf die Eingänge des 2090 legen. Aber... ich konnte ihn im Keller nicht mehr finden. Irgendwie hat meine Busch-Kiste einen der letzten Umzüge nicht überlebt oder wurde aus dem Keller geklaut. Falls letzteres, wer tut sowas? Möge der Blitz dich bei was-auch-immer treffen. Das ist ein echter Verlust für mich :-(((
 
 Was gibt die Schublade her? Da fanden sich doch tatsächlich noch ein paar Arduino Nanos (Arduini Nani?) 128p, die ich eigentlich schon abgeschrieben hatte, da ein arglistiger Händler aus Fernost mir jene statt der gewünschten und bestellten 328p geliefert hatte. Aber um mal eben schnell ne Zufallszahl zu erzeugen, müssten die doch...
 
@@ -91,7 +91,7 @@ Inzwischen sind wir etwas weiter. Dennoch stellte ich fest, dass mein Programm z
 
 Zudem vergisst der 2090 leider alle seine mühevoll von Menschenhirn ersonnenen und Menschenfinger eingegebenen Programmschritte, sobald (versehentlich natürlich) die Steckdose dem Staubsauger weichen musste. Es wurde Zeit, die Programmentwicklung zu professionalisieren. Ein Simulator und/oder eine Speichermöglichkeit und/oder ein Assembler wären doch wirklich nützlich. Zum Glück hat [Martin Sauter](https://blog.wirelessmoves.com/) das Protokoll für das optional erhältliche [Kassetten-Interface 2095](https://blog.wirelessmoves.com/2017/06/emulating-a-busch-2090-tape-interface-part-1.html) _reverse-engineered_ und als Python-Programm für den Raspberry Pi zur Verfügung gestellt. Und auch einen [Assembler für den 2090](https://blog.wirelessmoves.com/2017/07/an-assembler-for-the-busch-2090.html) geschrieben, der auf Calc ([LibreOffice](https://de.libreoffice.org/)) läuft. 
 
-Fortan konnte ich also am PC entwickeln, über Calc mit aktivierten Makros assemblieren (assembeln?), über WLAN an den Raspi Pico W senden, von dort an den Microtronic übertragen und dort dann alle meine Fehler bestaunen. Schokolade!
+Fortan konnte ich also am PC entwickeln, über Calc mit aktivierten Makros assemblieren (assembeln?), über WLAN und SFTP an den Raspi Pico W senden, von dort mit Python an den Microtronic übertragen, da mit HALT-PGM-1 empfangen und mit HALT-NEXT-00-RUN starten sowie schließlich alle meine Programmierfehler bestaunen. Schokolade!
 
 
 ## Timing des Arduino/Raspi
@@ -102,7 +102,7 @@ Eine saubere Lösung, um Timing-Probleme zu vermeiden, wäre: Immer wenn ein Zuf
 
 ## Testen ist am besten
 
-Zur Überprüfung meiner Überlegungen und zur Ermittlung des richtigen/besten Lieferintervalls für Zufallszahlen habe ich ein bisschen mit ChatGPT geplaudert und wir haben uns auf folgendes Python-Programm (für den Raspi) geeinigt. Meine programmiertechnische Eigenleistung bestand darin, die richtigen GPIOs einzutragen. 
+Zur Überprüfung meiner Überlegungen und zur Ermittlung des richtigen/besten Lieferintervalls für Zufallszahlen habe ich ein bisschen mit ChatGPT geplaudert und wir haben uns auf folgendes Python-Programm (für den Raspi, der Arduino wanderte erstmal zurück in die Schublade) geeinigt. Meine programmiertechnische Eigenleistung bestand darin, die richtigen GPIOs einzutragen. 
 
 
 ### Annahmen
