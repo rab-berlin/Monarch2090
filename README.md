@@ -14,7 +14,9 @@ Neben dem Reiz, den die Aussicht auf Geldgewinne für viele Menschen darstellt, 
 
 II.
 
-Wie gerne hätte ich damals (80er) auch so einen Automaten in meinem Zimmer gehabt! Aber eBay gab´s damals nicht und offenbar kannte ich nicht die richtigen Leute. Matthias hatte einen "Rotomat Trianon" und Jürgen hatte einen "Rotomat Exquisit Gold". Aber ich hatte... zuerst ein Yps-Radio für 6,50 DM, dann zu Weihnachten einen Philips EE2050 Elektronik-Baukasten, danach schrittweise die ganze Serie Baukästen von Busch und schließlich - den **Microtronic 2090**. Ein Lerncomputer, mit dem man selbst programmieren (lernen) konnte. Irgendwann reifte der kühne Plan: 
+Wie gerne hätte ich damals (80er) auch so einen Automaten in meinem Zimmer gehabt! Aber eBay gab´s damals nicht und offenbar kannte ich nicht die richtigen Leute. Matthias hatte einen "Rotomat Trianon" und Jürgen hatte einen "Rotomat Exquisit Gold". Aber ich hatte... zuerst ein Yps-Radio für 6,50 DM, dann zu Weihnachten einen Philips EE2050 Elektronik-Baukasten, danach schrittweise die ganze Serie Baukästen von Busch und schließlich - den [**Microtronic 2090**](https://www.busch-modell.de/information/Microtronic-Computer.aspx). Ein Lerncomputer, mit dem man selbst programmieren (lernen) konnte. Und das konnte man wirklich, weil auch die [Handbücher zu diesem Lerncomputer](https://github.com/lambdamikel/Busch-2090/blob/master/manuals/anl2090-1.pdf) wirklich gut gemacht waren.
+
+Irgendwann reifte der kühne Plan: 
 
 ### Ich programmiere mir meinen Automaten selbst!
 
