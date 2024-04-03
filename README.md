@@ -109,6 +109,46 @@ Eine saubere Lösung, um Timing-Probleme zu vermeiden, wäre: Immer wenn ein Zuf
 
 Zur Überprüfung meiner Überlegungen und zur Ermittlung des richtigen/besten Lieferintervalls für Zufallszahlen habe ich ein bisschen mit ChatGPT geplaudert und wir haben uns auf folgendes Python-Programm (für den Raspi, der Arduino wanderte erstmal zurück in die Schublade) geeinigt. Meine programmiertechnische Eigenleistung bestand darin, die richtigen GPIOs einzutragen. 
 
+```
+import RPi.GPIO as GPIO
+import random
+import time
+
+# Setze die GPIO-Pins
+pins = [12, 21, 20, 16]  # Beispiel GPIO-Pins, bitte an deine Konfiguration anpassen
+
+def setup():
+    GPIO.setmode(GPIO.BCM)
+    for pin in pins:
+        GPIO.setup(pin, GPIO.OUT)
+
+def generate_random_number():
+    return random.randint(0, 9)
+
+def decimal_to_binary(decimal_number):
+    return bin(decimal_number)[2:].zfill(4)
+
+def output_to_pins(binary_string):
+    for index, pin in enumerate(pins):
+        GPIO.output(pin, int(binary_string[index]))
+
+def main():
+    try:
+        setup()
+        while True:
+            random_number = generate_random_number()
+            binary_number = decimal_to_binary(random_number)
+            output_to_pins(binary_number)
+            print("Zufallszahl:", random_number, "Binär:", binary_number)
+            time.sleep(0.05)  # Wartezeit in Sekunden
+    except KeyboardInterrupt:
+        print("\nProgramm wurde beendet.")
+    finally:
+        GPIO.cleanup()
+
+if __name__ == "__main__":
+    main()
+```
 
 ### Annahmen
 
