@@ -77,6 +77,12 @@ void loop() {
 }
 ```
 
+Funktioniert. Damit die Zahlen auch schön zufällig sind, wird der Zufallsgenerator anfangs mit dem offenen analogen Eingang A0 _geseeded_. Das Gequassel auf der seriellen Schnittstelle ist für´s Debugging nützlich, wird aber für den produktiven Einsatz abgeschaltet. Und das Gute bei allem: der Arduino arbeitet mit 5 Volt auf Ein- und Ausgängen, genauso wie der 2090. Kein Level-Shifting nötig.
+
+## Assembler
+
+
+
 
 ## Timing des Arduino/Raspi
 
