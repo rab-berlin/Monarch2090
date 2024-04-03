@@ -81,7 +81,11 @@ Funktioniert. Damit die Zahlen auch schön zufällig sind, wird der Zufallsgener
 
 ## Assembler
 
-Der Befehlssatz des 2090 ist nach allem, was ich bescheiden dazu sagen kann, wirklich durchdacht. Kudos an Jörg Vallen, den Schöpfer des Microtronic, der das System im Rahmen seiner Diplomarbeit entwickelt hatte. Man kann damit tatsächlich Programme schreiben, auch wenn man echt viel knobeln muss - und praktisch ständig mit den ganzen Sprungbefehlen GOTO, BRZ, BRC und CALL durcheinander kommt. Es ist zwar nicht _Programmieren auf dem blanken Metall_, aber es kommt dem schon recht nahe. Besonders mühsam war es, Änderungen am Code vorzunehmen, weil praktisch alle danach erfolgenden Sprünge neue Adressen erhalten mussten. Also war es gute Praxis, eine Menge von NOPs in den Code einzufügen, damit man später noch genug Platz für seine brillanten Ideen hatte. Reichlich Karopapier, Bleistift, Radiergummi und Schokolade waren unerlässlich für eine funktionierende _Toolchain_. 
+Der Befehlssatz des 2090 ist nach allem, was ich bescheiden dazu sagen kann, wirklich durchdacht. Kudos an Jörg Vallen, den Schöpfer des Microtronic, der das System im Rahmen seiner Diplomarbeit entwickelt hatte. Man kann damit tatsächlich Programme schreiben, auch wenn man echt viel knobeln muss - und praktisch ständig mit den ganzen Sprungbefehlen GOTO, BRZ, BRC und CALL durcheinander kommt. Es ist zwar nicht _Programmieren auf dem blanken Metall_, aber es kommt dem schon recht nahe. Besonders mühsam war es, Änderungen am Code vorzunehmen, weil alle danach erfolgenden Sprünge im Programm neue Zieladressen erhalten mussten. Eine Arbeit für jemanden, der Vater und Mutter erschlug. Also war es gute Praxis, eine Menge von NOPs in den Code einzufügen, damit man später noch genug Platz für seine brillanten Ideen hatte. Reichlich Karopapier, Bleistift, Radiergummi und Schokolade waren unerlässlich für eine funktionierende _Toolchain_ :-P
+
+Es gab sogar einen Programmierwettbewerb, und später wurde auch ein kleines Büchlein "Computerspiele" veröffentlicht, in dem die prämierten Programme zum Abtippen standen. Ich wollte auch teilnehmen, und ehrlich, ich schwör - ich hätte so abgeräumt und euch alle zerstört. Aber irgendwie hatte ich wohl vergessen, mein fantastisches Hammer-Programm abzuschicken. Keinen passenden Umschlag? Keine Briefmarke? Hier trübt sich meine Erinnerung...
+
+
 
 
 ## Timing des Arduino/Raspi
