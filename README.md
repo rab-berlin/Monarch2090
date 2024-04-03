@@ -16,11 +16,13 @@ II.
 
 Wie gerne hätte ich damals auch so einen Automaten in meinem Zimmer gehabt! Aber eBay gab´s damals nicht und offenbar kannte ich nicht die richtigen Leute. Matthias hatte einen "Rotomat Trianon" und Jürgen hatte einen "Rotomat Exquisit Gold". Aber ich hatte... zuerst ein Yps-Radio für 6,50 DM, dann zu Weihnachten einen Philips EE2050 Elektronik-Baukasten, danach schrittweise die ganze Serie Baukästen von Busch und schließlich - den **Microtronic 2090**. Ein Lerncomputer, mit dem man selbst programmieren (lernen) konnte. Irgendwann reifte der kühne Plan: 
 
-## Ich programmiere mir meinen Automaten selbst!
+### Ich programmiere mir meinen Automaten selbst!
 
 
 
 Der Kreis derjenigen, die ebenfalls einen 2090 hatten (und womöglich noch haben), dürfte ohnehin überschaubar sein. Wenn man dann noch die Schnittmenge bildet mit denjenigen, die bei elektromechanischen Geldspielgeräten ins Schwärmen geraten, wäre eine Abschätzung der verbleibenden Interessengruppe inetwa mit der Größe 1 zu beziffern - also bin ich wohl alleine :-) Aber egal, andere lösen Kreuzworträtsel. Oder Sudoku. Also hier nun mein Programm...
+
+
 
 
 
@@ -42,7 +44,7 @@ Der erste Gedanke war, den Baukasten 2075 zu nutzen. Damit wäre ich auch schön
 
 ## Timing des Arduino/Raspi
 
-Der 2090 ist nicht schnell. Michael hat ein paar Performance-Tests durchgeführt und als Ergebnis maximal 114 Operationen pro Sekunde (1,14 HIPS) ermittelt. Da in meinem Programm das Display meistens aktiv ist, dürfte eher ein Wert von 40 Instructions per second (0,4 HIPS) zu erwarten sein. Welche Dauer der Befehl zum Einlesen der 4 Bits an den Eingängen KIN (FDd) beansprucht und wie er ausgeführt wird (sequentiell, parallel, quantenmechanisch o.ä.), ist im Detail nicht bekannt, aber es ist klar, dass Timing ein Faktor sein kann. Wenn die Peripherie die Zufallszahlen zu langsam liefert, wird der gleiche Wert mehrfach im Programm eingelesen, wenn die Zufallszahlen hingegen zu schnell geliefert werden, wird der Wert während des Einlesens möglicherweise "verschmiert", da sich die Bits während des Einlesevorgangs durch eine in der Zwischenzeit neu erzeugte Zufallszahl verändern. Dieser zweite Fall wird noch ein richtiges Problem, dazu später...
+Der 2090 ist nicht schnell. Michael hat ein paar [Performance-Tests](https://www.youtube.com/watch?v=e8KJ-cnX9bU) durchgeführt und als Ergebnis maximal 114 Operationen pro Sekunde (1,14 HIPS) ermittelt. Da in meinem Programm das Display meistens aktiv ist, dürfte eher ein Wert von 40 Instructions per second (0,4 HIPS) zu erwarten sein. Welche Dauer der Befehl zum Einlesen der 4 Bits an den Eingängen KIN (FDd) beansprucht und wie er ausgeführt wird (sequentiell, parallel, quantenmechanisch o.ä.), ist im Detail nicht bekannt, aber es ist klar, dass Timing ein Faktor sein kann. Wenn die Peripherie die Zufallszahlen zu langsam liefert, wird der gleiche Wert mehrfach im Programm eingelesen, wenn die Zufallszahlen hingegen zu schnell geliefert werden, wird der Wert während des Einlesens möglicherweise "verschmiert", da sich die Bits während des Einlesevorgangs durch eine in der Zwischenzeit neu erzeugte Zufallszahl verändern. Dieser zweite Fall wird noch ein richtiges Problem, dazu später...
 
 Eine saubere Lösung, um Timing-Probleme zu vermeiden, wäre: Immer wenn ein Zufallszahl benötigt wird, geben wir dem Zahlen-Lieferanten ein Signal. Der Raspuino erzeugt die Zahl, liefert sie über GPIO an die Eingänge des 2090, hält sie da ausreichend lange stabil und wartet dann einfach auf die nächste Zahlen-Bestellung. Das erforderte aber zusätzliche Befehle im Programmcode des 2090 (Wert in Register speichern, Register auf Ausgang legen, ggf. warten auf die Verarbeitung). Und ein extra Kabel. Und ein wertvolles Register - wir haben nur 16 Stück brauchbare. Nope, scheidet (erstmal) aus.
 
