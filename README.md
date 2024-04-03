@@ -72,6 +72,21 @@ Im Programm müssen
 
 Zunächst hatte ich für Addition und Subtraktion - schön ordentlich und strukturiert - jeweils separate Unterprogramme geschrieben. Addition und Subtraktion werden im 2090 registerweise hexadezimal durchgeführt, also müssen Dezimalkorrektur und Carry-Flag-Übertrag berücksichtigt werden. Kurzum, die Routinen für eine bis zu 3-stellige mathematische Plus- oder Minus-Operation waren lang und belegten deutlich zu viel Platz im Programmspeicher. So wird das nix.
 
-Mir war noch vage von der Uni in Erinnerung, dass binäre Subtraktion ja auch nichts anderes als Addition mit der Inversen des Summanden plus 1 ist. Wer´s nicht glaubt, prüft es nach. Also konnte ich die Routinen zu einer einzigen zusammenfassen; es wird nur addiert. Da nur zwei feste Werte (20 Pf, 1 Spiel) ggf. zu subtrahieren sind, konnte ich diese im Programm "fest verdrahten". Insgesamt wurde dadurch das _Rechenwerk_ des Monarchen angenehm schlank und viele Programmschritte wurden eingespart. Übersichtlicher wird´s dadurch natürlich nicht.
+Mir war noch vage von der Uni in Erinnerung, dass binäre Subtraktion ja auch nichts anderes als Addition mit der Inversen des Subtrahenden plus 1 ist. Wer´s nicht glaubt, prüft es nach. Also konnte ich die Routinen zu einer einzigen zusammenfassen; es wird nur addiert. Da nur zwei feste Werte (20 Pf, 1 Spiel) ggf. zu subtrahieren sind, konnte ich diese im Programm "fest verdrahten" (die Werte FFE und FFF werden _subtraddiert_). Insgesamt wurde dadurch das _Rechenwerk_ des Monarchen angenehm schlank und viele Programmschritte wurden eingespart. Übersichtlicher wurde es dadurch natürlich nicht.
+
+```
+DeltaSub	MOVI #F,DELTA_E	              Einsprungadresse für Subtraktion (Addition mit invertiertem HEX-Wert + 1)
+	        MOVI #F,DELTA_F	
+DeltaAdd	ADD DELTA_D,rD	
+	        ADC rE	
+	        ADC rF	
+	        ADD DELTA_E,rE	
+	        ADC rF	
+	        ADD DELTA_F,rF	              wegen mögl. Subtraktion auch letzte Stelle “addieren”
+	        RET
+```
+
+test
+
 
 
