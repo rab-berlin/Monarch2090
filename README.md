@@ -26,7 +26,11 @@ Programmieren ist ein mühsames Geschäft
 
 Indirekte Adressierung, Felder, symbolische Links, Assembler für  
 
-Der Kreis derjenigen, die ebenfalls einen 2090 hatten (und womöglich noch haben), dürfte ohnehin überschaubar sein. Wenn man dann noch die Schnittmenge bildet mit denjenigen, die bei elektromechanischen Geldspielgeräten ins Schwärmen geraten, wäre eine Abschätzung der verbleibenden Interessengruppe inetwa mit der Größe 1 zu beziffern - also bin ich wohl alleine :-) Aber egal, andere lösen Kreuzworträtsel. Oder Sudoku. Also hier nun mein Programm...
+## Wen interessiert´s?
+
+Der Kreis derjenigen, die ebenfalls einen 2090 hatten (und womöglich noch haben), dürfte reichlich überschaubar sein. Bildet man dann noch die Schnittmenge mit denjenigen Personen, die bei elektromechanischen Geldspielgeräten ins Schwärmen geraten, wäre eine Abschätzung der verbleibenden Interessengruppe inetwa mit der Größe 1 zu beziffern - also bin ich wohl alleine :-) 
+
+Aber egal, andere lösen Kreuzworträtsel oder Sudoku. Es ist, was es ist, sagte die Liebe. Also hier nun mein Programm...
 
 
 
