@@ -230,6 +230,8 @@ Nö. Für die Anzeige wird der hexadezimale Wert (Geld oder Sonderspiele) jeweil
 
 Übrigens: Findige, mit der nötigen kriminellen Energie ausgestattete Menschen sollen natürlich versucht haben, mit allerlei Werkzeugen und Drähten das 10-DM-Relais beim Stand von 0 zu einem klitzekleinen weiteren Abzug-Impuls zu überreden. Und ruckzuck wurden aus 0,20 DM Guthaben dann 90,20 DM. Auszahlknopf gedrückt und nix wie raus aus der Kneipe... Hatte ich schon erwähnt, dass fast überall 230 Volt im Gerät anliegen?
 
+## Kleinigkeiten
 
+Bei der Darstellung der Walzen habe ich die doppelt vorhandenen Walzenstellungen an das Ende der Auswertung gesetzt. Dadurch ist der (erwünschte) optische Würfel-Effekt mit höherer Wahrscheinlichkeit zu sehen.
 
 
