@@ -234,4 +234,18 @@ Nö. Für die Anzeige wird der hexadezimale Wert (Geld oder Sonderspiele) jeweil
 
 Bei der Darstellung der Walzen habe ich die doppelt vorhandenen - also häufiger auftretenden - Walzenstellungen erst an das Ende der Auswertung gesetzt. Dadurch ist der (erwünschte) optische _Würfel-Effekt_ mit höherer Wahrscheinlichkeit länger zu sehen.
 
+# Was fehlt?
+
+Der echte Monarch bietet die Möglichkeit, die erste Walze einmalig in jedem Spiel nochmal zu starten, wenn die angezeigte Kombination nicht gefällt. Man kann also gezielt "auf Sonderspiele" spielen, weil man dafür ja König oder Krone als Symbol auf der ersten Walze haben will. 
+
+Um diese Funktion auch noch zu integrieren, wäre es nötig, innerhalb der Warteschleife auf einen Tastendruck an einem Eingang (also ohne Anhalten des Programms) zu warten. Aber alle Eingänge sind schon mit Zufallszahlen-Lieferanten belegt.
+
+Ein paar Ideen hab ich dazu:
+
+- Der Raspuino möge schweigen, solange er nicht gebraucht wird. Das bedeutet, er bekommt über einen Ausgang das Signal, eine Zufallszahl zu liefern. Würde wahrscheinlich auch alle möglichen Timing-Probleme lösen. Dann könnte man eine Taste "parallel" auf einen der Eingänge legen, und dieser Eingang wird dann während der Warteschleife geprüft, ob Taste gedrückt oder nicht... Aaaber. Jede Erzeugung einer Zufallszahl erforderte dann mindestens 2 Befehle (statt bisher einen). Ein Kabel zusätzlich wäre auch nötig.  
+
+- Der Raspuino liefert nur Zufallszahlen von 0-7. Das würde reichen, denn mehr als 8 Symbolkombinationen gibt es auf keiner Walze. Man müsste die Walzen-Wahrscheinlichkeitsverteilung dann dem Raspuino überlassen, also bestimmte Zufallszahlen müssten doppelt so häufig wie andere erzeugt werden (da 2x auf der Walze vorhanden). Dann müsste man dem Zahlen-Lieferanten aber auch mitteilen, für welche Walze die nächste Zufallszahl erzeugt werden soll, da die Kombinationen auf den Walzen unterschiedliche Häufigkeiten haben.
+
+- Die Taste wird an einen Eingang des Raspuino gelegt. Wenn gedrückt, erzeugt der Raspuino eine "unmögliche" Zahl für die zweite Walze, z.B. "F", welche dann vom Programm erkannt wird und einen Sprung zurück zu Walze 1 auslöst.
+
 
