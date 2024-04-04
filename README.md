@@ -232,6 +232,6 @@ Nö. Für die Anzeige wird der hexadezimale Wert (Geld oder Sonderspiele) jeweil
 
 ## Kleinigkeiten
 
-Bei der Darstellung der Walzen habe ich die doppelt vorhandenen, also häufigeren Walzenstellungen erst an das Ende der Auswertung gesetzt. Dadurch ist der (erwünschte) optische _Würfel-Effekt_ mit höherer Wahrscheinlichkeit länger zu sehen.
+Bei der Darstellung der Walzen habe ich die doppelt vorhandenen - also häufiger auftretenden - Walzenstellungen erst an das Ende der Auswertung gesetzt. Dadurch ist der (erwünschte) optische _Würfel-Effekt_ mit höherer Wahrscheinlichkeit länger zu sehen.
 
 
