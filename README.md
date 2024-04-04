@@ -174,7 +174,7 @@ pauseEnde	DZHX				Konvertierung in Hex
 
 Aber ich habe ja nicht nur den 3-stelligen Münzspeicher, sondern auch den _Sonderspiele-Zähler_... Wohin damit? Ich müsste den ja temporär in die Register D-F schieben, damit Umrechnung und Anzeige erfolgen können. Schon wieder jede Menge MOVes :-( 
 
-Neben den 16 Arbeitsregistern gibt es beim Microtronic noch 16 Speicherregister. Spricht irgendwas dagegen, die Sonderspiele (die man meistens sowieso nicht hat), im "Schatten", also in den Speicherregistern D-F zu halten und diese bei Bedarf zur Anzeige oder Berechnung einfach elegant einzublenden mit dem formschönen Befehl EXRM, der in einem Rutsch alle Arbeitsregister 8-F mit den entsprechenden Speicherregistern 8-F tauscht? Nein? Spart viel "Schiebung", also ist das so beschlossen.
+Neben den 16 Arbeitsregistern gibt es beim Microtronic noch 16 Speicherregister. Spricht irgendwas dagegen, die Sonderspiele (die man meistens sowieso nicht hat), im "Schatten", also in den **Speicher**registern D-F zu halten und diese bei Bedarf zur Anzeige oder Berechnung einfach elegant einzublenden mit dem Befehl EXRM, der praktischerweise in einem Rutsch alle Arbeitsregister 8-F mit den entsprechenden Speicherregistern 8-F tauscht? Nein? Spart viel "Schiebung", also ist das so beschlossen.
 
 
 
