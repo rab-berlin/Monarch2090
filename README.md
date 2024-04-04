@@ -244,8 +244,12 @@ Ein paar Ideen hab ich dazu:
 
 - Der Raspuino möge schweigen, solange er nicht gebraucht wird. Das bedeutet, er bekommt über einen Ausgang das Signal, eine Zufallszahl zu liefern. Würde wahrscheinlich auch alle möglichen Timing-Probleme lösen. Dann könnte man eine Taste "parallel" auf einen der Eingänge legen, und dieser Eingang wird dann während der Warteschleife geprüft, ob Taste gedrückt oder nicht... Aaaber. Jede Erzeugung einer Zufallszahl erforderte dann mindestens 2 Befehle (statt bisher einen). Ein Kabel zusätzlich wäre auch nötig.  
 
-- Der Raspuino liefert nur Zufallszahlen von 0-7. Das würde reichen, denn mehr als 8 Symbolkombinationen gibt es auf keiner Walze. Man müsste die Walzen-Wahrscheinlichkeitsverteilung dann dem Raspuino überlassen, also bestimmte Zufallszahlen müssten doppelt so häufig wie andere erzeugt werden (da 2x auf der Walze vorhanden). Dann müsste man dem Zahlen-Lieferanten aber auch mitteilen, für welche Walze die nächste Zufallszahl erzeugt werden soll, da die Kombinationen auf den Walzen unterschiedliche Häufigkeiten haben.
+- Der Raspuino liefert nur Zufallszahlen von 0-7. Das würde reichen, denn mehr als 8 Symbolkombinationen gibt es auf keiner Walze. Man müsste die Walzen-Wahrscheinlichkeitsverteilung dann dem Raspuino überlassen, also bestimmte Zufallszahlen müssten doppelt so häufig wie andere erzeugt werden (da 2x auf der Walze vorhanden). Dann müsste man dem Zahlen-Lieferanten aber auch mitteilen, für welche Walze die nächste Zufallszahl erzeugt werden soll, da die Kombinationen auf den Walzen unterschiedliche Häufigkeiten haben. Auch hier wird ein "Rückkanal" vom 2090 zur Peripherie benötigt.
 
-- Die Taste wird an einen Eingang des Raspuino gelegt. Wenn gedrückt, erzeugt der Raspuino eine "unmögliche" Zahl für die zweite Walze, z.B. "F", welche dann vom Programm erkannt wird und einen Sprung zurück zu Walze 1 auslöst.
+- Die Taste wird an einen Eingang des Raspuino gelegt. Wenn gedrückt, erzeugt der Raspuino eine "unmögliche" Zahl für die zweite Walze, z.B. "F", welche dann vom Programm erkannt wird und einen Sprung zurück zu Walze 1 auslöst. Ebenso: Rückmeldung nötig.
+
+In jedem Fall wäre es wahrscheinlich gut, wenn der Raspuino wüsste, welche Walze gerade mit einer Zufallszahl zu versorgen ist. Allerdings - und das ist der Nachteil - könnte man dann ja auch gleich die ganze Simulation auf dem Raspuino laufen lassen .-(
+
+Ich denke darüber nach.
 
 
