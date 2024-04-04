@@ -45,7 +45,7 @@ Um den Spielablauf des Automaten möglichst authentisch abzubilden, musste ich e
 
 ### Walzensymbole
 
-Jeder Walzenkörper des Monarchen hat 10 Stellungen, auf denen Gewinnbeträge bzw. Symbole abgebildet sind. Diese und ihre Entsprechungen auf dem 2090 sind:
+Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bzw. Symbole abgebildet sind. Diese und ihre Entsprechungen auf dem 2090 sind:
 
 ```
  Monarch-	Microtronic-
