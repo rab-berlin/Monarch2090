@@ -214,5 +214,17 @@ pause1		SUBI #F,ZÄHLER
 
 Juhuu, eine Instruktion eingespart. Im Kopf können wir nicht so gut F von einem Register abziehen und mit irgendwelchen Unter- und Überläufen hantieren, wir möchten automatisch lieber 1 von einem vorher gegebenen Startwert abziehen - dem Computer ist es aber schnuppe.
 
+## Nullerkennung
+
+Wir ziehen regelmäßig 20 Pf bzw. 1 Spiel von den Speichern für Geld und Sonderspiele ab. Wie können wir dann erkennen, ob einer von diesen Speichern leer (Null) ist? Denn dann müsste der Automat ja anhalten bzw. den Sonderspiele-Status zurücksetzen. Natürlich könnte ich alle 3 Register D-F einzeln auf Null testen in einer verschachtelten CMPI-Konstruktion... Aber wie viele Instruktionen das wieder kosten würde! :-(
+
+Wenn einer dieser Speicher aber leer ist (also 0), dann entsteht durch die Subtraktion ein Wert "Fxx"
+
+Übrigens: Findige, mit der nötigen kriminellen Energie ausgestattete Menschen sollen natürlich versucht haben, mit allerlei Werkzeugen und Drähten das 10-DM-Relais beim Stand von 0 zu einem klitzekleinen Abzug-Impuls zu überreden. Und ruckzuck wurden aus 0,20 DM Guthaben dann 90,20 DM. Auszahlknopf gedrückt und schnell raus aus der Kneipe...
+
+
+Für die Anzeige wird der hexadezimale Wert (Geld oder Sonderspiele) jeweils mit HXDZ in einen dezimalen umgewandelt. 
+
+Undokumentiert ist folgendes Verhalten: HXDZ ist so freundlich, einen hexadezimal zu großen Wert (größer als 3EF) in den Registern D-F in eine   
 
 
