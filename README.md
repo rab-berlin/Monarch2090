@@ -32,9 +32,34 @@ Der Kreis derjenigen, die ebenfalls einen 2090 hatten (und womöglich noch haben
 
 Aber egal, andere lösen Kreuzworträtsel oder Sudoku. Es ist, was es ist, sagte die Liebe. Also hier nun mein Programm...
 
+# Der Monarch
+
+Zuvor aber: Wie funktioniert der Monarch?
 
 
+Jetzt aber wirklich mein Programm...
 
+## Design-Entscheidungen
+
+Um den Spielablauf des Automaten möglichst authentisch abzubilden, musste ich einige Entscheidungen treffen. Was wird wann wie und in welcher Reihenfolge dargestellt? Wir haben ja nur eine 6-stellige Sieben-Segment-Anzeige.
+
+### Walzensymbole
+
+Jeder Walzenkörper des Monarchen hat 10 Stellungen, auf denen Gewinnbeträge oder Symbole abgebildet sind. Diese sind:
+
+```
+-,40		4
+-,80		8
+1,-		9
+1,20		A
+1,40		B
+1,60		C
+2,-		D
+Krone		E
+König		F
+```
+
+Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-Zähler größer als 0 ist (also eine Serie beginnt oder läuft)
 
 ## Zufallszahlen im 2090
 
