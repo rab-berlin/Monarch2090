@@ -236,6 +236,10 @@ Bei der Darstellung der Walzen habe ich die doppelt vorhandenen - also häufiger
 
 # Was fehlt?
 
+Alle 256 Programmschritte sind mehr oder weniger verbraucht. ~~Wahrscheinlich~~ Mit Sicherheit kann man an der einen oder anderen Stelle noch etwas herausmelken, aber es wird schwierig. Falls sich doch jemand damit beschäftigen will, ich bin dankbar für jede Idee. Ich vermute z.B., dass die Auswertung des Tableaus bei Sonderspielen noch irgendwie optimiert werden kann.
+
+## Nachstarten 
+
 Der echte Monarch bietet die Möglichkeit, die erste Walze einmalig in jedem Spiel nochmal zu starten, wenn die angezeigte Kombination nicht gefällt. Man kann also gezielt "auf Sonderspiele" spielen, weil man dafür ja König oder Krone als Symbol auf der ersten Walze haben will. 
 
 Um diese Funktion auch noch zu integrieren, wäre es nötig, innerhalb der Warteschleife auf einen Tastendruck an einem Eingang (also ohne Anhalten des Programms) zu warten. Aber alle vier Eingänge sind derzeit schon vom Zufallszahlen-Lieferanten belegt.
@@ -251,5 +255,21 @@ Ein paar Ideen hab ich dazu:
 In jedem Fall wäre es wahrscheinlich gut, wenn der Raspuino wüsste, welche Walze gerade mit einer Zufallszahl zu versorgen ist. Allerdings - und das ist der Nachteil - könnte man dann ja auch gleich die ganze Simulation auf dem Raspuino laufen lassen .-(
 
 Ich denke darüber nach.
+
+## Ton bei Gewinn von 1,60 DM
+
+Ist nicht, musste dem Sparzwang geopfert werden. Denn 16 ist hexadezimal 10, das heißt im Delta-Register 5 steht eine Null - und genau dieses Register wird geprüft, ob ein Gewinn vorliegt. Natürlich könnte man die Prüfung allumfassend über beide Delta-Register vornehmen, aber dafür war kein Platz mehr.
+
+## Sonderspiele-Stopp
+
+Der 40-Kilo-Monarch hat ein "Sonderspiele-Stop-Relais" eingebaut. Das heißt, wenn man den Volltreffer mit 50 Sonderspielen gelandet hat, können keine weiteren Verlängerungen der Serie erzielt werden (also ist das Verlängerungs-Tableau danach inaktiv). Mit anderen Worten, der Monarch lässt dich wissen: "Du hast genug gewonnen, jetzt reicht´s aber mal!" Aber das erleben wir nicht, dafür ist die Wahrscheinlichkeit einfach zu gering und/oder das Leben zu kurz.
+
+Also YAGNI.
+
+## Hexadezimalzahlen sind kurz zu sehen
+
+Jaaa, da müsste man noch ein paar mehr DISOUTs einbauen, bevor die Umwandlung vorgenommen wird. Aber - kein Platz dafür, und so schlimm sieht´s nicht aus. Ich lass das jetzt so.
+
+
 
 
