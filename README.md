@@ -198,7 +198,7 @@ DeltaAdd	ADD DELTA_D,rD
 
 ## Schleifentricks
 
-Wir erinnern uns: Um eine Warteschleife für die Anzeige zu realisieren, hatte ich den Startwert F in ein Register gespeichert, davon solange 1 abgezogen, bis der Wert 0 im Register erreicht und dadurch das Zero-Flag gesetzt wurde für einen Schleifenexit mit BRZ. Unterm Strich also 4 Instruktionen. Geht das nicht besser?
+Wir erinnern uns: Um eine Warteschleife für die Anzeige zu realisieren, hatte ich den Startwert F in ein Register gespeichert, davon solange 1 abgezogen, bis der Wert 0 im Register erreicht, dadurch das Zero-Flag gesetzt wurde und die Schleife dann mit BRZ verlassen wurde. Unterm Strich also 4 Instruktionen. Geht das nicht besser?
 
 Doch. Statt der beiden Sprung-Befehle BRZ (bei 0 raus aus der Schleife) und GOTO (bei nicht-0 zum Schleifenfang) auf den SUBI-Befehl vertrauen, der das Carry-Flag bei einem Unterlauf setzt. Und statt 1 immer F abziehen, so dass bei fast jeder Subtraktion ein Unterlauf entsteht - außer bei F - F = 0.
 
