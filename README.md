@@ -45,18 +45,21 @@ Um den Spielablauf des Automaten möglichst authentisch abzubilden, musste ich e
 
 ### Walzensymbole
 
-Jeder Walzenkörper des Monarchen hat 10 Stellungen, auf denen Gewinnbeträge oder Symbole abgebildet sind. Diese sind:
+Jeder Walzenkörper des Monarchen hat 10 Stellungen, auf denen Gewinnbeträge bzw. Symbole abgebildet sind. Diese und ihre Entsprechungen auf dem 2090 sind:
 
 ```
--,40		4
--,80		8
-1,-		9
-1,20		A
-1,40		B
-1,60		C
-2,-		D
-Krone		E
-König		F
+ Monarch-	Microtronic-
+  Symbol	   Symbol
+----------	------------
+  -,40		     4
+  -,80		     8
+  1,-		     9
+  1,20		     A
+  1,40		     B
+  1,60		     C
+  2,-		     D
+ Krone		     E
+ König		     F
 ```
 
 Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-Zähler größer als 0 ist (also eine Serie beginnt oder läuft)
