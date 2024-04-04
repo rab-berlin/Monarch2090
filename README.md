@@ -216,15 +216,16 @@ Juhuu, eine Instruktion eingespart. Im Kopf können wir nicht so gut F von einem
 
 ## Nullerkennung
 
-Wir ziehen regelmäßig 20 Pf bzw. 1 Spiel von den Speichern für Geld und Sonderspiele ab. Wie können wir dann erkennen, ob einer von diesen Speichern leer (Null) ist? Denn dann müsste der Automat ja anhalten bzw. den Sonderspiele-Status zurücksetzen. Natürlich könnte ich alle 3 Register D-F einzeln auf Null testen in einer verschachtelten CMPI-Konstruktion... Aber wie viele Instruktionen das wieder kosten würde! :-(
+Wir ziehen regelmäßig 20 Pf bzw. 1 Spiel von den Speichern für Geld und Sonderspiele ab. Wie können wir dann erkennen, ob einer von diesen Speichern leer ist? Denn dann müsste der Automat ja anhalten bzw. den Sonderspiele-Status zurücksetzen. Natürlich könnte ich alle 3 Register D-F einzeln auf Null testen in einer verschachtelten CMPI-Konstruktion... Aber wie viele Instruktionen das wieder kosten würde! :-(
 
-Wenn einer dieser Speicher aber leer ist (also 0), dann entsteht durch die Subtraktion ein Wert "Fxx"
+Es wird einfach die übliche Vor-dem-Spiel-Subtraktion erneut ausgeführt. Wenn einer dieser Speicher leer ist (also 0), dann entsteht durch die Subtraktion ein Wert "Fxx", also steht anschließend definitiv im Register F der Wert F. Und nur auf diesen müssen wir anschließedn testen, um zu erkennen, dass der Speicher leer ist/war.  
 
-Übrigens: Findige, mit der nötigen kriminellen Energie ausgestattete Menschen sollen natürlich versucht haben, mit allerlei Werkzeugen und Drähten das 10-DM-Relais beim Stand von 0 zu einem klitzekleinen Abzug-Impuls zu überreden. Und ruckzuck wurden aus 0,20 DM Guthaben dann 90,20 DM. Auszahlknopf gedrückt und schnell raus aus der Kneipe...
+Nun, da das Problem der Nullerkennung gelöst ist, bleibt noch das Aufräumen in den Speichern. Immerhin steht da ja hexadezimal irgendwas mit Fxx drin (über 380 DM). Man könnte alles wieder mit MOVI #0 löschen. Ist das nötig? 
+
+Nö. Für die Anzeige wird der hexadezimale Wert (Geld oder Sonderspiele) jeweils mit HXDZ in einen dezimalen umgewandelt. Undokumentiert ist folgendes Verhalten: HXDZ ist so freundlich, einen hexadezimal zu großen Wert (größer als 3E7, also dezimal 999) in den Registern D-F in eine komfortable 0 in all diesen Registern umzuwandeln. Also einfach nochmal anzeigen lassen, und schon wird aus einer theoretischen Null auch eine praktische Null in allen Registern. Check.
+
+Übrigens: Findige, mit der nötigen kriminellen Energie ausgestattete Menschen sollen natürlich versucht haben, mit allerlei Werkzeugen und Drähten das 10-DM-Relais beim Stand von 0 zu einem klitzekleinen weiteren Abzug-Impuls zu überreden. Und ruckzuck wurden aus 0,20 DM Guthaben dann 90,20 DM. Auszahlknopf gedrückt und nix wie raus aus der Kneipe... Hatte ich schon erwähnt, dass fast überall 230 Volt im Gerät anliegen?
 
 
-Für die Anzeige wird der hexadezimale Wert (Geld oder Sonderspiele) jeweils mit HXDZ in einen dezimalen umgewandelt. 
-
-Undokumentiert ist folgendes Verhalten: HXDZ ist so freundlich, einen hexadezimal zu großen Wert (größer als 3EF) in den Registern D-F in eine   
 
 
