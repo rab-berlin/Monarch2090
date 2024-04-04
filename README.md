@@ -196,7 +196,23 @@ DeltaAdd	ADD DELTA_D,rD
 	        RET
 ```
 
-test
+## Schleifentricks
+
+Wir erinnern uns: Um eine Warteschleife für die Anzeige zu realisieren, hatte ich den Startwert F in ein Register gespeichert, davon solange 1 abgezogen, bis der Wert 0 im Register erreicht und dadurch das Zero-Flag gesetzt wurde für einen Schleifenexit mit BRZ. Unterm Strich also 4 Instruktionen. Geht das nicht besser?
+
+Doch. Statt der beiden Sprung-Befehle BRZ (bei 0 raus aus der Schleife) und GOTO (bei nicht-0 zum Schleifenfang) auf den SUBI-Befehl vertrauen, der das Carry-Flag bei einem Unterlauf setzt. Und statt 1 immer F abziehen, so dass bei fast jeder Subtraktion ein Unterlauf entsteht - außer bei F - F = 0.
+
+```
+
+Anzeige		HXDZ				Konvertierung in Dez
+		MOVI #0,ZÄHLER	
+pause1		SUBI #F,ZÄHLER	
+		BRC pause1			nur bei F - F = 0 nicht erfüllt, also Schleifenexit
+		DZHX				Konvertierung in Hex
+		RET	
+```
+
+Juhuu, eine Instruktion eingespart. Im Kopf können wir nicht so gut F von einem Register abziehen und mit irgendwelchen Unter- und Überläufen hantieren, wir möchten automatisch lieber 1 von einem vorher gegebenen Startwert abziehen - dem Computer ist es aber schnuppe.
 
 
 
