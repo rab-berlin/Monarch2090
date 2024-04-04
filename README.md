@@ -238,7 +238,7 @@ Bei der Darstellung der Walzen habe ich die doppelt vorhandenen - also häufiger
 
 Der echte Monarch bietet die Möglichkeit, die erste Walze einmalig in jedem Spiel nochmal zu starten, wenn die angezeigte Kombination nicht gefällt. Man kann also gezielt "auf Sonderspiele" spielen, weil man dafür ja König oder Krone als Symbol auf der ersten Walze haben will. 
 
-Um diese Funktion auch noch zu integrieren, wäre es nötig, innerhalb der Warteschleife auf einen Tastendruck an einem Eingang (also ohne Anhalten des Programms) zu warten. Aber alle Eingänge sind schon mit Zufallszahlen-Lieferanten belegt.
+Um diese Funktion auch noch zu integrieren, wäre es nötig, innerhalb der Warteschleife auf einen Tastendruck an einem Eingang (also ohne Anhalten des Programms) zu warten. Aber alle vier Eingänge sind derzeit schon vom Zufallszahlen-Lieferanten belegt.
 
 Ein paar Ideen hab ich dazu:
 
