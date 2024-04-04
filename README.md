@@ -18,7 +18,7 @@ Wie gerne hätte ich damals (80er) auch so einen Automaten in meinem Zimmer geha
 
 Irgendwann reifte der kühne Plan: 
 
-### Ich programmiere mir meinen Automaten selbst!
+**Ich programmiere mir meinen Automaten selbst!**
 
 
 
