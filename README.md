@@ -76,7 +76,8 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 - Prüfung, ob Geld auf dem Münzspeicher
 - Anzeige Münzspeicher
 - Abbuchung 20 Pf Spieleinsatz
-- Wenn Serie läuft, Anzeige des Sonderspiele-Zählers
+- Wenn Serie läuft,
+- 	Anzeige des Sonderspiele-Zählers
 - Anzeige der Walzen
 - Ermittlung der linken Walze
 - Ermittlung der rechten Walze
