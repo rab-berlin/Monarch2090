@@ -77,7 +77,7 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 - Anzeige Münzspeicher
 - Abbuchung 20 Pf Spieleinsatz
 - Wenn Serie läuft,
--- Anzeige des Sonderspiele-Zählers
+ - Anzeige des Sonderspiele-Zählers
 - Anzeige der Walzen
 - Ermittlung der linken Walze
 - Ermittlung der rechten Walze
@@ -86,8 +86,12 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 - Anzeige Gewinn (meistens 0)
 - Anzeige Münzspeicher
 - Aufbuchung Gewinn
-- Wenn Sonderspiele laufen, Auswertung des Tableaus
-- Wenn Sonderspiele laufen oder gewonnen wurden, Anzeige des Sonderspiele-Gewinns und -Zählers
+- Wenn Sonderspiele laufen
+ - Auswertung des Tableaus
+- Wenn Sonderspiele laufen oder gewonnen wurden,
+ - Anzeige des Sonderspiele-Gewinns
+ - Aufbuchung des Sonderspiele-Gewinns
+ - Anzeige des Sonderspiele-Zählers
 - Zurück zum Anfang
 
 Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-Zähler größer als 0 ist (also eine Serie gewonnen wurde oder schon läuft).
