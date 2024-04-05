@@ -36,13 +36,13 @@ Zuvor aber: Wie funktioniert der Monarch?
 
 Das Gerät hat drei Walzen, links, rechts und in der Mitte. Zu Beginn jedes Spiels werden vom Guthabenspeicher 20 Pf Spieleinsatz abgezogen, danach beginnen alle Walzen sich zu drehen. Anschließend stoppen die Walzen nacheinander in der Reihenfolge "Links - Rechts - Mitte" und zeigen Gewinnsymbole: entweder einen Geldbetrag oder Krone bzw. König. Auf der linken und rechten Seite werden je zwei Symbole angezeigt, in der Mitte nur eins.
 
-Wenn auf allen drei Walzen das gleiche Symbol (der gleiche Betrag) erscheint, dann hat man gewonnen. Die Kombination 40 - 40 - 40 z.B. bedeutet 40 Pfennig Gewinn. Jede Kombination gleicher Symbole gewinnt - egal ob oben oder unten auf den äußeren Walzen. Der König auf der mittleren Walze funktioniert dabei als "Joker", d.h. er ersetzt jedes notwendige Symbol für eine Gewinnkombination.
+Wenn auf allen drei Walzen das gleiche Symbol (der gleiche Betrag) erscheint, dann hat man gewonnen. Die Kombination 40 - 40 - 40 z.B. bedeutet 40 Pfennig Gewinn. Jede Kombination gleicher Symbole gewinnt - egal ob oben oder unten auf den äußeren Walzen. Der König auf der mittleren Walze funktioniert dabei als _Joker_, d.h. er ersetzt jedes notwendige Symbol für eine Gewinnkombination.
 
-Was alle Spieler aber wollen, sind nicht die Geldgewinne, sondern Sonderspiele (eine Serie). Denn wie oben bereits erwähnt, ist in diesen Spielen die Gewinnerwartung deutlich höher. Sonderspiele gewinnt man durch die Kombination "König - König - König" (10 Sonderspiele) oder "Krone - König - Krone" (5 Sonderspiele). Wenn nacheinander links und rechts ein König erscheint, steigt die Spannung und man betet zu Fortuna, dass in der Mitte der Regent auch auftauchen möge. 
+Was alle Spieler aber wollen, sind nicht die Geldgewinne, sondern Sonderspiele (eine _Serie_). Denn wie oben bereits erwähnt, ist in diesen Spielen die Gewinnerwartung deutlich höher. Sonderspiele gewinnt man durch die Kombination "König - König - König" (10 Sonderspiele) oder "Krone - König - Krone" (5 Sonderspiele). Wenn nacheinander links und rechts ein König erscheint, dann steigt die Spannung und man betet zu Fortuna, dass in der Mitte der Regent auch auftauchen möge. 
 
-Während einer Serie wird jeder erzielte Gewinn auf 2 DM erhöht. Zusätzlich gewinnt jedes karierte Feld in der Mitte ebenfalls 2 DM (die Beträge 40 Pf, 2 DM und der König sind kariert hinterlegt). Insgesamt hat man also in jedem Sonderspiel eine mehr als 50%-ige Chance, 2 DM zu gewinnen - 5 von 10 Feldern sind kariert, dazu kommen die möglichen Gewinne durch Kombination.
+Während einer Serie wird jeder erzielte Gewinn auf 2 DM erhöht. Zusätzlich gewinnt jedes karierte Feld in der Mitte ebenfalls 2 DM (die Beträge 40 Pf, 2 DM und der König sind kariert hinterlegt). Insgesamt hat man also in jedem Sonderspiel eine mehr als 50%-ige Chance, 2 DM zu gewinnen - denn 5 von 10 Feldern sind kariert, dazu kommen die möglichen Gewinne durch Kombination.
 
-Wenn eine Serie läuft, dann kann sie verlängert werden. Wenn der Sonderspiele-Zähler auf der Position 10 steht und ein König in der Mitte erscheint, werden 10 zusätzliche Sonderspiele gegeben. Auf den Positionen 9 bis 2 jeweils 2 zusätzliche Sonderspiele, auf der Position 1 ganze 20 Sonderspiele. Auf Position 15 gibt es bei König in der Mitte 50 Sonderspiele (davon träumen alle). Auf Position 14 werden 2 Sonderspiele gegeben (sodass man erneut die Chance auf den Großgewinn von 50 Sonderspielen bekommt). Die Sonderspiele 20 bis 1 zeigt der Monarch auf einem Leucht-Tableau an, die jeweilige Position leuchtet während des Spiels. Adrenalin pur.
+Wenn eine Serie läuft, dann kann sie verlängert werden. Wenn der Sonderspiele-Zähler auf der Position 10 steht und ein König in der Mitte erscheint, werden 10 zusätzliche Sonderspiele gegeben. Auf den Positionen 9 bis 2 jeweils 2 zusätzliche Sonderspiele, auf der Position 1 ganze 20 Sonderspiele. Auf Position 15 gibt es bei König in der Mitte sogar 50 Sonderspiele (davon träumen alle). Auf Position 14 werden 2 Sonderspiele gegeben (sodass man erneut die Chance auf den Großgewinn von 50 Sonderspielen bekommt). Die Sonderspiele 20 bis 1 zeigt der Monarch auf einem Leucht-Tableau an, die jeweilige Position leuchtet während des Spiels. Adrenalin pur.
 
 Jede Walze hat 10 Stellungen. Das bedeutet, man erhält durchschnittlich alle 500 Spiele eine Serie - linke Walze König oder Krone (2/10), rechte Walze passend dazu König oder Krone (1/10), mittlere Walze nur König, denn Krone gibt es in der Mitte nicht (1/10). Also 0,2 x 0,1 x 0,1 = 0,002 (= 1/500)
 
@@ -50,7 +50,7 @@ Jetzt aber wirklich mein Programm...
 
 ## Design-Entscheidungen
 
-Um den Spielablauf des Automaten möglichst authentisch abzubilden, musste ich einige Entscheidungen treffen. Was wird wann wie und in welcher Reihenfolge dargestellt? Wir haben ja nur eine 6-stellige Sieben-Segment-Anzeige.
+Um den Spielablauf des Automaten möglichst authentisch abzubilden, musste ich einige Entscheidungen treffen. **Was** wird **wann** **wie** und in **welcher Reihenfolge** dargestellt? Wir haben ja nur eine 6-stellige Sieben-Segment-Anzeige.
 
 ### Walzensymbole
 
