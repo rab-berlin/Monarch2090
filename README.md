@@ -71,11 +71,29 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
  König		     F
 ```
 
-Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-Zähler größer als 0 ist (also eine Serie beginnt oder läuft)
+### Programmablauf
+
+- Prüfung, ob Geld auf dem Münzspeicher
+- Anzeige Münzspeicher
+- Abbuchung 20 Pf Spieleinsatz
+- Wenn Serie läuft, Anzeige des Sonderspiele-Zählers
+- Anzeige der Walzen
+- Ermittlung der linken Walze
+- Ermittlung der rechten Walze
+- Ermittlung der mittleren Walze
+- Gewinnauswertung
+- Anzeige Gewinn (meistens 0)
+- Anzeige Münzspeicher
+- Aufbuchung Gewinn
+- Wenn Sonderspiele laufen, Auswertung des Tableaus
+- Wenn Sonderspiele laufen oder gewonnen wurden, Anzeige des Sonderspiele-Gewinns und -Zählers
+- Zurück zum Anfang
+
+Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-Zähler größer als 0 ist (also eine Serie gewonnen wurde oder schon läuft).
 
 ## Zufallszahlen im 2090
 
-Der Microtronic 2090 hat einen Befehl zur Ermittlung einer 3-stelligen hexadezimalen Zufallszahl - RND (F05). Faktisch wird dabei der Zählerstand eines internen Zählers zur Tastaturabfrage ausgelesen und in die Arbeitsregister D, E und F übertragen. Solange im Programm immer mal wieder auf eine Benutzereingabe mit KIN (FFd) gewartet wird, ist das auch kein Problem, da das nötige zufällige Element in der Dauer der Wartezeit auf den Benutzerfinger begründet liegt, mithin ist der Zufallswert hinreichend zufällig. Wenn aber das Programm automatisiert und ohne Benutzereingaben abläuft (und das soll der Spielautomat ja), dann ergibt sich das Problem, dass der interne Zähler und das Programm synchron laufen - wodurch sich immer wieder feste Folgen in der Abarbeitung des Programms ergeben. 
+Der Microtronic 2090 hat einen Befehl zur Ermittlung einer 3-stelligen hexadezimalen Zufallszahl - RND. Faktisch wird dabei der Zählerstand eines internen Zählers zur Tastaturabfrage ausgelesen und in die Arbeitsregister D, E und F übertragen. Solange im Programm immer mal wieder auf eine Benutzereingabe mit KIN gewartet wird, ist das auch kein Problem, da das nötige zufällige Element in der Dauer der Wartezeit auf den Benutzerfinger begründet liegt, mithin ist der Zufallswert hinreichend zufällig. Wenn aber das Programm automatisiert und ohne Benutzereingaben abläuft (und das soll der Spielautomat ja), dann ergibt sich das Problem, dass der interne Zähler und das Programm synchron laufen - wodurch sich immer wieder feste Folgen in der Abarbeitung des Programms ergeben. 
 
 Als kleiner Junge war mir dieser Zusammenhang übrigens nicht klar, und ich wunderte mich damals nur darüber, dass mein "Krieg der Sterne"-Programm mich deutlich öfter als theoretisch erwartet gewinnen ließ. 
 
