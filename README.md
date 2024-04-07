@@ -34,6 +34,8 @@ Wenn auf allen drei Walzen das gleiche Symbol (der gleiche Betrag) erscheint, da
 
 Was alle Spieler aber wollen, sind nicht die Geldgewinne, sondern Sonderspiele (eine _Serie_). Denn wie oben bereits erwähnt, ist in diesen Spielen die Gewinnerwartung deutlich höher. Sonderspiele gewinnt man durch die Kombination "König - König - König" (10 Sonderspiele) oder "Krone - König - Krone" (5 Sonderspiele). Wenn nacheinander links und rechts ein König erscheint, dann steigt die Spannung und man betet zu Fortuna, dass in der Mitte der Regent auch auftauchen möge. 
 
+![Monarch: Gewinnkombination für 10 Sonderspiele](/pics/monarch-vollbild.jpg)
+
 Während einer Serie wird jeder erzielte Gewinn auf 2 DM erhöht. Zusätzlich gewinnt jedes karierte Feld in der Mitte ebenfalls 2 DM (die Beträge 40 Pf, 2 DM und der König sind kariert hinterlegt). Insgesamt hat man also in jedem Sonderspiel eine mehr als 50%-ige Chance, 2 DM zu gewinnen - denn 5 von 10 Feldern sind kariert, dazu kommen die möglichen Gewinne durch Kombination.
 
 Wenn eine Serie läuft, dann kann sie verlängert werden. Wenn der Sonderspiele-Zähler auf der Position 10 steht und ein König in der Mitte erscheint, werden 10 zusätzliche Sonderspiele gegeben. Auf den Positionen 9 bis 2 jeweils 2 zusätzliche Sonderspiele, auf der Position 1 ganze 20 Sonderspiele. Auf Position 15 gibt es bei König in der Mitte sogar 50 Sonderspiele (davon träumen alle). Auf Position 14 werden 2 Sonderspiele gegeben (sodass man erneut die Chance auf den Großgewinn von 50 Sonderspielen bekommt). Die Sonderspiele 20 bis 1 zeigt der Monarch auf einem Leucht-Tableau an, die jeweilige Position leuchtet während des Spiels. Adrenalin pur.
