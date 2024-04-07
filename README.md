@@ -18,12 +18,6 @@ Wie gerne hätte ich damals (80er) auch so einen Automaten in meinem Zimmer geha
 
 Irgendwann reifte der kühne Plan: **Ich programmiere mir meinen Automaten selbst!**
 
-blabla
-
-Programmieren ist ein mühsames Geschäft
-
-Indirekte Adressierung, Felder, symbolische Links, Assembler für  
-
 ## Wen interessiert´s?
 
 Der Kreis derjenigen, die ebenfalls einen 2090 hatten (und womöglich noch haben), dürfte reichlich überschaubar sein. Bildet man dann noch die Schnittmenge mit Personen, die bei elektromechanischen Geldspielgeräten in Verzückung geraten, wäre eine Abschätzung der verbleibenden Interessengruppe etwa mit der Größe 1 zu beziffern - also bin ich wohl alleine :-) 
