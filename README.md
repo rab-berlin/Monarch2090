@@ -36,7 +36,7 @@ Das Gerät hat drei Walzen, links, rechts und in der Mitte. Zu Beginn jedes Spie
 
 ## Nachstarten
 
-Nachdem die linke Walze gestoppt hat, kann der Spieler entscheiden, ob ihm die angezeigten Symbole gefallen. Einige Sekunden lang leuchet dann eine Taste auf, mit der die linke Walze einmalig nachgestartet werden kann. 
+Nachdem die linke Walze gestoppt hat, kann der Spieler entscheiden, ob ihm die angezeigten Symbole gefallen. Einige Sekunden lang leuchet dann eine Taste auf, mit der die linke Walze einmalig pro Spiel nachgestartet werden kann. 
 
 ## Gewinnkombination
 
@@ -56,7 +56,11 @@ Die Sonderspiele 20 bis 1 zeigt der Monarch auf einem Leucht-Tableau an; die jew
 
 ## Wahrscheinlichkeiten
 
-Da jede Walze 10 Stellungen hat, erhält man durchschnittlich alle 500 Spiele eine Serie - linke Walze König oder Krone (2/10), rechte Walze passend dazu König oder Krone (1/10), mittlere Walze nur König, denn Krone gibt es in der Mitte nicht (1/10). Also 0,2 x 0,1 x 0,1 = 0,002 (= 1/500). Nutzt man konsequent die Nachstart-Möglichkeit der ersten Walze, wird die Wahrscheinlichkeit etwa verdoppelt - was aber dann auf Kosten der "Kleingewinne" geht.
+Da jede Walze 10 Stellungen hat, erhält man durchschnittlich alle 500 Spiele eine Serie - linke Walze König oder Krone (2/10), rechte Walze passend dazu König oder Krone (1/10), mittlere Walze nur König, denn Krone gibt es in der Mitte nicht (1/10). Also 0,2 x 0,1 x 0,1 = 0,002 (= 1/500). 
+
+## Strategie
+
+Nutzt man konsequent die Nachstart-Möglichkeit der ersten Walze, wird die Wahrscheinlichkeit für eine Serie etwa verdoppelt - was aber dann auf Kosten der "Kleingewinne" geht. 
 
 Jetzt aber wirklich mein Programm...
 
