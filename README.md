@@ -32,6 +32,10 @@ Zuvor aber: Wie funktioniert der Monarch?
 
 Das Gerät hat drei Walzen, links, rechts und in der Mitte. Zu Beginn jedes Spiels werden vom Guthabenspeicher 20 Pf Spieleinsatz abgezogen, danach beginnen alle Walzen sich zu drehen. Anschließend stoppen die Walzen nacheinander in der Reihenfolge "Links - Rechts - Mitte" und zeigen Gewinnsymbole: entweder einen Geldbetrag oder Krone bzw. König. Auf der linken und rechten Seite werden je zwei Symbole angezeigt, in der Mitte nur eins.
 
+## Nachstarten
+
+Nur die linke Walze kann einmalig nachgestartet werden. 
+
 ## Gewinnkombination
 
 Wenn auf allen drei Walzen das gleiche Symbol (der gleiche Betrag) erscheint, dann hat man gewonnen. Die Kombination 40 - 40 - 40 z.B. bedeutet 40 Pfennig Gewinn. Jede Kombination gleicher Symbole gewinnt - egal ob oben oder unten auf den äußeren Walzen. Der König auf der mittleren Walze funktioniert dabei als _Joker_, d.h. er ersetzt jedes notwendige Symbol für eine Gewinnkombination.
@@ -50,7 +54,7 @@ Die Sonderspiele 20 bis 1 zeigt der Monarch auf einem Leucht-Tableau an; die jew
 
 ## Wahrscheinlichkeiten
 
-Da jede Walze 10 Stellungen hat, erhält man durchschnittlich alle 500 Spiele eine Serie - linke Walze König oder Krone (2/10), rechte Walze passend dazu König oder Krone (1/10), mittlere Walze nur König, denn Krone gibt es in der Mitte nicht (1/10). Also 0,2 x 0,1 x 0,1 = 0,002 (= 1/500). Nutzt man konsequent die Nachstart-Möglichkeit der ersten Walze, 
+Da jede Walze 10 Stellungen hat, erhält man durchschnittlich alle 500 Spiele eine Serie - linke Walze König oder Krone (2/10), rechte Walze passend dazu König oder Krone (1/10), mittlere Walze nur König, denn Krone gibt es in der Mitte nicht (1/10). Also 0,2 x 0,1 x 0,1 = 0,002 (= 1/500). Nutzt man konsequent die Nachstart-Möglichkeit der ersten Walze, wird die Wahrscheinlichkeit etwa verdoppelt - was aber dann auf Kosten der "Kleingewinne" geht.
 
 Jetzt aber wirklich mein Programm...
 
