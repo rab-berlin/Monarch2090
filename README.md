@@ -18,7 +18,7 @@ Wie gerne hätte ich damals (80er) auch so einen Automaten in meinem Zimmer geha
 
 Irgendwann reifte der kühne Plan: **Ich programmiere mir meinen Automaten selbst!**
 
-Mit den mir damals zur Verügung stehenden Möglichkeiten (
+Mit den mir damals zur Verügung stehenden [Möglichkeiten](https://github.com/rab-berlin/Monarch2090/blob/main/README.md#Toolchain) hab ich das dann auch gemacht. 
 
 ## Wen interessiert´s?
 
