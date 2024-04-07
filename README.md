@@ -20,7 +20,7 @@ Irgendwann reifte der kühne Plan: **Ich programmiere mir meinen Automaten selbs
 
 ## Wen interessiert´s?
 
-Der Kreis derjenigen, die ebenfalls einen 2090 hatten (und womöglich noch haben), dürfte reichlich überschaubar sein. Bildet man dann noch die Schnittmenge mit Personen, die bei elektromechanischen Geldspielgeräten in Verzückung geraten, wäre eine Abschätzung der verbleibenden Interessengruppe etwa mit der Größe 1 zu beziffern - also bin ich wohl alleine :-) 
+Der Kreis derjenigen, die ebenfalls einen 2090 hatten (und womöglich noch haben), dürfte reichlich überschaubar sein. Bildet man dann noch die Schnittmenge mit Personen, die bei elektro-mechanischen Geldspielgeräten in Verzückung geraten, wäre eine Abschätzung der verbleibenden Interessengruppe etwa mit der Größe 1 zu beziffern - also bin ich wohl alleine :-) 
 
 Aber egal, andere lösen Kreuzworträtsel oder Sudoku. Es ist, was es ist, sagte die Liebe. Also hier nun mein Programm...
 
@@ -34,7 +34,7 @@ Das Gerät hat drei Walzen, links, rechts und in der Mitte. Zu Beginn jedes Spie
 
 ## Nachstarten
 
-Nur die linke Walze kann einmalig nachgestartet werden. 
+Nachdem die linke Walze gestoppt hat, kann der Spieler entscheiden, ob ihm die angezeigten Symbole gefallen. Einige Sekunden lang leuchet dann eine Taste auf, mit der die linke Walze einmalig nachgestartet werden kann. 
 
 ## Gewinnkombination
 
@@ -42,7 +42,7 @@ Wenn auf allen drei Walzen das gleiche Symbol (der gleiche Betrag) erscheint, da
 
 ## Sonderspiele (Serie)
 
-Was alle Spieler aber wollen, sind nicht die Geldgewinne, sondern Sonderspiele (eine _Serie_). Denn wie oben bereits erwähnt, ist in diesen Spielen die Gewinnerwartung deutlich höher. Sonderspiele gewinnt man durch die Kombination "König - König - König" (10 Sonderspiele) oder "Krone - König - Krone" (5 Sonderspiele). Wenn nacheinander links und rechts ein König erscheint, dann steigt die Spannung und man betet zu Fortuna, dass in der Mitte der Regent auch auftauchen möge. 
+Was alle Spieler aber wollen, sind nicht die "Kleingewinne" (dreimal der gleiche Betrag), sondern Sonderspiele (eine _Serie_). Denn wie oben bereits erwähnt, ist in diesen Spielen die Gewinnerwartung deutlich höher. Sonderspiele gewinnt man durch die Kombination "König - König - König" (10 Sonderspiele) oder "Krone - König - Krone" (5 Sonderspiele). Wenn nacheinander links und rechts ein König erscheint, dann steigt die Spannung und man betet zu Fortuna, dass in der Mitte der Regent auch auftauchen möge. 
 
 ![Monarch: Gewinnkombination für 10 Sonderspiele](/pics/monarch-vollbild.jpg)
 
