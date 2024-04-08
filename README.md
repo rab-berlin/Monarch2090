@@ -28,7 +28,7 @@ Aber egal, andere lösen Kreuzworträtsel oder Sudoku. Es ist, was es ist, sagte
 
 # Der Monarch
 
-Zuvor aber: [Wie funktioniert der Monarch?](...)
+Zuvor aber: [Wie funktioniert der Monarch?](documents/Monarch Technische Beschreibung.pdf)
 
 ## Walzen 
 
