@@ -28,7 +28,7 @@ Aber egal, andere lösen Kreuzworträtsel oder Sudoku. Es ist, was es ist, sagte
 
 # Der Monarch
 
-Zuvor aber: [Wie funktioniert der Monarch?](https://github/Monarch2090/documents/MonarchTechnischeBeschreibung.pdf)
+Zuvor aber: [Wie funktioniert der Monarch?](https://github/rab-berlin/Monarch2090/blob/main/documents/MonarchTechnischeBeschreibung.pdf)
 
 ## Walzen 
 
