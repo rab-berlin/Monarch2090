@@ -130,20 +130,24 @@ Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-
 
 Zu Beginn des Spiels wird also zunächst kurz der 4-stellige Münzspeicher angezeigt, von dem dann der Einsatz von 20 Pf abgezogen wird, z.B.
 ```
-0180 = Münzspeicher 1,80 DM
+0180			Münzspeicher 1,80 DM
 ```
 ```
-0160 = Münzspeicher 1,60 DM (nach Abzug des Spieleinsatzes von 20 Pf)
+0160			Münzspeicher 1,60 DM (nach Abzug des Spieleinsatzes von 20 Pf)
 ```
 
 Sollten aktuell Sonderspiele laufen, wird kurz der Sonderspiele-Zählerstand angezeigt (damit man z.B. weiß, ob gerade eine Verlängerungsmöglichkeit über das Tableau besteht). 
 ```
-16 = Sonderspiele-Zählerstand: 16 (Chance auf 50 Sonderspiele, wenn König in der Mitte erscheint!)
+16			Sonderspiele-Zählerstand: 16 (Chance auf 50 Sonderspiele, wenn König in der Mitte erscheint!)
 ```
 
 Anschließend werden die Walzen 5-stellig dargestellt - die linke Walze auf den linken beiden Stellen, die rechte auf den beiden rechten und die mittlere Walze in der Mitte
 ```
-C4F48 = links 1,60 DM und 40 Pf, rechts 40 Pf und 80 Pf, in der Mitte ein König - also wurden gerade 40 Pf gewonnen)
+			links		Mitte		rechts
+			------		-----		------
+			 1,60				 0,80
+C4 F 48					König
+			 0,40 				 0,40
 ```
 
 ## Zufall
