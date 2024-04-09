@@ -112,9 +112,9 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 
 1. Geldeinwurf
 2. Anzeige Münzspeicher
-3. Wenn kein Geld auf dem Münzspeicher war,
+3. Abbuchung 20 Pf Spieleinsatz
+4. Wenn kein Geld auf dem Münzspeicher war,
     - zurück zu Geldeinwurf
-4. Abbuchung 20 Pf Spieleinsatz
 5. Wenn Serie läuft,
     - Anzeige Sonderspiele-Zähler
 6. Anzeige der Walzen
