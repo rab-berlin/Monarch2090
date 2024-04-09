@@ -69,15 +69,15 @@ Da jede Walze 10 Stellungen hat, erhält man durchschnittlich alle 500 Spiele ei
 
 Nutzt man konsequent die Nachstart-Möglichkeit der ersten Walze, wird die Chance auf eine Serie etwa verdoppelt, weil man gezielt alles "wegdrückt", was kein König und keine Krone ist. Das geht dann aber auf Kosten der "Kleingewinne", mit denen man ja die Spieldauer am Automat verlängern könnte. Welche Strategie die bessere ist, mögen Wahrscheinlichkeits-Theoretiker mit ihren Rechenschiebern ausrechnen.  
 
-Jetzt aber wirklich mein Programm...
-
-## Assembler
+## Microtronic 2090
 
 Der Befehlssatz des 2090 ist nach allem, was ich bescheiden dazu sagen kann, wirklich durchdacht. Kudos an Jörg Vallen, den Vater des Microtronic, der das System im Rahmen seiner Diplomarbeit entscheidend mitentwickelt hatte. Man kann damit tatsächlich Programme schreiben, auch wenn man echt viel knobeln muss - und praktisch ständig mit den ganzen Sprungbefehlen GOTO, BRZ, BRC und CALL durcheinander kommt. Es ist zwar nicht _Programmieren auf dem blanken Metall_, aber es kommt dem schon recht nahe. 
 
 Besonders mühsam war es, Änderungen am Code vorzunehmen, weil alle danach erfolgenden Sprünge im Programm neue Zieladressen erhalten mussten. Eine Arbeit für jemanden, der Vater und Mutter erschlug. Also war es gute Praxis, an kritischen Stellen eine Menge von NOPs in den Code einzufügen, damit man später noch genug Platz für seine brillanten Ideen hatte. Reichlich Karopapier, Bleistift, Radiergummi und Schokolade waren unerlässlich für eine funktionierende [_Toolchain_](https://github.com/rab-berlin/Monarch2090/blob/main/README.md#Toolchain) :-P
 
 Es gab sogar einen Programmierwettbewerb, und später wurde auch ein kleines Büchlein ["Computerspiele"](https://github.com/lambdamikel/Busch-2090/blob/master/manuals/anl2094.pdf) veröffentlicht, in dem die jeweils mit 100 DM prämierten Programme zum Abtippen standen. Ich wollte auch teilnehmen, und ich schwör - ich hätte so abgeräumt und euch alle zerstört. Aber irgendwie hatte ich wohl vergessen, mein fantastisches Hammer-Programm abzuschicken. Keinen passenden Umschlag? Keine Briefmarke? Hier trübt sich meine Erinnerung...
+
+## Assembler 
 
 Inzwischen sind wir etwas weiter. Beim Programmieren stellte ich allerdings fest, dass mein Programm zunehmend unübersichtlich wurde, insbesondere wegen des notwendigen Gebotes zur Sparsamkeit im Programm- und Registerspeicher. Register mussten mehrfach belegt werden, Subroutinen wurden recycelt für verschiedene Zwecke usw. Der 2090 hat übrigens keine ["Von-Neumann-Architektur"](https://de.wikipedia.org/wiki/Von-Neumann-Architektur), sondern eine ["Harvard-Architektur"](https://de.wikipedia.org/wiki/Harvard-Architektur) - Programmspeicher und Datenspeicher sind getrennt. Gespart werden muss aber bei beiden. Wer den Microtronic kennt, weiß den Wert eines einzelnen Bytes noch zu schätzen. Wer das Byte nicht ehrt, ist des RAMs nicht wert... Zum Glück ist das meine Seite, deswegen darf ich so viel abschweifen wie ich möchte. Also noch eine völlig unbedeutende Anekdote an dieser Stelle: Für den ZX81 (1 KB RAM!) schrieb nach meiner Erinnerung seinerzeit jemand mal ein Schachprogramm. Gerüchtehalber lief es wohl, aber war natürlich vollkommen unlesbar. Naja, und auch nicht sehr stark...
 
