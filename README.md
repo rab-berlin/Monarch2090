@@ -111,7 +111,7 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 5. Anzeige der Walzen
 6. Ermittlung linke Walze
 7. Wenn Nachstart-Taste gedrückt wird,
-   - Zurück zu 6. Ermittlung linke Walze
+   - Zurück zu Ermittlung linke Walze (einmalig)
 9. Ermittlung rechte Walze
 10. Ermittlung mittlere Walze
 11. Gewinnauswertung
