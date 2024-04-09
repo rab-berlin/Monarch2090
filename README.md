@@ -133,7 +133,7 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 17. Wenn Sonderspiele laufen oder gerade gewonnen wurden,
     - Anzeige Sonderspiele-Gewinn
     - Aufbuchung Sonderspiele-Gewinn
-18. Zurück zum Anzeige Münzspeicher
+18. Zurück zum Anfang
 
 Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-Zähler größer als 0 ist (also eine Serie gewonnen wurde oder schon läuft). Ansonsten wechselt die Anzeige zu oft und die Darstellung verwirrt zu sehr.
 
