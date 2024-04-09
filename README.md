@@ -153,7 +153,6 @@ Display			Bedeutung
 ```
 
 Anschließend werden die Walzen 5-stellig auf dem Display dargestellt - die linke Walze auf den linken beiden Stellen, die rechte Walze auf den rechten beiden Stellen und die mittlere Walze dazwischen.
-
 ```
 Display			Bedeutung
 -------			----------------------------------------------------------------------------------------
@@ -167,7 +166,30 @@ Display			Bedeutung
 ```
 
 Entsprechend der o.a. Symboltabelle ergibt sich z.B. folgendes Bild:
+```
+Display			Bedeutung
+-------			----------------------------------------------------------------------------------------
 
+			links		Mitte		rechts
+			------		-----		------
+			 1,60				 -,80
+ C4D48					 2,-				(bei dieser Kombination nichts gewonnen)
+			 -,40 				 -,40
+```
+
+Ein Gewinn über eine dreifache Kombination des gleichen Betrags: 
+```
+Display			Bedeutung
+-------			----------------------------------------------------------------------------------------
+
+			links		Mitte		rechts
+			------		-----		------
+			 1,60				 -,80
+ C4448					-,40				(bei dieser Kombination: Gewinn 40 Pf)
+			 -,40 				 -,40
+```
+
+Das gleiche mit König (als Joker) in der Mitte:
 ```
 Display			Bedeutung
 -------			----------------------------------------------------------------------------------------
@@ -179,6 +201,17 @@ Display			Bedeutung
 			 -,40 				 -,40
 ```
 
+Und die meistbegehrte Gewinnkombination:
+```
+Display			Bedeutung
+-------			----------------------------------------------------------------------------------------
+
+			links		Mitte		rechts
+			------		-----		------
+			König				König
+ FDFDF					König				(bei dieser Kombination: 10 Sonderspiele)
+			 2,- 				 2,-
+```
 
 
 ## Zufall
