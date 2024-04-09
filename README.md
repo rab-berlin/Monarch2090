@@ -2,7 +2,7 @@
 
 Eine Simulation des legendären Spielautomaten [Rotomat Monarch](http://www.rd-b.de/html/wulff_rotomat_monarch.html) (1972) auf dem [Microtronic 2090](https://www.busch-modell.de/information/Microtronic-Computer.aspx) (1981)
 
-Das ist mir alles zu viel zu lesen ich will spielen! - Ok, dann solltest du nur die richtige Version eintippen (bzw. hochladen). 
+Das ist mir alles zu viel zu lesen, ich will spielen! - Ok, dann solltest du nur die richtige Version eintippen (bzw. hochladen):
 
 - Busch 2090 Busch: Wenn du einen "blanken" Microtronic hast, dann brauchst du eine Version, bei der du nach jedem Lauf einer Walze leider eine Taste drücken musst - sonst ist der Zufallsgenerator nicht zufällig genug. (noch in der Entwicklung)
 - Busch 2090 emuliert: Wenn du einen Emulator benutzt, dann hast du dieses Problem nicht; der Zufall ist gut genug. Dann schließt du einen roten Taster an Eingang 1 ein, das ist deine Taste zum Neustarten der linken Walze. (noch in der Entwicklung)
