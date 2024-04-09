@@ -135,13 +135,13 @@ Zu Beginn des Spiels wird also zunächst kurz der 4-stellige Münzspeicher angez
 Anzeige 2090		Bedeutung
 ------------		----------------------------------------------------------------------------------------
 
-0180			Münzspeicher 1,80 DM
+  0180			Münzspeicher 1,80 DM
 ```
 ```
 Anzeige 2090		Bedeutung
 ------------		---------------------------------------------------------------------------------------
 
-0160			Münzspeicher 1,60 DM 				(nach Abzug von 20 Pf Spieleinsatz)
+  0160			Münzspeicher 1,60 DM 				(nach Abzug von 20 Pf Spieleinsatz)
 ```
 
 Sollten aktuell Sonderspiele laufen, wird kurz der Sonderspiele-Zählerstand angezeigt (damit man z.B. weiß, ob gerade eine Verlängerungsmöglichkeit über das Tableau besteht). 
@@ -149,10 +149,24 @@ Sollten aktuell Sonderspiele laufen, wird kurz der Sonderspiele-Zählerstand ang
 Anzeige 2090		Bedeutung
 ------------		----------------------------------------------------------------------------------------
 
-16			Sonderspiele-Zählerstand: 16 			(Chance auf 50 Sonderspiele!)
+    16			Sonderspiele-Zählerstand: 16 			(Chance auf 50 Sonderspiele!)
 ```
 
 Anschließend werden die Walzen 5-stellig dargestellt - die linke Walze auf den linken beiden Stellen, die rechte auf den beiden rechten und die mittlere Walze in der Mitte. Entsprechend der o.a. Symboltabelle z.B.
+
+```
+Anzeige 2090		Bedeutung
+------------		----------------------------------------------------------------------------------------
+
+			links		Mitte		rechts
+			------		-----		------		(V = links oben - LO)
+			  V				  Z		(W = links unten - LU)
+ VWXYZ					  X				(X = Mitte - MI)
+			  W 				  Y		(Y = rechts unten - RU)
+									(Z = rechts oben - RO)
+```
+
+
 ```
 Anzeige 2090		Bedeutung
 ------------		----------------------------------------------------------------------------------------
@@ -160,7 +174,7 @@ Anzeige 2090		Bedeutung
 			links		Mitte		rechts
 			------		-----		------
 			 1,60				 -,80
-C4F48					König				(bei dieser Kombination: Gewinn 40 Pf)
+ C4F48					König				(bei dieser Kombination: Gewinn 40 Pf)
 			 -,40 				 -,40
 ```
 
