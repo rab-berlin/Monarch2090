@@ -52,7 +52,7 @@ Während einer Serie wird jeder erzielte Gewinn auf 2 DM erhöht. Zusätzlich ge
 
 ### Tableau
 
-Die Sonderspiele 20 bis 1 zeigt der Monarch auf einem Leucht-Tableau an; die jeweilige Position des Sonderspiele-Zählers leuchtet während des Spiels. Wenn eine Serie läuft, dann kann sie verlängert werden. Steht z.B. der Sonderspiele-Zähler auf der Position 10 und erscheint dann ein König in der Mitte, werden 10 zusätzliche Sonderspiele gegeben. Auf den Positionen 9 bis 2 jeweils 2 zusätzliche Sonderspiele, auf der Position 1 ganze 20 Sonderspiele. Auf Position 15 gibt es bei König in der Mitte sogar 50 Sonderspiele (davon träumen alle). Auf Position 14 werden 2 Sonderspiele gegeben (sodass man erneut die Chance auf den Großgewinn von 50 Sonderspielen bekommt). Adrenalin pur. 
+Die Sonderspiele 20 bis 1 zeigt der Monarch auf einem Leucht-Tableau an; die jeweilige Position des Sonderspiele-Zählers leuchtet während des Spiels. Wenn eine Serie läuft, dann kann sie verlängert werden. Steht z.B. der Sonderspiele-Zähler auf der Position 10 und erscheint dann ein König in der Mitte, werden 10 zusätzliche Sonderspiele gegeben. Auf den Positionen 9 bis 2 jeweils 2 zusätzliche Sonderspiele, auf der Position 1 ganze 20 Sonderspiele. Auf Position 16 gibt es bei König in der Mitte sogar 50 Sonderspiele (davon träumen alle). Auf Position 15 werden 2 Sonderspiele gegeben (sodass man erneut die Chance auf den Großgewinn von 50 Sonderspielen bekommt). Adrenalin pur. 
 
 ### Wahrscheinlichkeiten
 
