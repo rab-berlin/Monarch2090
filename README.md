@@ -2,12 +2,12 @@
 
 Eine Simulation des legendären Spielautomaten [Rotomat Monarch](http://www.rd-b.de/html/wulff_rotomat_monarch.html) (1972) auf dem [Microtronic 2090](https://www.busch-modell.de/information/Microtronic-Computer.aspx) (1981)
 
-Varianten (tbc)
+Das ist mir alles zu viel zu lesen ich will spielen! - Ok, dann solltest du nur die richtige Version eintippen (bzw. hochladen). 
 
-- Busch 2090 Busch
-- Busch 2090 emuliert
-- Busch 2090 und Arduino/Raspberry Pi
-- Busch 2090, 2075 und 2070
+- Busch 2090 Busch: Wenn du einen "blanken" Microtronic hast, dann brauchst du eine Version, bei der du nach jedem Lauf einer Walze leider eine Taste drücken musst - sonst ist der Zufallsgenerator nicht zufällig genug.
+- Busch 2090 emuliert: Wenn du einen Emulator benutzt, dann hast du dieses Problem nicht; der Zufall ist gut genug. Dann schließt du einen roten Taster an Eingang 1 ein, das ist deine Taste zum Neustarten der linken Walze.
+- Busch 2090 und Arduino/Raspberry Pi: Wenn dich das dauernde Gedrücke von Tasten nervt (so wie mich), dann brauchst du für einen guten Zufall einen Arduino oder Raspberry Pi. Verdrahtung und Sketch / Python-Programm weiter unten.
+- Busch 2090, 2075 und 2070: Wenn du auch den 2075 und den 2070 hast, dann erzeugen wir zufälligen Zufall mit Busch-Bordmitteln. Das ist die schönste Variante (aber noch in der Entwicklung).
 
 ## Was soll das Ganze?
 
@@ -139,7 +139,7 @@ Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-
 
 ## Display
 
-Zu Beginn des Spiels wird also zunächst kurz der 4-stellige Münzspeicher angezeigt, von dem dann der Einsatz von 20 Pf abgezogen wird, z.B.
+Zu Beginn eines Spiels wird der 4-stellige Münzspeicher angezeigt, von dem dann der Einsatz von 20 Pf abgezogen wird, z.B.
 ```
 Display			Bedeutung
 -------			----------------------------------------------------------------------------------------
@@ -186,7 +186,7 @@ Display			Bedeutung
 			 -,40 				 -,40
 ```
 
-Ein Gewinn über eine dreifache Kombination des gleichen Betrags: 
+Ein Gewinn über dreifache Kombination des gleichen Betrags: 
 ```
 Display			Bedeutung
 -------			----------------------------------------------------------------------------------------
