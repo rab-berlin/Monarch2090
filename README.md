@@ -132,31 +132,31 @@ Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-
 
 Zu Beginn des Spiels wird also zunächst kurz der 4-stellige Münzspeicher angezeigt, von dem dann der Einsatz von 20 Pf abgezogen wird, z.B.
 ```
-Anzeige 2090		Bedeutung
-------------		----------------------------------------------------------------------------------------
+Display			Bedeutung
+-------			----------------------------------------------------------------------------------------
 
   0180			Münzspeicher 1,80 DM
 ```
 ```
-Anzeige 2090		Bedeutung
-------------		---------------------------------------------------------------------------------------
+Display			Bedeutung
+-------			----------------------------------------------------------------------------------------
 
   0160			Münzspeicher 1,60 DM 				(nach Abzug von 20 Pf Spieleinsatz)
 ```
 
 Sollten aktuell Sonderspiele laufen, wird kurz der Sonderspiele-Zählerstand angezeigt (damit man z.B. weiß, ob gerade eine Verlängerungsmöglichkeit über das Tableau besteht). 
 ```
-Anzeige 2090		Bedeutung
-------------		----------------------------------------------------------------------------------------
+Display			Bedeutung
+-------			----------------------------------------------------------------------------------------
 
     16			Sonderspiele-Zählerstand: 16 			(Chance auf 50 Sonderspiele!)
 ```
 
-Anschließend werden die Walzen 5-stellig dargestellt - die linke Walze auf den linken beiden Stellen, die rechte auf den beiden rechten und die mittlere Walze in der Mitte. Entsprechend der o.a. Symboltabelle z.B.
+Anschließend werden die Walzen 5-stellig auf dem Display dargestellt - die linke Walze auf den linken beiden Stellen, die rechte Walze auf den rechten beiden Stellen und die mittlere Walze dazwischen.
 
 ```
-Anzeige 2090		Bedeutung
-------------		----------------------------------------------------------------------------------------
+Display			Bedeutung
+-------			----------------------------------------------------------------------------------------
 
 			links		Mitte		rechts
 			------		-----		------		(V = links oben - LO)
@@ -166,10 +166,11 @@ Anzeige 2090		Bedeutung
 									(Z = rechts oben - RO)
 ```
 
+Entsprechend der o.a. Symboltabelle ergibt sich z.B. folgendes Bild:
 
 ```
-Anzeige 2090		Bedeutung
-------------		----------------------------------------------------------------------------------------
+Display			Bedeutung
+-------			----------------------------------------------------------------------------------------
 
 			links		Mitte		rechts
 			------		-----		------
