@@ -144,7 +144,7 @@ Display			Bedeutung
   0160			Münzspeicher 1,60 DM 				(nach Abzug von 20 Pf Spieleinsatz)
 ```
 
-Sollten aktuell Sonderspiele laufen, wird kurz der Sonderspiele-Zählerstand angezeigt (damit man z.B. weiß, ob gerade eine Verlängerungsmöglichkeit über das Tableau besteht). 
+Sollte aktuell eine Serie laufen, wird kurz der Sonderspiele-Zählerstand angezeigt (damit man z.B. weiß, ob gerade eine Verlängerungsmöglichkeit über das Tableau besteht). 
 ```
 Display			Bedeutung
 -------			----------------------------------------------------------------------------------------
@@ -173,7 +173,7 @@ Display			Bedeutung
 			links		Mitte		rechts
 			------		-----		------
 			 1,60				 -,80
- C4D48					 2,-				(bei dieser Kombination nichts gewonnen)
+ C4D48					 2,-				(nichts gewonnen)
 			 -,40 				 -,40
 ```
 
@@ -185,7 +185,7 @@ Display			Bedeutung
 			links		Mitte		rechts
 			------		-----		------
 			 1,60				 -,80
- C4448					-,40				(bei dieser Kombination: Gewinn 40 Pf)
+ C4448					-,40				(Gewinn 40 Pf)
 			 -,40 				 -,40
 ```
 
@@ -197,7 +197,7 @@ Display			Bedeutung
 			links		Mitte		rechts
 			------		-----		------
 			 1,60				 -,80
- C4F48					König				(bei dieser Kombination: Gewinn 40 Pf)
+ C4F48					König				(Gewinn 40 Pf)
 			 -,40 				 -,40
 ```
 
@@ -209,7 +209,7 @@ Display			Bedeutung
 			links		Mitte		rechts
 			------		-----		------
 			König				König
- FDFDF					König				(bei dieser Kombination: 10 Sonderspiele)
+ FDFDF					König				(Gewinn 2 DM und 10 Sonderspiele)
 			 2,- 				 2,-
 ```
 
