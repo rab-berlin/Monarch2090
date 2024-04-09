@@ -112,15 +112,15 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 
 1. Geldeinwurf
 2. Anzeige Münzspeicher
-3. Abbuchung 20 Pf Spieleinsatz
-4. Wenn kein Geld auf dem Münzspeicher
-     - zurück zu Geldeinwurf
+3. Wenn kein Geld auf dem Münzspeicher war,
+    - zurück zu Geldeinwurf
+4. Abbuchung 20 Pf Spieleinsatz
 5. Wenn Serie läuft,
-     - Anzeige Sonderspiele-Zähler
+    - Anzeige Sonderspiele-Zähler
 6. Anzeige der Walzen
 7. Ermittlung linke Walze
 8. Wenn Nachstart-Taste gedrückt wird,
-     - zurück zu Ermittlung linke Walze (einmalig)
+    - zurück zu Ermittlung linke Walze (einmalig)
 9. Ermittlung rechte Walze
 10. Ermittlung mittlere Walze
 11. Gewinnauswertung Betrag-Kombination
@@ -128,11 +128,11 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 13. Anzeige Münzspeicher
 14. Aufbuchung Gewinn
 15. Wenn Sonderspiele laufen,
-      - Auswertung Verlängerungs-Tableau
+    - Auswertung Verlängerungs-Tableau
 16. Gewinnauswertung Sonderspiele-Kombination
 17. Wenn Sonderspiele laufen oder gerade gewonnen wurden,
-      - Anzeige Sonderspiele-Gewinn
-      - Aufbuchung Sonderspiele-Gewinn
+    - Anzeige Sonderspiele-Gewinn
+    - Aufbuchung Sonderspiele-Gewinn
 18. Zurück zum Anzeige Münzspeicher
 
 Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-Zähler größer als 0 ist (also eine Serie gewonnen wurde oder schon läuft). Ansonsten wechselt die Anzeige zu oft und die Darstellung verwirrt zu sehr.
