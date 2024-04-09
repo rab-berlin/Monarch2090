@@ -141,14 +141,16 @@ Sollten aktuell Sonderspiele laufen, wird kurz der Sonderspiele-Zählerstand ang
 16			Sonderspiele-Zählerstand: 16 (Chance auf 50 Sonderspiele, wenn König in der Mitte erscheint!)
 ```
 
-Anschließend werden die Walzen 5-stellig dargestellt - die linke Walze auf den linken beiden Stellen, die rechte auf den beiden rechten und die mittlere Walze in der Mitte
+Anschließend werden die Walzen 5-stellig dargestellt - die linke Walze auf den linken beiden Stellen, die rechte auf den beiden rechten und die mittlere Walze in der Mitte. Entsprechend der o.a. Symboltabelle z.B.
 ```
 			links		Mitte		rechts
 			------		-----		------
-			 1,60				 0,80
-C4 F 48					König
-			 0,40 				 0,40
+			 1,60				 -,80
+C4F48					König						(bei dieser Kombination würden also 40 Pf gewonnen werden)
+			 -,40 				 -,40
 ```
+
+
 
 ## Zufall
 
