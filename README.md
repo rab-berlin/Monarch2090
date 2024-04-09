@@ -2,6 +2,13 @@
 
 Eine Simulation des legendären Spielautomaten [Rotomat Monarch](http://www.rd-b.de/html/wulff_rotomat_monarch.html) (1972) auf dem [Microtronic 2090](https://www.busch-modell.de/information/Microtronic-Computer.aspx) (1981)
 
+Varianten (tbc)
+
+- Busch 2090 Busch
+- Busch 2090 emuliert
+- Busch 2090 und Arduino/Raspberry Pi
+- Busch 2090, 2075 und 2070
+
 ## Was soll das Ganze?
 
 I.
