@@ -146,7 +146,7 @@ Anschließend werden die Walzen 5-stellig dargestellt - die linke Walze auf den 
 			links		Mitte		rechts
 			------		-----		------
 			 1,60				 -,80
-C4F48					König						(bei dieser Kombination würden also 40 Pf gewonnen werden)
+C4F48					König				(bei dieser Kombination würden also 40 Pf gewonnen werden)
 			 -,40 				 -,40
 ```
 
