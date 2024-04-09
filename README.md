@@ -6,7 +6,7 @@ Das ist mir alles zu viel zu lesen, ich will spielen! - Ok, dann solltest du nur
 
 - Busch 2090 Busch: Wenn du einen "blanken" Microtronic hast, dann brauchst du eine Version, bei der du nach jedem Lauf einer Walze leider eine Taste drücken musst - sonst ist der Zufallsgenerator nicht zufällig genug. (noch in der Entwicklung)
 - Busch 2090 emuliert: Wenn du einen Emulator benutzt, dann hast du dieses Problem nicht; der Zufall ist gut genug. Dann schließt du einen roten Taster an Eingang 1 ein, das ist deine Taste zum Neustarten der linken Walze. (noch in der Entwicklung)
-- Busch 2090 und Arduino/Raspberry Pi: Wenn dich das dauernde Gedrücke von Tasten nervt (so wie mich), dann brauchst du für einen guten Zufall einen Arduino oder Raspberry Pi. Schaltplan und Sketch / Python-Programm weiter unten.
+- Busch 2090 und Arduino/Raspberry Pi: Wenn dich das dauernde Gedrücke von Tasten nervt (so wie mich), dann brauchst du für einen guten Zufall einen Arduino oder Raspberry Pi. Schaltplan und Sketch bzw. Python-Programm weiter unten.
 - Busch 2090, 2075 und 2070: Wenn du auch den 2075 und den 2070 hast, dann erzeugen wir zufälligen Zufall mit reinen Busch-Bordmitteln. Das ist die schönste Variante. (aber auch noch in der Entwicklung)
 
 ## Was soll das Ganze?
