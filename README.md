@@ -128,12 +128,18 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 
 Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-Zähler größer als 0 ist (also eine Serie gewonnen wurde oder schon läuft). Ansonsten wechselt die Anzeige zu oft und die Darstellung verwirrt zu sehr.
 
+## Display
+
 Zu Beginn des Spiels wird also zunächst kurz der 4-stellige Münzspeicher angezeigt, von dem dann der Einsatz von 20 Pf abgezogen wird, z.B.
 ```
 Anzeige 2090		Bedeutung
-------------		---------------------------------------------------------------------------------------------
+------------		----------------------------------------------------------------------------------------
 
 0180			Münzspeicher 1,80 DM
+```
+```
+Anzeige 2090		Bedeutung
+------------		---------------------------------------------------------------------------------------
 
 0160			Münzspeicher 1,60 DM 				(nach Abzug von 20 Pf Spieleinsatz)
 ```
@@ -141,7 +147,7 @@ Anzeige 2090		Bedeutung
 Sollten aktuell Sonderspiele laufen, wird kurz der Sonderspiele-Zählerstand angezeigt (damit man z.B. weiß, ob gerade eine Verlängerungsmöglichkeit über das Tableau besteht). 
 ```
 Anzeige 2090		Bedeutung
-------------		---------------------------------------------------------------------------------------------
+------------		----------------------------------------------------------------------------------------
 
 16			Sonderspiele-Zählerstand: 16 			(Chance auf 50 Sonderspiele!)
 ```
@@ -149,7 +155,7 @@ Anzeige 2090		Bedeutung
 Anschließend werden die Walzen 5-stellig dargestellt - die linke Walze auf den linken beiden Stellen, die rechte auf den beiden rechten und die mittlere Walze in der Mitte. Entsprechend der o.a. Symboltabelle z.B.
 ```
 Anzeige 2090		Bedeutung
-------------		---------------------------------------------------------------------------------------------
+------------		----------------------------------------------------------------------------------------
 
 			links		Mitte		rechts
 			------		-----		------
