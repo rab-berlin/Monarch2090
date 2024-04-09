@@ -36,7 +36,7 @@ Das Gerät hat drei Walzen, links, rechts und in der Mitte. Zu Beginn jedes Spie
 
 ### Nachstarten
 
-Nachdem die linke Walze gestoppt hat, kann der Spieler entscheiden, ob ihm die angezeigten Symbole gefallen. Einige Sekunden lang leuchet dann eine Taste auf, mit der die linke Walze einmalig pro Spiel nachgestartet werden kann. 
+Nachdem die linke Walze gestoppt hat, kann der Spieler entscheiden, ob ihm die angezeigten Symbole gefallen. Einige Sekunden lang leuchet dann eine Taste auf, mit der die linke Walze einmalig pro Spiel nochmal gestartet werden kann. 
 
 ### Gewinnkombination
 
