@@ -31,7 +31,7 @@ Mit den mir damals zur Verfügung stehenden [Möglichkeiten](https://github.com/
 
 Der Kreis derjenigen, die ebenfalls einen 2090 hatten (und womöglich noch haben), dürfte reichlich überschaubar sein. Bildet man dann noch die Schnittmenge mit Personen, die bei elektro-mechanischen Geldspielgeräten in Verzückung geraten, wäre eine Abschätzung der verbleibenden Interessengruppe etwa mit der Größe 1 zu beziffern - also bin ich wohl alleine :-) 
 
-Aber egal, andere lösen Kreuzworträtsel oder Sudoku. Es ist, was es ist, sagte die Liebe. Also hier nun mein Programm...
+Aber egal, andere lösen Kreuzworträtsel oder Sudoku. Es ist, was es ist, sagte die Liebe.
 
 ## Der Monarch
 
@@ -67,7 +67,7 @@ Da jede Walze 10 Stellungen hat, erhält man durchschnittlich alle 500 Spiele ei
 
 ### Strategie
 
-Nutzt man konsequent die Nachstart-Möglichkeit der ersten Walze, wird die Wahrscheinlichkeit für eine Serie etwa verdoppelt - was aber dann auf Kosten der "Kleingewinne" geht. 
+Nutzt man konsequent die Nachstart-Möglichkeit der ersten Walze, wird die Chance auf eine Serie etwa verdoppelt, weil man gezielt alles "wegdrückt", was kein König und keine Krone ist. Das geht dann aber auf Kosten der "Kleingewinne", mit denen man ja die Spieldauer am Automat verlängern könnte. Welche Strategie die bessere ist, mögen Wahrscheinlichkeits-Theoretiker mit ihren Rechenschiebern ausrechnen.  
 
 Jetzt aber wirklich mein Programm...
 
