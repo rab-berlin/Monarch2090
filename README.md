@@ -111,21 +111,40 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 5. Anzeige der Walzen
 6. Ermittlung linke Walze
 7. Wenn Nachstart-Taste gedrückt wird,
-   - Zurück zu Ermittlung linke Walze (einmalig)
+   - zurück zu Ermittlung linke Walze (einmalig)
 9. Ermittlung rechte Walze
 10. Ermittlung mittlere Walze
-11. Gewinnauswertung
+11. Gewinnauswertung Betrag-Kombination
 12. Anzeige Gewinn (meistens 0)
 13. Anzeige Münzspeicher
 14. Aufbuchung Gewinn
-15. Wenn Sonderspiele laufen
+15. Wenn Sonderspiele laufen,
      - Auswertung Verlängerungs-Tableau
-16. Wenn Sonderspiele laufen oder gewonnen,
+15. Gewinnauswertung Sonderspiele-Kombination
+16. Wenn Sonderspiele laufen oder gerade gewonnen wurden,
      - Anzeige Sonderspiele-Gewinn
      - Aufbuchung Sonderspiele-Gewinn
 17. Zurück zum Anfang
 
-Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-Zähler größer als 0 ist (also eine Serie gewonnen wurde oder schon läuft).
+Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-Zähler größer als 0 ist (also eine Serie gewonnen wurde oder schon läuft). Ansonsten wechselt die Anzeige zu oft und die Darstellung verwirrt zu sehr.
+
+Zu Beginn des Spiels wird also zunächst kurz der 4-stellige Münzspeicher angezeigt, von dem dann der Einsatz von 20 Pf abgezogen wird, z.B.
+```
+0180 = Münzspeicher 1,80 DM
+```
+```
+0160 = Münzspeicher 1,60 DM (nach Abzug des Spieleinsatzes von 20 Pf)
+```
+
+Sollten aktuell Sonderspiele laufen, wird kurz der Sonderspiele-Zählerstand angezeigt (damit man z.B. weiß, ob gerade eine Verlängerungsmöglichkeit über das Tableau besteht). 
+```
+16 = Sonderspiele-Zählerstand: 16 (Chance auf 50 Sonderspiele, wenn König in der Mitte erscheint!)
+```
+
+Anschließend werden die Walzen 5-stellig dargestellt - die linke Walze auf den linken beiden Stellen, die rechte auf den beiden rechten und die mittlere Walze in der Mitte
+```
+C4F48 = links 1,60 DM und 40 Pf, rechts 40 Pf und 80 Pf, in der Mitte ein König - also wurden gerade 40 Pf gewonnen)
+```
 
 ## Zufall
 
