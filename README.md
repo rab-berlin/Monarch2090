@@ -39,11 +39,11 @@ Zuvor aber: [Wie funktioniert der Monarch?](https://github.com/rab-berlin/Monarc
 
 ### Guthabenspeicher (Münzspeicher)
 
-Das verbliebene Guthaben wird über ein Zählwerk im oberen Teil des Automaten angezeigt.
+Das Guthaben in DM und Pf wird über ein Zählwerk im oberen Teil des Automaten angezeigt.
 
 ![Monarch: Münzspeicher](/pics/münzspeicher.jpg)
 
-Unterhalb des Münzspeichers befindet sich ein schwarzer Rückgabeknopf, über den man sich sein Guthaben (sehr geräuschvoll) auszahlen lassen kann.
+Unterhalb des Münzspeichers befindet sich ein schwarzer Rückgabeknopf, über den man sich sein Guthaben - sehr geräuschvoll - auszahlen lassen kann.
 
 ### Walzen 
 
