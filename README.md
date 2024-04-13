@@ -57,6 +57,10 @@ Zu Beginn jedes Spiels werden vom Guthabenspeicher 20 Pf Spieleinsatz abgezogen,
 
 Nachdem die linke Walze gestoppt hat, kann der Spieler entscheiden, ob ihm die angezeigten Symbole gefallen. Einige Sekunden lang leuchet dann eine Taste auf, mit der die linke Walze einmalig pro Spiel nochmal gestartet werden kann. 
 
+![Monarch: Start-Stop-Taste](/pics/taste.jpg)
+
+Mit dieser Taste können auch rechte und mittlere Walze manuell gestoppt werden, wenn sie erleuchtet ist.
+
 ### Gewinnkombination
 
 Wenn auf allen drei Walzen das gleiche Symbol (der gleiche Betrag) erscheint, dann hat man gewonnen. Die Kombination 40 - 40 - 40 z.B. bedeutet 40 Pfennig Gewinn. Jede Kombination gleicher Symbole gewinnt - egal ob oben oder unten auf den äußeren Walzen. Der König auf der mittleren Walze funktioniert dabei als _Joker_, d.h. er ersetzt jedes notwendige Symbol für eine Gewinnkombination.
