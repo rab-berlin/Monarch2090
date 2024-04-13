@@ -224,6 +224,31 @@ Display			Bedeutung
 			 2,- 				 2,-
 ```
 
+Nach der Walzenanzeige erfolgt eine interne Auswertung der Kombinationen, und der (mögliche) Gewinn wird 3-stellig angezeigt:
+```
+Display			Bedeutung
+-------			----------------------------------------------------------------------------------------
+
+   000			nichts gewonnen
+```
+```
+Display			Bedeutung
+-------			----------------------------------------------------------------------------------------
+
+   140			1,40 DM gewonnen
+```
+
+Danach wird wieder der Münzspeicher 4-stellig angezeigt und eventuell der Gewinn aufgebucht.
+
+Sollte aktuell eine Serie laufen oder gewonnen worden sein, werden die gewonnenen Sonderspiele 2-stellig angezeigt (und anschließend intern aufgebucht): 
+```
+Display			Bedeutung
+-------			----------------------------------------------------------------------------------------
+
+    05			5 Sonderspiele gewonnen
+```
+
+Anschließend zeigt das Programm wieder den 4-stelligen Münzspeicher und kehrt zum Anfang eines neuen Spiels zurück.
 
 ## Zufall
 
