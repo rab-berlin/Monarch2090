@@ -37,9 +37,21 @@ Aber egal, andere lösen Kreuzworträtsel oder Sudoku. Es ist, was es ist, sagte
 
 Zuvor aber: [Wie funktioniert der Monarch?](https://github.com/rab-berlin/Monarch2090/blob/main/documents/MonarchTechnischeBeschreibung.pdf)
 
+### Guthabenspeicher (Münzspeicher)
+
+Das verbliebene Guthaben wird über ein Zählwerk im oberen Teil des Automaten angezeigt.
+
+![Monarch: Münzspeicher](/pics/münzspeicher.jpg)
+
+Unterhalb des Münzspeichers befindet sich ein schwarzer Rückgabeknopf, über den man sich sein Guthaben (sehr geräuschvoll) auszahlen lassen kann.
+
 ### Walzen 
 
-Das Gerät hat drei Walzen, links, rechts und in der Mitte. Zu Beginn jedes Spiels werden vom Guthabenspeicher 20 Pf Spieleinsatz abgezogen, danach beginnen alle Walzen sich zu drehen. Anschließend stoppen die Walzen nacheinander in der Reihenfolge "Links - Rechts - Mitte" und zeigen Gewinnsymbole: entweder einen Geldbetrag oder Krone bzw. König. Auf der linken und rechten Seite werden je zwei Symbole angezeigt, in der Mitte nur eins.
+Das Gerät hat drei Walzen, links, rechts und in der Mitte. 
+
+![Monarch: Walzen](/pics/walzen.jpg)
+
+Zu Beginn jedes Spiels werden vom Guthabenspeicher 20 Pf Spieleinsatz abgezogen, danach beginnen alle Walzen sich zu drehen. Anschließend stoppen die Walzen nacheinander in der Reihenfolge "Links - Rechts - Mitte" und zeigen Gewinnsymbole: entweder einen Geldbetrag oder Krone bzw. König. Auf der linken und rechten Seite werden je zwei Symbole angezeigt, in der Mitte nur eins.
 
 ### Nachstarten
 
