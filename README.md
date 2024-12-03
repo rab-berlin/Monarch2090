@@ -446,7 +446,7 @@ Juhuu, eine Instruktion eingespart. Im Kopf können wir nicht so gut F von einem
 
 Wir ziehen regelmäßig 20 Pf bzw. 1 Spiel von den Speichern für Geld und Sonderspiele ab. Wie können wir dann erkennen, ob einer von diesen Speichern leer ist? Denn dann müsste der Automat ja anhalten bzw. den Sonderspiele-Status zurücksetzen. Natürlich könnte ich alle 3 Register D-F einzeln auf Null testen in einer verschachtelten CMPI-Konstruktion... Aber wie viele Instruktionen das wieder kosten würde! :-(
 
-Es wird einfach die übliche Vor-dem-Spiel-Subtraktion erneut ausgeführt. Wenn einer dieser Speicher leer ist (also 0), dann entsteht durch die Subtraktion ein Wert "Fxx", also steht anschließend definitiv im Register F der Wert F. Und nur auf diesen müssen wir anschließedn testen, um zu erkennen, dass der Speicher leer ist/war.  
+Es wird einfach die übliche Vor-dem-Spiel-Subtraktion erneut ausgeführt. Wenn einer dieser Speicher leer ist (also 0), dann entsteht durch die Subtraktion ein Wert "Fxx", also steht anschließend definitiv im Register F der Wert F. Und nur auf diesen müssen wir anschließend testen, um zu erkennen, dass der Speicher leer ist/war.  
 
 Nun, da das Problem der Nullerkennung gelöst ist, bleibt noch das Aufräumen in den Speichern. Immerhin steht da ja hexadezimal irgendwas mit Fxx drin (über 380 DM). Man könnte alles wieder mit MOVI #0 löschen. Ist das nötig? 
 
