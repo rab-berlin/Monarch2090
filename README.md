@@ -395,6 +395,8 @@ Zunächst hatte ich für Addition und Subtraktion - schön ordentlich und strukt
 
 Die erste Entscheidung war: Ich halte alles hexadezimal in den Registern und wandele es nur bei Bedarf, also für die Anzeige, in Dezimalwerte um. Dazu stehen im Befehlssatz erfreulicherweise zwei formschöne Instruktionen zur Verfügung: HXDZ und DZHX, die den Inhalt der Register D bis F jeweils umrechnen. Damit war auch klar, dass der _Münzspeicher_ in den Registern D bis F residieren wird, denn dadurch konnte ich die vielen MOV-Befehle sparen, mit denen ich sonst Werte in den Registern hätte hin- und herschieben müssen. 
 
+So entstand diese Routine, die den Inhalt D-F konvertiert und eine Zeitlang anzeigt.
+
 ```
 Anzeige		HXDZ				Konvertierung in Dez
 		MOVI #F,ZÄHLER	
@@ -405,15 +407,20 @@ pauseEnde	DZHX				Konvertierung in Hex
 		RET				
 ```
 
-Aber ich habe ja nicht nur den 3-stelligen Münzspeicher, sondern auch den _Sonderspiele-Zähler_... Wohin damit? Ich müsste den ja temporär in die Register D-F schieben, damit Umrechnung und Anzeige erfolgen können. Schon wieder jede Menge MOVes :-( 
+Aber ich habe ja nicht nur den 3-stelligen Münzspeicher, sondern auch den _Sonderspiele-Zähler_... Wohin damit? Ich müsste den ja temporär in die Register D-F schieben, damit HEX-Konvertierung und Anzeige erfolgen können. Schon wieder jede Menge MOVes :-( 
 
 Neben den 16 Arbeitsregistern gibt es beim Microtronic noch 16 Speicherregister. Spricht irgendwas dagegen, die Sonderspiele (die man meistens sowieso nicht hat), im "Schatten", also in den **Speicher**registern D-F zu halten und diese bei Bedarf zur Anzeige oder Berechnung einfach elegant einzublenden mit dem Befehl EXRM, der praktischerweise in einem Rutsch alle Arbeitsregister 8-F mit den entsprechenden Speicherregistern 8-F tauscht? Nein? Spart viel "Schiebung", also ist das so beschlossen.
 
-Wie oben beschrieben, werden Münzspeicher und Sonderspiele-Zähler vor und nach dem Walzenlauf verändert. Manchmal muss addiert, manchmal subtrahiert werden. Der jeweilige Betrag wird in den sog. Delta-Registern abgelegt. Zumeist geschieht diese Berechnung ohne Anzeige, aber wenigstens einen erzielten Gewinn würde der Spieler gerne angezeigt sehen, bevor er verbucht wird. 
+Einsätze und Gewinne, die ab- oder aufzubuchen sind, müssen auch in irgendwelche Register, wir nennen diese einfach mal _Delta-Register_. Zumeist geschieht diese Berechnung ohne Anzeige, aber wenigstens einen erzielten Gewinn würde der Spieler gerne angezeigt sehen, bevor er verbucht wird. Aber die Arbeits- und Speicherregister D-F sind schon belegt... :-(
 
-Zum Glück gibt es EXRA, den Befehl, mit dem in einem Rutsch alle Speicherregister von 0-7 mit denen von 8-F getauscht werden. Dann kann die Spart viel "Schiebung", dann müssten die Delta-Register also notwendigerweise in die Register 5 bis 7... Hmmm... Check.
+Zum Glück gibt es EXRA, den Befehl, mit dem in einem Rutsch alle Speicherregister von 0-7 mit denen von 8-F getauscht werden. Dann kann die oben entwickelte "hexadezimal konvertierende Anzeige-Warteschleife" auch für die Gewinnanzeige recycelt werden. Spart viel "Schiebung", also müssen die Delta-Register notwendigerweise in die Register 5-7 gelegt werden, damit sie nach EXRA in D, E und F landen... Hmmm... Check.
 
-Mir war noch vage von der Uni in Erinnerung, dass binäre Subtraktion ja auch nichts anderes als Addition mit der Inversen des Subtrahenden plus 1 ist. Wer´s nicht glaubt, prüft es nach. Also konnte ich die Rechen-Routinen zu einer einzigen zusammenfassen; es wird nur addiert. Da nur zwei feste Werte (20 Pf, 1 Spiel) ggf. zu subtrahieren sind, konnte ich diese im Programm "fest verdrahten" (die Werte FFE und FFF werden _subtraddiert_<sup>TM</sup>). Insgesamt wurde dadurch das _Rechenwerk_ des Monarchen angenehm schlank und viele Programmschritte wurden eingespart. Ob das Programm dadurch auch übersichtlicher wurde, darf allerdings bezweifelt werden.
+## Der König ~~tanzt~~ rechnet... 
+
+Mir war noch vage von der Uni in Erinnerung, dass binäre Subtraktion ja auch nichts anderes als Addition mit der Inversen des Subtrahenden plus 1 ist. Wer´s nicht glaubt, prüft es nach. Also konnte ich die Rechen-Routinen zu einer einzigen zusammenfassen; es wird nur addiert. Da nur zwei feste Werte (20 Pf, 1 Spiel) ggf. zu subtrahieren sind, konnte ich diese im Programm "fest verdrahten" (die Werte FFE und FFF werden _subtraddiert_<sup>TM</sup>). Insgesamt wurde dadurch das _Rechenwerk_ des Monarchen angenehm schlank und viele Programmschritte wurden eingespart.
+
+- Soll subtrahiert werden, wird nur das Delta-Register D mit dem Wert E oder F vorbelegt (E für -2, F für -1) und zur Adresse _DeltaSub_ gesprungen. 
+- Soll addiert werden, wird in den Delta-Registern D und E der zu addierende Wert hinterlegt und zur Adresse _DeltaAdd_ gesprungen.
 
 ```
 DeltaSub	MOVI #F,DELTA_E			Einsprungadresse für Subtraktion (Addition mit invertiertem HEX-Wert + 1)
