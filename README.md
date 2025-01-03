@@ -148,7 +148,7 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 9. Ermittlung rechte Walze
 10. Ermittlung mittlere Walze
 11. Gewinnauswertung Betrag-Kombination
-12. Anzeige Gewinn (meistens 0)
+12. Anzeige Gewinn (meistens 0) und ggf. Ton
 13. Aufbuchung Gewinn
 14. Wenn Sonderspiele laufen,
     - Auswertung Verlängerungs-Tableau
@@ -416,6 +416,8 @@ Einsätze und Gewinne, die ab- oder aufzubuchen sind, müssen auch in irgendwelc
 Zum Glück gibt es EXRA, den Befehl, mit dem in einem Rutsch alle Speicherregister von 0-7 mit denen von 8-F getauscht werden. Dann kann die oben entwickelte "hexadezimal konvertierende Anzeige-Warteschleife" auch für die Gewinnanzeige recycelt werden. Spart viel "Schiebung", also müssen die Delta-Register notwendigerweise in die Register 5-7 gelegt werden, damit sie nach EXRA in D, E und F landen... Hmmm... Check.
 
 ## Der König ~~tanzt~~ rechnet... 
+
+Nachdem die Entscheidung, die Werte intern hexadezimal zu speichern und berechnen, gefallen war, blieb die Frage: Wie sollen die Routinen für Addition und Subtraktion dann aussehen? Brauche ich jeweils eigene Unterprogramme für Plus und Minus?
 
 Mir war noch vage von der Uni in Erinnerung, dass binäre Subtraktion ja auch nichts anderes als Addition mit der Inversen des Subtrahenden plus 1 ist. Wer´s nicht glaubt, prüft es nach. Also konnte ich die Rechen-Routinen zu einer einzigen zusammenfassen; es wird nur addiert. Da nur zwei feste Werte (20 Pf, 1 Spiel) ggf. zu subtrahieren sind, konnte ich diese im Programm "fest verdrahten" (die Werte FFE und FFF werden _subtraddiert_<sup>TM</sup>). Insgesamt wurde dadurch das _Rechenwerk_ des Monarchen angenehm schlank und viele Programmschritte wurden eingespart.
 
