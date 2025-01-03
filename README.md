@@ -413,11 +413,11 @@ Neben den 16 Arbeitsregistern gibt es beim Microtronic noch 16 Speicherregister.
 
 Einsätze und Gewinne, die ab- oder aufzubuchen sind, müssen auch in irgendwelche Register, wir nennen diese einfach mal _Delta-Register_. Zumeist geschieht diese Berechnung ohne Anzeige, aber wenigstens einen erzielten Gewinn würde der Spieler gerne angezeigt sehen, bevor er verbucht wird. Aber die Arbeits- und Speicherregister D-F sind schon belegt... :-(
 
-Zum Glück gibt es EXRA, den Befehl, mit dem in einem Rutsch alle Speicherregister von 0-7 mit denen von 8-F getauscht werden. Dann kann die oben entwickelte "hexadezimal konvertierende Anzeige-Warteschleife" auch für die Gewinnanzeige recycelt werden. Spart viel "Schiebung", also müssen die Delta-Register notwendigerweise in die Register 5-7 gelegt werden, damit sie nach EXRA in D, E und F landen... Hmmm... Check.
+Zum Glück gibt es EXRA, den Befehl, mit dem in einem Rutsch alle Speicherregister von 0-7 mit denen von 8-F getauscht werden. Dann kann die oben entwickelte universelle "hexadezimal konvertierende Anzeige-Warteschleife" auch für die Gewinnanzeige recycelt werden. Also müssen die Delta-Register notwendigerweise in den Registern 5-7 liegen, damit sie nach EXRA in D, E und F landen... Hmmm... Check.
 
 ## Der König ~~tanzt~~ rechnet... 
 
-Nachdem die Entscheidung, die Werte intern hexadezimal zu speichern und berechnen, gefallen war, blieb die Frage: Wie sollen die Routinen für Addition und Subtraktion dann aussehen? Brauche ich jeweils eigene Unterprogramme für Plus und Minus?
+Nachdem die Entscheidung gefallen war, alle Werte intern hexadezimal zu speichern und berechnen, blieb die Frage: Wie sollen die Routinen für Addition und Subtraktion dann aussehen? Brauche ich jeweils eigene Unterprogramme für Plus und Minus?
 
 Mir war noch vage von der Uni in Erinnerung, dass binäre Subtraktion ja auch nichts anderes als Addition mit der Inversen des Subtrahenden plus 1 ist. Wer´s nicht glaubt, prüft es nach. Also konnte ich die Rechen-Routinen zu einer einzigen zusammenfassen; es wird nur addiert. Da nur zwei feste Werte (20 Pf, 1 Spiel) ggf. zu subtrahieren sind, konnte ich diese im Programm "fest verdrahten" (die Werte FFE und FFF werden _subtraddiert_<sup>TM</sup>). Insgesamt wurde dadurch das _Rechenwerk_ des Monarchen angenehm schlank und viele Programmschritte wurden eingespart.
 
@@ -440,7 +440,7 @@ DeltaAdd	ADD DELTA_D,rD
 
 Wir erinnern uns: Um eine Warteschleife für die Anzeige zu realisieren, hatte ich den Startwert F in ein Register gespeichert, davon solange 1 abgezogen, bis der Wert 0 im Register erreicht, dadurch das Zero-Flag gesetzt wurde und die Schleife dann mit BRZ verlassen wurde. Unterm Strich also 4 Instruktionen. Geht das nicht besser?
 
-Doch. Statt der beiden Sprung-Befehle BRZ (bei 0 raus aus der Schleife) und GOTO (bei nicht-0 zum Schleifenfang) auf den SUBI-Befehl vertrauen, der das Carry-Flag bei einem Unterlauf setzt. Und statt 1 immer F abziehen, so dass bei fast jeder Subtraktion ein Unterlauf entsteht - außer bei F - F = 0.
+Doch. Statt der beiden Sprung-Befehle BRZ (bei 0 raus aus der Schleife) und GOTO (bei Nicht-0 zum Schleifenfang) auf den SUBI-Befehl vertrauen, der das Carry-Flag bei einem Unterlauf setzt. Und statt 1 immer F abziehen, so dass bei fast jeder Subtraktion ein Unterlauf entsteht - außer bei F - F = 0.
 
 ```
 
@@ -465,6 +465,12 @@ Nun, da das Problem der Nullerkennung gelöst ist, bleibt noch das Aufräumen in
 Nö. Für die Anzeige wird der hexadezimale Wert (Geld oder Sonderspiele) jeweils mit HXDZ in einen dezimalen umgewandelt. Undokumentiert ist folgendes Verhalten: HXDZ ist so freundlich, einen hexadezimal zu großen Wert (größer als 3E7, also dezimal 999) in den Registern D-F in eine komfortable 0 in all diesen Registern umzuwandeln. Also einfach nochmal anzeigen lassen, und schon wird aus einer theoretischen Null auch eine praktische Null. Check.
 
 Übrigens: Findige, mit der nötigen kriminellen Energie ausgestattete Menschen sollen natürlich versucht haben, mit allerlei Werkzeugen und Drähten das 10-DM-Relais beim Stand von 0 zu einem klitzekleinen weiteren Abzug-Impuls zu überreden. Und ruckzuck wurden aus 0,20 DM Guthaben dann 90,20 DM. Auszahlknopf gedrückt und nix wie raus aus der Kneipe... Hatte ich schon erwähnt, dass fast überall 230 Volt im Gerät anliegen?
+
+## Ton bei Gewinn von 1,60 DM
+
+~~Ist nicht, musste dem Sparzwang geopfert werden. Denn 16 ist hexadezimal 10, das heißt im Delta-Register 5 steht eine Null - und genau dieses Register wird geprüft, ob ein Gewinn vorliegt. Natürlich könnte man die Prüfung allumfassend über beide Delta-Register vornehmen, aber dafür war kein Platz mehr.~~
+
+Doch, irgendwie ließen sich diese zwei Befehle auch noch reinquetschen, sodass jetzt auch 1,60 DM wie jeder andere Gewinn einen schönen Piezo-Pieps generieren.
 
 ## Kleinigkeiten
 
@@ -492,9 +498,6 @@ In jedem Fall wäre es wahrscheinlich gut, wenn der Raspuino wüsste, welche Wal
 
 Ich denke darüber nach.
 
-## Ton bei Gewinn von 1,60 DM
-
-Ist nicht, musste dem Sparzwang geopfert werden. Denn 16 ist hexadezimal 10, das heißt im Delta-Register 5 steht eine Null - und genau dieses Register wird geprüft, ob ein Gewinn vorliegt. Natürlich könnte man die Prüfung allumfassend über beide Delta-Register vornehmen, aber dafür war kein Platz mehr.
 
 ## Sonderspiele-Stopp
 
