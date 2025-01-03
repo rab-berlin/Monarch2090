@@ -87,7 +87,9 @@ Da jede Walze 10 Stellungen hat, erhält man durchschnittlich alle 500 Spiele ei
 
 ### Strategie
 
-Nutzt man konsequent die Nachstart-Möglichkeit der ersten Walze, wird die Chance auf eine Serie etwa verdoppelt, weil man gezielt alles "wegdrückt", was kein König und keine Krone ist. Das geht dann aber auf Kosten der "Kleingewinne", mit denen man ja die Spieldauer am Automat verlängern könnte. Welche Strategie die bessere ist, mögen Wahrscheinlichkeits-Theoretiker mit ihren Rechenschiebern ausrechnen.  
+Nutzt man konsequent die Nachstart-Möglichkeit der ersten Walze, wird die Chance auf eine Serie etwa verdoppelt, weil man gezielt alles "wegdrückt", was kein König und keine Krone ist. Wer's ganz genau ausrechnen will, muss sich mit bedingten Wahrscheinlichkeiten herumschlagen...
+
+Diese Strategie geht dann aber auf Kosten der "Kleingewinne", mit denen man ja die Spieldauer am Automat verlängern könnte. Welche Strategie die bessere ist, mögen Wahrscheinlichkeits-Theoretiker mit ihren Rechenschiebern ausrechnen.  
 
 ## Microtronic 2090
 
@@ -136,7 +138,7 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 2. Anzeige Münzspeicher
 3. Abbuchung 20 Pf Spieleinsatz
 4. Wenn kein Geld auf dem Münzspeicher war,
-    - zurück zu Geldeinwurf
+    - zurück zu Geldeinwurf (1.)
 5. Wenn Serie läuft,
     - Anzeige Sonderspiele-Zähler
 6. Anzeige der Walzen
@@ -147,15 +149,14 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 10. Ermittlung mittlere Walze
 11. Gewinnauswertung Betrag-Kombination
 12. Anzeige Gewinn (meistens 0)
-13. Anzeige Münzspeicher
-14. Aufbuchung Gewinn
-15. Wenn Sonderspiele laufen,
+13. Aufbuchung Gewinn
+14. Wenn Sonderspiele laufen,
     - Auswertung Verlängerungs-Tableau
-16. Gewinnauswertung Sonderspiele-Kombination
-17. Wenn Sonderspiele laufen oder gerade gewonnen wurden,
+15. Gewinnauswertung Sonderspiele-Kombination
+16. Wenn Sonderspiele laufen oder gerade gewonnen wurden,
     - Anzeige Sonderspiele-Gewinn
     - Aufbuchung Sonderspiele-Gewinn
-18. Zurück zum Anfang
+17. Zurück zu Anzeige Münzspeicher (2.)
 
 Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-Zähler größer als 0 ist (also eine Serie gewonnen wurde oder schon läuft). Ansonsten wechselt die Anzeige zu oft und die Darstellung verwirrt zu sehr.
 
@@ -258,7 +259,7 @@ Display			Bedeutung
    140			1,40 DM gewonnen
 ```
 
-Danach wird wieder der Münzspeicher 4-stellig angezeigt und eventuell der Gewinn aufgebucht.
+Danach wird der Gewinn aufgebucht (ohne Anzeige des Münzspeichers).
 
 Sollte aktuell eine Serie laufen oder gewonnen worden sein, werden die gewonnenen Sonderspiele 2-stellig angezeigt (und anschließend intern aufgebucht): 
 ```
@@ -280,7 +281,9 @@ Kurz: der Zufall ist nicht zufällig genug.
 
 [Michael Wessel](https://github.com/lambdamikel/Busch-2090) hat mich darauf aufmerksam gemacht, dass ein anderer zu dieser Zeit ebenfalls erhältlicher Lerncomputer, der [Kosmos CP1](http://www.8bit-homecomputermuseum.at/computer/kosmos_computer_praxis_cp1.html), seine "Zufallszahlen" einfach durch obskure Verdrahtung seiner Aus- und Eingänge generiert. Worauf ich versprach, dass ich mich nie wieder über den RND-Befehl des 2090 beschweren wolle. Gleichwohl brauchte ich für mein Programm einen *zufälligeren Zufall*, sonst isses halt einfach zu langweilig. 
 
-Eine Möglichkeit wäre natürlich, nach jeder zufälligen Aktion auf eine Benutzerreaktion zu warten (s.o.) - aber das würde den Charme der Simulation zerstören. Opa Erwin musste 1972 in der Gaststätte "Zu den drei Hasen" auch nicht nach jedem Walzenstopp irgendwas drücken, damit es weiterging. Er warf einfach einen Heiermann ein (für die jüngeren unter uns: ein 5-Mark-Stück - der Monarch war der erste Automat, der auch diese Münzen dankbar schluckte) und setzte sich wieder an seinen Tisch, während die Kiste von alleine weiterlief und gelegentlich durch einen charakteristischen Türgong auf einen Gewinn aufmerksam machte.
+Eine Möglichkeit ist, nach jeder zufälligen Aktion auf eine Benutzerreaktion zu warten (s.o.) - aber das würde den Charme der Simulation zerstören. Opa Erwin musste 1972 in der Gaststätte "Zu den drei Hasen" auch nicht nach jedem Walzenstopp irgendwas drücken, damit es weiterging. Er warf einfach einen Heiermann ein (für die jüngeren unter uns: ein 5-Mark-Stück - der Monarch war der erste Automat, der auch diese Münzen dankbar schluckte) und setzte sich wieder an seinen Tisch, während die Kiste von alleine weiterlief und gelegentlich durch einen charakteristischen Türgong auf einen Gewinn aufmerksam machte.
+
+Für diejenigen, die wirklich nur den 2090 haben, ist die Variante mit "press a button to generate the next random number" allerdings auch umgesetzt. 
 
 ### Peripherie muss her
 
@@ -326,7 +329,7 @@ Funktioniert. Damit die Zahlen auch schön zufällig sind, wird der Zufallsgener
 
 ### Timing des Arduino/Raspi
 
-Der 2090 ist nicht schnell. Michael hat ein paar [Performance-Tests](https://www.youtube.com/watch?v=e8KJ-cnX9bU) durchgeführt und als Ergebnis maximal 114 Operationen pro Sekunde (1,14 HIPS) ermittelt. Da in meinem Programm das Display meistens aktiv ist, dürfte eher ein Wert von 40 _Instructions per second_ (0,4 HIPS) zu erwarten sein. Welche Dauer der Befehl DIN zum Einlesen der 4 Bits an den Eingängen beansprucht und wie er ausgeführt wird (sequentiell, parallel, quantenmechanisch o.ä.), ist im Detail nicht bekannt, aber es ist klar, dass Timing ein Faktor sein kann. Wenn die Peripherie die Zufallszahlen zu langsam liefert, wird der gleiche Wert mehrfach im Programm eingelesen, wenn die Zufallszahlen hingegen zu schnell geliefert werden, wird der Wert während des Einlesens möglicherweise "verschmiert", da sich die Bits durch eine in der Zwischenzeit neu erzeugte Zufallszahl verändern können. Dieser zweite Fall wird noch ein richtiges Problem, dazu später...
+Der 2090 ist nicht schnell. Michael hat ein paar [Performance-Tests](https://www.youtube.com/watch?v=e8KJ-cnX9bU) durchgeführt und als Ergebnis maximal 114 Operationen pro Sekunde (1,14 HIPS) ermittelt. Da in meinem Programm das Display meistens aktiv ist, dürfte eher ein Wert von 40 _Instructions per second_ (0,4 HIPS) zu erwarten sein. Welche Dauer der Befehl DIN zum Einlesen der 4 Bits an den Eingängen beansprucht und wie er ausgeführt wird (sequentiell, parallel, quantenmechanisch o.ä.), ist im Detail nicht bekannt, aber es ist klar, dass Timing ein Faktor sein kann. Wenn die Peripherie die Zufallszahlen zu langsam liefert, wird der gleiche Wert mehrfach im Programm eingelesen, wenn die Zufallszahlen hingegen zu schnell geliefert werden, wird der Wert während des Einlesens möglicherweise "verschmiert", da sich die Bits durch eine in der Zwischenzeit neu erzeugte Zufallszahl verändern können.
 
 Eine saubere Lösung, um Timing-Probleme zu vermeiden, wäre: Immer wenn eine Zufallszahl benötigt wird, geben wir dem Zahlen-Lieferanten ein Signal. Der _Raspuino_<sup>TM</sup> erzeugt die Zahl, liefert sie über seine GPIO an die Eingänge des 2090, hält sie da ausreichend lange stabil und wartet dann einfach auf die nächste Zahlen-Bestellung. Das erforderte aber zusätzliche Befehle im Programmcode des 2090 (Wert in Register speichern, Register auf Ausgang legen, ggf. warten auf die Lieferung usw.) Und ein extra Kabel. Und ein wertvolles Register - wir haben nur 16 Stück brauchbare. Nope, scheidet (erstmal) aus.
 
@@ -406,9 +409,9 @@ Aber ich habe ja nicht nur den 3-stelligen Münzspeicher, sondern auch den _Sond
 
 Neben den 16 Arbeitsregistern gibt es beim Microtronic noch 16 Speicherregister. Spricht irgendwas dagegen, die Sonderspiele (die man meistens sowieso nicht hat), im "Schatten", also in den **Speicher**registern D-F zu halten und diese bei Bedarf zur Anzeige oder Berechnung einfach elegant einzublenden mit dem Befehl EXRM, der praktischerweise in einem Rutsch alle Arbeitsregister 8-F mit den entsprechenden Speicherregistern 8-F tauscht? Nein? Spart viel "Schiebung", also ist das so beschlossen.
 
+Wie oben beschrieben, werden Münzspeicher und Sonderspiele-Zähler vor und nach dem Walzenlauf verändert. Manchmal muss addiert, manchmal subtrahiert werden. Der jeweilige Betrag wird in den sog. Delta-Registern abgelegt. Zumeist geschieht diese Berechnung ohne Anzeige, aber wenigstens einen erzielten Gewinn würde der Spieler gerne angezeigt sehen, bevor er verbucht wird. 
 
-
-Halt, es gibt ja EXRA, den Befehl, mit dem in einem Rutsch alle Speicherregister von 0-7 mit denen von 8-F getauscht werden. Spart viel "Schiebung", dann müsste der Sonderspiele-Zähler also notwendigerweise in die Register 5 bis 7... Hmmm... Check.
+Zum Glück gibt es EXRA, den Befehl, mit dem in einem Rutsch alle Speicherregister von 0-7 mit denen von 8-F getauscht werden. Dann kann die Spart viel "Schiebung", dann müssten die Delta-Register also notwendigerweise in die Register 5 bis 7... Hmmm... Check.
 
 Mir war noch vage von der Uni in Erinnerung, dass binäre Subtraktion ja auch nichts anderes als Addition mit der Inversen des Subtrahenden plus 1 ist. Wer´s nicht glaubt, prüft es nach. Also konnte ich die Rechen-Routinen zu einer einzigen zusammenfassen; es wird nur addiert. Da nur zwei feste Werte (20 Pf, 1 Spiel) ggf. zu subtrahieren sind, konnte ich diese im Programm "fest verdrahten" (die Werte FFE und FFF werden _subtraddiert_<sup>TM</sup>). Insgesamt wurde dadurch das _Rechenwerk_ des Monarchen angenehm schlank und viele Programmschritte wurden eingespart. Ob das Programm dadurch auch übersichtlicher wurde, darf allerdings bezweifelt werden.
 
