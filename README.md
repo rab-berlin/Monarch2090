@@ -87,9 +87,9 @@ Da jede Walze 10 Stellungen hat, erhält man durchschnittlich alle 500 Spiele ei
 
 ### Strategie
 
-Nutzt man konsequent die Nachstart-Möglichkeit der ersten Walze, wird die Chance auf eine Serie etwa verdoppelt, weil man gezielt alles "wegdrückt", was kein König und keine Krone ist. Wer's ganz genau ausrechnen will, muss sich mit bedingten Wahrscheinlichkeiten herumschlagen...
+Nutzt man konsequent die Nachstart-Möglichkeit der ersten Walze, wird die Chance auf eine Serie etwa verdoppelt, weil man gezielt alles "wegdrückt", was kein König und keine Krone ist. Wer's ganz genau ausrechnen will, muss sich mit bedingten Wahrscheinlichkeiten herumschlagen... Ok, wenn ich´s richtig berechnet habe, dann beträgt die Chance auf eine Serie bei der Nachstart-Strategie 0,0036 - also durchschnittlich etwa alle 278 Spiele.
 
-Diese Strategie geht dann aber auf Kosten der "Kleingewinne", mit denen man ja die Spieldauer am Automat verlängern könnte. Welche Strategie die bessere ist, mögen Wahrscheinlichkeits-Theoretiker mit ihren Rechenschiebern ausrechnen.  
+Diese Strategie geht dann aber auf Kosten der "Kleingewinne", mit denen man ja die Spieleanzahl am Automat vergrößern könnte. Welche Strategie dabei die bessere ist, mögen Wahrscheinlichkeits-Theoretiker mit ihren Rechenschiebern ausrechnen.  
 
 ## Microtronic 2090
 
