@@ -42,6 +42,18 @@ Also habe ich die Nachstart-Logik in die Oszillator-Schaltung eingebaut. Währen
 
 Falls eine Null anliegt, wurde die Taste nicht gedrückt, also kein Nachstart der Walze gewünscht. Alles andere als Null -> Nachstarten.
 
+```
+MOVI #4,DELTA_D             Zufallsgenerator stoppen 
+DOT DELTA_D	
+CALL Warteschleife          Zeit geben zur Entscheidung
+DIN TASTE                  
+DOT STATUS	                Zufallsgenerator wieder starten
+SUBI #F,DELTA_E	            nur einmal Nachstart ermöglichen
+BRC stopR	
+CMPI #0,TASTE	              Taste gedrückt?
+BRC stopL	                  Dann linke Walze nochmal starten
+```
+
 ## Red noise generator
 
 Wenn ich mal richtig viel Zeit (und genug Verständnis) habe, dann soll der Zählerbaustein nicht vom Gatterbaustein getaktet werden, sondern durch einen Rauschgenerator, der dann wirklich zufällige Taktsignale liefern würde... Dazu käme dann noch zusätzlich der Baukasten 2070 zum Einsatz, mit dem ein "Red-noise-generator" realisiert werden soll.
