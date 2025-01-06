@@ -20,12 +20,12 @@ Die erste Walze soll - einmalig pro Spiel - bei Nichtgefallen erneut gestartet w
 
 Also habe ich die Nachstart-Logik in die Oszillator-Schaltung eingebaut. Während der Möglichkeit zum Nachstart wird...
 
-- ein High auf Ausgang 3 gelegt
+- ein High auf Ausgang 3 gelegt,
 - dadurch der Transistor angesteuert
-- und der Oszillator gestoppt
-- der RESET-Eingang erhält über den 100 nF-Kondensator einen kurzen Impuls und "nullt" den Zähler
-- wenn der Taster in dieser Zeit gedrückt wird, wird ein Taktimpuls an den Zähler gegeben (oder mehrere, da nicht entprellt)
-- zum Ende der Nachstart-Periode liest der 2090 wieder seine Eingänge ein
+- und der Oszillator gestoppt.
+- Der RESET-Eingang erhält über den 100 nF-Kondensator einen kurzen Impuls und "nullt" den Zähler.
+- Wenn der Taster betätigt wird, wird ein Taktimpuls an den Zähler gegeben (oder mehrere, da nicht entprellt).
+- Zum Ende der Nachstart-Periode liest der 2090 wieder seine Eingänge ein.
 
 Falls eine Null anliegt, wurde die Taste nicht gedrückt, also kein Nachstart der Walze gewünscht. Alles andere als Null -> Nachstarten.
 
