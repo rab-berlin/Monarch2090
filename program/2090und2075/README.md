@@ -56,6 +56,6 @@ BRC stopL                   Dann linke Walze nochmal starten
 
 ## Brown noise generator
 
-Wenn ich mal richtig viel Zeit (und genug Verständnis) habe, dann soll der Zählerbaustein nicht vom Gatterbaustein getaktet werden, sondern durch einen Rauschgenerator, der dann wirklich zufällige Taktsignale liefern würde... Dazu käme dann noch zusätzlich der Baukasten 2070 zum Einsatz, mit dem ein ["Brown-noise-generator"](https://de.wikipedia.org/wiki/Rauschgenerator) realisiert werden soll.
+Wenn ich mal richtig viel Zeit (und genug Verständnis) habe, dann soll der Zählerbaustein nicht vom Gatterbaustein getaktet werden, sondern durch einen Rauschgenerator, der dann wirklich zufällige Taktsignale liefern würde... Dazu käme dann noch zusätzlich der [Baukasten 2070](/program/2090und2075und2070) zum Einsatz, mit dem ein ["Brown-noise-generator"](https://de.wikipedia.org/wiki/Rauschgenerator) realisiert werden soll.
 
 Bisherige Versuche scheiterten jedoch. Hauptsächlich an meinem Verständnis. Ich bin sehr offen für Ideen... ;-)
