@@ -14,7 +14,16 @@ Ein einzelnes 7400-Gatter hat eine Schaltzeit von 20 ns, kann also 50 MHz vertra
 
 ## HoleZahl
 
-Um eine neue Zufallszahl einzulesen, ruft der Monarch das Unterprogramm _HoleZahl_ auf. Darin wird ein High auf Ausgang 4 gelegt und dadurch der Oszillator gestoppt. Nach einer Schamfrist von einem Microtronic-Befehl (damit die Ausgänge des Zählerbausteins sicher stabil sind), wird die Zahl über die Eingänge 1-4 eingelesen. Gleich danach wird der Oszillator wieder gestartet durch Low an Ausgang 4.
+Um eine neue Zufallszahl einzulesen, ruft der Monarch das Unterprogramm _HoleZahl_ auf. 
+
+  MOVI #8,DELTA_D	Zufallsgenerator stoppen
+	DOT DELTA_D			
+	MOVI #0,GEWINNSYMBOL	Verzögerung, damit Aus-/Eingänge stabil
+	DIN ZAHL09	
+	DOT STATUS	Zufallsgenerator starten
+	RET	
+
+Darin wird ein High auf Ausgang 4 gelegt und dadurch der Oszillator gestoppt. Nach einer Schamfrist von einem Microtronic-Befehl (damit die Ausgänge des Zählerbausteins sicher stabil sind), wird die Zahl über die Eingänge 1-4 eingelesen. Gleich danach wird der Oszillator wieder gestartet durch Low an Ausgang 4.
 
 ## Nachstarten
 
