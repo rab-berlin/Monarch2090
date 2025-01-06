@@ -14,7 +14,7 @@ Ein einzelnes 7400-Gatter hat eine Schaltzeit von 20 ns, kann also 50 MHz vertra
 
 ![Oszillatorfrequenz](/pics/Oszillator.png)
 
-Mit einem 47 pF-Kondensator erreichen wir eine Frequenz von etwa 6,6 MHz. Passt.
+Mit einem 47 pF-Kondensator erreichen wir eine Frequenz von etwa 6,7 MHz. Passt.
 
 ## HoleZahl
 
