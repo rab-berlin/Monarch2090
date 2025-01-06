@@ -12,6 +12,10 @@ Die Überlegung: Wenn der Zählerbaustein deutlich schneller getaktet wird als d
 
 Ein einzelnes 7400-Gatter hat eine Schaltzeit von 20 ns, kann also 50 MHz vertragen. Da aber für den Oszillator drei Gatter nacheinander durchlaufen werden, erreichen wir eine maximale Frequenz von etwa 16 Mhz. Der SN74143N auf dem Zählerbaustein schafft laut Datenblatt typischerweise 18 MHz. In diesem Bereich etwa wollen wir also unseren Oszillator schwingen lassen, damit "Zufall durch Gleichlaufschwankung" zwischen 2075 und 2090 generiert werden kann.
 
+![Oszillatorfrequenz](/pics/Oszillator.png)
+
+Mit einem 47 pF-Kondensator erreichen wir eine Frequenz von etwa 6,6 MHz. Passt.
+
 ## HoleZahl
 
 Um eine neue Zufallszahl einzulesen, ruft der Monarch das Unterprogramm _HoleZahl_ auf. 
