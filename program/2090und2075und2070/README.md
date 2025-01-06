@@ -1,3 +1,3 @@
-Wie 2075, nur bessere Auswahl an Kondensatoren für den Oszillator (z.B. 2 x 10 pF parallel - sofern dein 2070 schon mit dem Mittelwellen-IC geliefert wurde)
+Wie [Busch 2090 und 2075](/program/2090und2075), nur bessere Auswahl an Kondensatoren für den Oszillator (z.B. 2 x 10 pF parallel - sofern dein 2070 schon mit dem Mittelwellen-IC geliefert wurde)
 
 Zukünftig vielleicht auch ein schöner Rauschgenerator, der den 2075-Zählerbaustein taktet...
