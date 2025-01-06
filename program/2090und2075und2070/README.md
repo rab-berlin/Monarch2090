@@ -1,1 +1,3 @@
-Wie 2075, nur bessere Kondensatoren
+Wie 2075, nur bessere Kondensatoren für den Oszillator (z.B. 2 x 10 pF parallel)
+
+Zukünftig vielleicht auch ein schöner Rauschgenerator, der den 2075-Zählerbaustein taktet...
