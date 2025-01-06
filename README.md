@@ -11,6 +11,8 @@ Das ist mir alles zu viel zu lesen (tldr), ich will spielen! - Ok, dann solltest
 
 Für jede Version findest du eine Datei _monarch.mic_ im jeweiligen Verzeichnis _/program/2090xxx_. Diese Datei kannst du mit einem geeigneten Tool auf deinen Microtronic befördern. Hardcore-Leute tippen die knapp 256 Programmschritte ab. Wenn ich Zeit habe, lade ich auch noch ein Audiofile hoch, falls du die Erweiterung 2095 "Kassetten-Interface" hast.
 
+Wer den Programmcode nachvollziehen möchte, schaut sich besser die PDF-Datei im jeweiligen Ordner an. Ich finde, ich hab das alles dort ordentlich dokumentiert :-) 
+
 ## Was soll das Ganze?
 
 I.
