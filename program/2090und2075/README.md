@@ -17,11 +17,11 @@ Ein einzelnes 7400-Gatter hat eine Schaltzeit von 20 ns, kann also 50 MHz vertra
 Um eine neue Zufallszahl einzulesen, ruft der Monarch das Unterprogramm _HoleZahl_ auf. 
 
 ```
-MOVI #8,DELTA_D			Zufallsgenerator stoppen
+MOVI #8,DELTA_D             Zufallsgenerator stoppen
 DOT DELTA_D			
-MOVI #0,GEWINNSYMBOL		Verzögerung, damit Aus-/Eingänge stabil
+MOVI #0,GEWINNSYMBOL        Verzögerung, damit Aus-/Eingänge stabil
 DIN ZAHL09	
-DOT STATUS			Zufallsgenerator starten
+DOT STATUS                  Zufallsgenerator starten
 RET	
 ```
 
@@ -47,11 +47,11 @@ MOVI #4,DELTA_D             Zufallsgenerator stoppen
 DOT DELTA_D	
 CALL Warteschleife          Zeit geben zur Entscheidung
 DIN TASTE                  
-DOT STATUS	                Zufallsgenerator wieder starten
-SUBI #F,DELTA_E	            nur einmal Nachstart ermöglichen
+DOT STATUS                  Zufallsgenerator wieder starten
+SUBI #F,DELTA_E             (nur einmal Nachstart ermöglichen)
 BRC stopR	
-CMPI #0,TASTE	              Taste gedrückt?
-BRC stopL	                  Dann linke Walze nochmal starten
+CMPI #0,TASTE               Taste gedrückt?
+BRC stopL                   Dann linke Walze nochmal starten
 ```
 
 ## Red noise generator
