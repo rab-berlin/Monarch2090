@@ -4,7 +4,7 @@ In dieser Variante wird der Monarch durch den Zählerbaustein des 2075 mit den n
 
 ![Schaltplan](/pics/Schaltung2075.png)
 
-Dazu wird die bekannte Oszillator-Schaltung aus dem 2075-Baukasten ("Elektronisches Roulette") verwendet und deren Frequenz durch einen hinreichend kleinen Kondensator vergrößert. Zugegeben, ein 47 pF-Kondensator gehört nicht zum Lieferumfang des 2075. Zur Not aus einem anderen Kasten nehmen - oder selbst bauen aus Alufolie und Schaumstoff.
+Dazu wird die bekannte Oszillator-Schaltung aus dem 2075-Baukasten ("Elektronisches Roulette") verwendet und deren Frequenz durch einen hinreichend kleinen Kondensator vergrößert. Zugegeben, ein 22 pF-Kondensator gehört nicht zum Lieferumfang des 2075. Zur Not aus einem anderen Kasten nehmen - oder selbst bauen aus Alufolie und Schaumstoff.
 
 ## Geschwindigkeit ist (k)eine Hexerei
 
@@ -14,7 +14,7 @@ Ein einzelnes 7400-Gatter hat eine Schaltzeit von 20 ns, kann also 50 MHz vertra
 
 ![Oszillatorfrequenz](/pics/Oszillator.png)
 
-Mit einem 47 pF-Kondensator erreichen wir eine Frequenz von etwa 6,7 MHz. Passt.
+Mit einem 22 pF-Kondensator erreichen wir eine Frequenz von etwa 10,25 MHz. Passt.
 
 ## HoleZahl
 
