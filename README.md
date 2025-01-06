@@ -9,6 +9,8 @@ Das ist mir alles zu viel zu lesen (tldr), ich will spielen! - Ok, dann solltest
 - Busch 2090 und Arduino/Raspberry Pi: Wenn dich das dauernde Gedrücke von Tasten nervt (so wie mich), dann brauchst du für einen guten Zufallsgenerator einen Arduino oder Raspberry Pi. Schaltplan und Sketch bzw. Python-Programm weiter unten.
 - [Busch 2090 und 2075](/program/2090und2075): Wenn du zusätzlich den 2075 (Digital-Technik) besitzt, dann erzeugen wir _zufälligen Zufall_ mit reinen Busch-Bordmitteln. Das ist die schönste Variante.
 
+Für jede Version findest du eine Datei _monarch.mic_ im jeweiligen Verzeichnis _/program/2090xxx_. Diese Datei kannst du mit einem geeigneten Tool auf deinen Microtronic befördern. Hardcore-Leute tippen die knapp 256 Programmschritte ab. Wenn ich Zeit habe, lade ich auch noch ein Audiofile hoch, falls du die Erweiterung 2095 "Kassetten-Interface" hast.
+
 ## Was soll das Ganze?
 
 I.
