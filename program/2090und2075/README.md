@@ -2,6 +2,8 @@
 
 In dieser Variante wird der Monarch durch den Zählerbaustein des 2075 mit den nötigen Zufallszahlen versorgt.
 
+![Schaltplan](/program/2090und2075/Schaltung mit 2075.png)
+
 Dazu wird die bekannte Oszillator-Schaltung aus dem 2075-Baukasten ("Elektronisches Roulette") verwendet und deren Frequenz durch einen hinreichend kleinen Kondensator vergrößert. Zugegeben, ein 47 pF-Kondensator gehört nicht zum Lieferumfang des 2075. Zur Not aus einem anderen Kasten nehmen - oder selbst bauen aus Alufolie und Schaumstoff.
 
 ## Geschwindigkeit ist (k)eine Hexerei
