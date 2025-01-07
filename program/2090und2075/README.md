@@ -60,6 +60,13 @@ CMPI #0,TASTE               Taste gedrückt?
 BRC stopL                   Dann linke Walze nochmal starten
 ```
 
+## Wie zufällig ist der Zufall?
+
+Überraschend gut. Ich hatte mit verschiedenen Kondensatoren experimentiert, also mit verschiedenen Oszillator-Frequenzen. Alles im nF-Bereich kann man vergessen, dadurch wird nicht ausreichend Asynchronität zwischen Oszillator und Programmlauf hergestellt. Ab pF wurde es interessant, bei 22 pF erziele ich die besten Ergebnisse
+
+![Oszillatorfrequenz](/pics/Oszillator.png)
+
+
 ## Brown noise generator
 
 Wenn ich mal richtig viel Zeit (und genug Verständnis) habe, dann soll der Zählerbaustein nicht vom Gatterbaustein getaktet werden, sondern durch einen Rauschgenerator, der dann wirklich zufällige Taktsignale liefern würde... Dazu käme dann noch zusätzlich der [Baukasten 2070](/program/2090und2075und2070) zum Einsatz, mit dem ein ["Brown-noise-generator"](https://de.wikipedia.org/wiki/Rauschgenerator) realisiert werden soll.
