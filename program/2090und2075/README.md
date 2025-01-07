@@ -64,8 +64,9 @@ BRC stopL                   Dann linke Walze nochmal starten
 
 Überraschend gut. Ich hatte mit verschiedenen Kondensatoren experimentiert, also mit verschiedenen Oszillator-Frequenzen. Alles im nF-Bereich kann man vergessen, dadurch wird nicht ausreichend Asynchronität zwischen Oszillator und Programmlauf hergestellt. Ab pF wurde es interessant, bei 22 pF erziele ich die besten Ergebnisse
 
-![Oszillatorfrequenz](/pics/Oszillator.png)
+![Oszillatorfrequenz](/pics/Statistik2075.jpg)
 
+Die Kombinationen A4 und C4 werden jeweils durch zwei dezimale Zufallszahlen getroffen, müssten also doppelt so häufig auftreten wie andere Kombinationen. Passt. Gut genug jedenfalls.
 
 ## Brown noise generator
 
