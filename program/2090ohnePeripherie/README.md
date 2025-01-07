@@ -10,8 +10,8 @@ Nach Ermittlung aller Walzen wird die normale Gewinnabfrage und -anzeige durchge
 
 Übrigens: Ganz zufällig ist auch diese Variante nicht, denn...
 
-- Der RND-Befehl ermittelt eine hexadezimale Ziffer in Register D zwischen 0 und F.
-- Bei A-F soll laut Programm einfach erneut eine Ziffer ermittelt werden.
+- Der RND-Befehl sorgt für eine hexadezimale Ziffer im Register D.
+- Bei den Ziffern A-F soll laut Programm einfach eine neue Ziffer ermittelt werden.
 - Intern läuft der Zähler für die Tastaturabfrage weiter.
 - Vergleich und Sprung zur Neuermittlung dauern immer gleich lang, daher ist das Intervall für den Zähler immer gleich lang.
 - Die sechs Ziffern A-F lassen den 2090 also immer die gleichen neuen dezimalen Ziffern ermitteln.
