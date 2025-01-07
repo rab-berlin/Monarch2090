@@ -10,7 +10,7 @@ Dazu wird die bekannte Oszillator-Schaltung aus dem 2075-Baukasten ("Elektronisc
 
 Die Überlegung: Wenn der Zählerbaustein deutlich schneller getaktet wird als der Microtronic, dann dürften bereits kleinste Unregelmäßigkeiten im Taktsignal ausreichen, um an den Ausgängen A-D eine mehr oder weniger zufällige Ziffer von 0-9 zu präsentieren, sobald der Oszillator anhält. Denn diese _kleinsten Unregelmäßigkeiten_ treten im MHz-Bereich einer Oszillator-Schaltung ohne Quarz praktisch immer auf - durch thermisches Rauschen, elektromagnetische Einstrahlung oder göttliche Fügung.
 
-Ein einzelnes 7400-Gatter hat eine Schaltzeit von 20 ns, kann also 50 MHz vertragen. Da aber für den Oszillator drei Gatter nacheinander durchlaufen und rückgekoppelt werden, erreichen wir eine maximale Frequenz von etwa 16 MHz. Der SN74143N auf dem Zählerbaustein schafft laut Datenblatt typischerweise 18 MHz. In diesem Bereich etwas unterhalb wollen wir also unseren Oszillator schwingen lassen, damit "Zufall durch Gleichlaufschwankung" zwischen 2075 und 2090 bestmöglich generiert werden kann.
+Ein einzelnes 7400-Gatter hat eine Schaltzeit von 20 ns, kann also 50 MHz vertragen. Da aber für den Oszillator drei Gatter nacheinander durchlaufen und rückgekoppelt werden, erreichen wir eine maximale Frequenz von etwa 16 MHz. Der SN74143N auf dem Zählerbaustein schafft laut Datenblatt typischerweise 18 MHz. Etwas unterhalb dieses Bereiches wollen wir also unseren Oszillator schwingen lassen, damit "Zufall durch Gleichlaufschwankung" zwischen 2075 und 2090 bestmöglich generiert werden kann.
 
 ![Oszillatorfrequenz](/pics/Oszillator.png)
 
