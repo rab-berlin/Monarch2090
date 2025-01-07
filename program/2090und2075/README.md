@@ -62,7 +62,7 @@ BRC stopL                   Dann linke Walze nochmal starten
 
 ## Wie zufällig ist der Zufall?
 
-Überraschend gut. Ich hatte mit verschiedenen Kondensatoren experimentiert, also mit verschiedenen Oszillator-Frequenzen. Alles im nF-Bereich kann man vergessen, dadurch wird nicht ausreichend Asynchronität zwischen Oszillator und Programmlauf hergestellt. Ab pF wurde es interessant, bei 22 pF erziele ich die besten Ergebnisse
+Überraschend gut. Ich hatte mit verschiedenen Kondensatoren experimentiert, also mit verschiedenen Oszillator-Frequenzen. Alles im nF-Bereich kann man vergessen, dadurch wird nicht ausreichend Asynchronität zwischen Oszillator und Programmlauf hergestellt. Ab pF wurde es interessant, bei 22 pF erziele ich die besten Ergebnisse.
 
 ![Oszillatorfrequenz](/pics/Statistik2075.jpg)
 
