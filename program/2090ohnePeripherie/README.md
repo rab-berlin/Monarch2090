@@ -22,7 +22,7 @@ RET
 - Bei den Ziffern A-F soll laut Programm einfach eine neue Ziffer ermittelt werden.
 - Intern läuft der Zähler für die Tastaturabfrage weiter.
 - Vergleich und Sprung zur Neuermittlung dauern immer gleich lang, daher ist das Intervall für den Zähler immer gleich lang.
-- Die sechs Ziffern A-F lassen den 2090 also immer die gleichen neuen dezimalen Ziffern ermitteln.
+- Die sechs Ziffern A-F lassen den 2090 also ~~immer~~ erwartbar die gleichen neuen dezimalen Ziffern ermitteln.
 - Also sind (mind.) 4 dezimale Ziffern mit verminderter Wahrscheinlichkeit zu erwarten.
 
 Das Handbuch weist auf diese Eigenart auch hin. Bei "Unser erstes Programm: Ein elektronischer Würfel" heißt es: "Eine gewisse Häufigkeit einzelner Zufallszahlen wird bei später folgenden Experimenten durch ein etwas aufwendigeres Programm beseitigt." (Bd. 1, Seite 11). In späteren Programmen werden daher für die "Verbesserung" des Zufalls auch noch das E und F-Register herangezogen.
