@@ -4,13 +4,13 @@ In dieser Variante wird der Monarch durch den Zählerbaustein des 2075 mit den n
 
 ![Schaltplan](/pics/Schaltung2075.png)
 
-Dazu wird die bekannte Oszillator-Schaltung aus dem 2075-Baukasten ("Elektronisches Roulette") verwendet und deren Frequenz durch einen hinreichend kleinen Kondensator vergrößert. Zugegeben, ein 22 pF-Kondensator gehört nicht zum Lieferumfang des 2075. Zur Not aus einem anderen Kasten nehmen (z.B. 2x 10 pF aus den "neueren" 2070, in denen der MW-Radio-IC schon beigelegt war), aus dem China-Beutel einen rausfischen - oder selbst bauen aus Alufolie und Schaumstoff.
+Dazu wird die bekannte Oszillator-Schaltung aus dem 2075-Baukasten ("Elektronisches Roulette") verwendet und deren Frequenz durch einen hinreichend kleinen Kondensator vergrößert. Zugegeben, ein 22 pF-Kondensator gehört nicht zum Lieferumfang des 2075. Zur Not aus einem anderen Kasten nehmen (z.B. 2x 10 pF aus den "neueren" 2070, in denen der MW-Radio-IC schon beigelegt war), aus dem China-Beutel rausfischen - oder selbst bauen aus Alufolie und Schaumstoff.
 
 ## Geschwindigkeit ist (k)eine Hexerei
 
 Die Überlegung: Wenn der Zählerbaustein deutlich schneller getaktet wird als der Microtronic, dann dürften bereits kleinste Schwankungen im Taktsignal ausreichen, um an den Ausgängen A-D eine mehr oder weniger zufällige Ziffer von 0-9 zu präsentieren, sobald der Oszillator anhält. Denn diese _kleinsten Schwankungen_ treten im MHz-Bereich einer Oszillator-Schaltung ohne Quarz praktisch immer auf - durch thermisches Rauschen, elektromagnetische Einstrahlung oder göttliche Fügung.
 
-Ein einzelnes 7400-Gatter hat eine Schaltzeit von 20 ns, kann also 50 MHz vertragen. Da aber für den Oszillator drei Gatter nacheinander durchlaufen werden, erreichen wir eine maximale Frequenz von etwa 16 MHz. Der SN74143N auf dem Zählerbaustein schafft laut Datenblatt typischerweise 18 MHz. In diesem Bereich etwas unterhalb wollen wir also unseren Oszillator schwingen lassen, damit "Zufall durch Gleichlaufschwankung" zwischen 2075 und 2090 bestmöglich generiert werden kann.
+Ein einzelnes 7400-Gatter hat eine Schaltzeit von 20 ns, kann also 50 MHz vertragen. Da aber für den Oszillator drei Gatter nacheinander durchlaufen und rückgekoppelt werden, erreichen wir eine maximale Frequenz von etwa 16 MHz. Der SN74143N auf dem Zählerbaustein schafft laut Datenblatt typischerweise 18 MHz. In diesem Bereich etwas unterhalb wollen wir also unseren Oszillator schwingen lassen, damit "Zufall durch Gleichlaufschwankung" zwischen 2075 und 2090 bestmöglich generiert werden kann.
 
 ![Oszillatorfrequenz](/pics/Oszillator.png)
 
