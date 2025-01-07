@@ -10,7 +10,7 @@ Das ist mir alles zu viel zu lesen (tldr), ich will spielen! - Ok, dann solltest
 - [Busch 2090 und 2075](/program/2090und2075): Wenn du zusätzlich den 2075 (Digital-Technik) besitzt, dann erzeugen wir _zufälligen Zufall_ mit reinen Busch-Bordmitteln. Das ist die schönste Variante.
 - [Busch 2090 und 2070](/program/2090und2070): Daran arbeite ich noch.
 
-Für jede Version findest du eine Datei _monarch.mic_ im jeweiligen Verzeichnis _/program/2090xxx_. Diese Datei kannst du mit einem geeigneten Tool auf deinen Microtronic befördern. Hardcore-Leute tippen die knapp 256 Programmschritte ab. Wenn ich Zeit habe, lade ich auch noch ein Audiofile des Programms hoch, falls du die Erweiterung "Cassetten-Interface 2095" (sic!) hast.
+Für jede Version findest du eine Datei _monarch.mic_ im jeweiligen Verzeichnis _/program/2090xxx_. Diese Datei kannst du mit einem geeigneten Tool auf deinen Microtronic befördern. Hardcore-Leute tippen die knapp 256 Programmschritte ab. Wenn ich Zeit habe, lade ich auch noch ein Audiofiles der Programme hoch, falls du die Erweiterung "Cassetten-Interface 2095" (sic!) hast.
 
 Wer den Programmcode nachvollziehen möchte, schaut sich besser die PDF-Datei im jeweiligen Ordner an. Ich finde, ich hab das alles dort ordentlich dokumentiert :-) 
 
