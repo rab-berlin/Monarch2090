@@ -10,6 +10,14 @@ Nach Ermittlung aller Walzen wird die normale Gewinnabfrage und -anzeige durchge
 
 Übrigens: Ganz zufällig ist auch diese Variante nicht, denn...
 
+'''
+KIN TASTE
+RND
+CMPI #9,rD
+BRC Würfel
+RET
+'''
+
 - Der RND-Befehl sorgt für eine hexadezimale Ziffer im Register D.
 - Bei den Ziffern A-F soll laut Programm einfach eine neue Ziffer ermittelt werden.
 - Intern läuft der Zähler für die Tastaturabfrage weiter.
