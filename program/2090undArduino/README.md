@@ -13,10 +13,10 @@ unsigned int m2090Out4;
 unsigned int m2090Out3;
 
 void setup() {
-  pinMode(5, OUTPUT);
-  pinMode(4, OUTPUT);
-  pinMode(3, OUTPUT);    
-  pinMode(2, OUTPUT);
+  pinMode(5, OUTPUT);           // m2090In1
+  pinMode(4, OUTPUT);           // m2090In2
+  pinMode(3, OUTPUT);           // m2090In3
+  pinMode(2, OUTPUT);           // m2090In4
   pinMode(6, INPUT);            // m2090Out4
   pinMode(7, INPUT);            // m2090Out3
   pinMode(8, INPUT_PULLUP);     // taste
@@ -69,5 +69,5 @@ void setOutputs() {
 }
 ```
 
-Bei mir läuft der Sketch auf einem Nano 168, die ich noch irgendwo gefunden hatte. 
+Bei mir läuft der Sketch auf einem Nano 168, den ich noch irgendwo gefunden hatte. 
 
