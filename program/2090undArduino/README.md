@@ -13,14 +13,13 @@ unsigned int m2090Out4;
 unsigned int m2090Out3;
 
 void setup() {
-  Serial.begin(9600);
   pinMode(5, OUTPUT);
   pinMode(4, OUTPUT);
-  pinMode(3, OUTPUT);
+  pinMode(3, OUTPUT);    
   pinMode(2, OUTPUT);
-  pinMode(6, INPUT); // m2090Out4
-  pinMode(7, INPUT); // m2090Out3
-  pinMode(8, INPUT_PULLUP); // taste
+  pinMode(6, INPUT);            // m2090Out4
+  pinMode(7, INPUT);            // m2090Out3
+  pinMode(8, INPUT_PULLUP);     // taste
   randomSeed(analogRead(A0));
 }
  
