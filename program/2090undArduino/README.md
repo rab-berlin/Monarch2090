@@ -2,7 +2,7 @@ Der Nano möchte seine digitalen Ausgänge maximal mit 40 mA belastet sehen, typ
 
 ![Schaltplan](/pics/SchaltungArduino.png)
 
-Wenn du mutig bist, kannst du die Stromversorung für den Arduino (+5V) vom 2090 abzweigen. Das spart ein Netzteil. Dazu müsstest du den richtigen Pin am Verbindungssockel zum 2095 anzapfen... mehr verrate ich nicht.
+Wenn du mutig bist, kannst du die Stromversorung für den Arduino (+5V) vom 2090 abzweigen. Das spart ein Netzteil. Dazu müsstest du den richtigen Pin am Verbindungssockel zum 2095 anzapfen... mehr verrate ich nicht, mach nix kaputt! Weniger Mutige geben dem Nano seine 5 Volt mit einem USB-Netzteil und einem entsprechenden Kabel.
 
 Der Sketch für den Nano:
 
