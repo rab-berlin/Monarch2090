@@ -1,4 +1,6 @@
-Der Nano möchte seine digitalen Ausgänge maximal mit 40 mA belastet sehen, typischerweise sogar nur mit 20 mA. Die Eingänge des Microtronic haben jeweils 100 Ohm gegen GND. Das würde bei 5V dann aber 50 mA Strom fließen lassen. Wahrscheinlich auch verkraftbar für den Arduino, aber um auf der ganz sicheren Seite zu sein: 1 kOhm-Widerstände vor den Eingängen!
+In dieser Variante benutzt du das gleiche Programm wie bei der Variante "2090 und 2075", lediglich eine andere Peripherie wird verwendet - statt eines 2075-Zählerbausteins liefert ein Arduino Nano die Zufallszahlen und überwacht den Taster für den Nachstart der linken Walze. 
+
+Der Nano möchte seine digitalen Ausgänge maximal mit 40 mA belastet sehen, typischerweise sogar nur mit 20 mA. Die Eingänge des Microtronic haben jeweils 100 Ohm gegen GND. Das würde dann durch die Arduino-Ausgänge bei 5V jeweils 50 mA Strom fließen lassen. Ebentuell verkraftbar für den Arduino, aber um auf der ganz sicheren Seite zu sein: 1 kOhm-Widerstände vor den Eingängen des Microtronic!
 
 ![Schaltplan](/pics/SchaltungArduino.png)
 
