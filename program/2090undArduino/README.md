@@ -89,4 +89,4 @@ Verschiedentlich wurde bemängelt, dass der _digitalWrite_-Befehl des Arduino zi
 
 Zum "Glück" ist der Microtronic noch viel langsamer. Wie Michael Wessel ermittelt hat, liegen wir bei etwa 0,4 Hips (also 40 Instruktionen pro Sekunde), wenn das Display des 2090 aktiv ist - das heißt 25 **Milli**sekunden pro Befehl. 
 
-Milli = 1000 x Mikro. Wir dürfen also davon ausgehen, dass der Arduino seine Arbeit an seinen Ausgängen längst erledigt hat, wenn der Microtronic die Zahlenlieferung an seinen Eingängen erwartet.
+Milli = 1000 x Mikro. Wir dürfen also davon ausgehen, dass der Arduino seine Arbeit an seinen Ausgängen längst erledigt hat, bevor der Microtronic die Zahlenlieferung an seinen Eingängen erwartet.
