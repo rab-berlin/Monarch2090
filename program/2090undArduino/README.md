@@ -87,6 +87,6 @@ Der Taster übrigens hängt am D8-Anschluss des Arduino, welcher im Code als dig
 
 Verschiedentlich wurde bemängelt, dass der _digitalWrite_-Befehl des Arduino ziemlich langsam sei (ca. 2,2 Mikrosekunden). Der Sketch wartet in einer Schleife darauf, dass D6 high wird, macht dann noch ein bisschen Vergleich, wirft den Zufallsgenerator an, springt in ein Unterprogramm und legt schließlich Bit für Bit die Zahl auf die Ausgänge D2-D5. Es dauert also mindestens 4 x 2,2 = 8,8 Mikrosekunden, bis die Zufallszahl stabil binär an den Ausgängen anliegt. Mit dem ganzen Overhead wahrscheinlich doppelt so lange, sagen wir mal 20 **Mikro**sekunden.
 
-Zum "Glück" ist der Microtronic noch viel langsamer. Wie Michael Wessel ermittelt hat, liegen wir bei etwa 0,4 Hips (also 40 Instruktionen pro Sekunde), wenn das Display des 2090 aktiv ist - das heißt 25 **Milli**sekunden pro Befehl. 
+Zum "Glück" ist der Microtronic noch viel langsamer. Wie [Michael Wessel ermittelt hat](https://www.youtube.com/watch?v=e8KJ-cnX9bU), liegen wir bei etwa 0,4 Hips (also 40 Instruktionen pro Sekunde), wenn das Display des 2090 aktiv ist - das heißt 25 **Milli**sekunden pro Befehl. 
 
 Milli = 1000 x Mikro. Wir dürfen also davon ausgehen, dass der Arduino seine Arbeit an seinen Ausgängen längst erledigt hat, bevor der Microtronic die Zahlenlieferung an seinen Eingängen erwartet.
