@@ -73,3 +73,4 @@ void setOutputs() {
 
 Bei mir läuft der Sketch auf einem Nano 168, den ich noch irgendwo gefunden hatte. 
 
+Der Taster übrigens hängt am D8-Anschluss des Arduino, welcher im Code als digitaler Eingang mit internem Pullup-Widerstand definiert ist (der Nano hat keine internen Pulldown-Widerstände). Damit ist dieser Arduino-Eingang ohne Betätigung des Tasters immer High. Nur bei Tastendruck wird der Eingang auf Low gezogen. 
