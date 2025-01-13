@@ -118,11 +118,13 @@ Besonders mühsam war es, Änderungen am Code vorzunehmen, weil alle danach erfo
 
 Es gab sogar einen Programmierwettbewerb, und später wurde auch ein kleines Büchlein ["Computerspiele"](https://github.com/lambdamikel/Busch-2090/blob/master/manuals/anl2094.pdf) veröffentlicht, in dem die jeweils mit 100 DM prämierten Programme zum Abtippen standen. Ich wollte auch teilnehmen, und ich schwör - ich hätte so abgeräumt und euch alle zerstört. Aber irgendwie hatte ich wohl vergessen, mein fantastisches Hammer-Programm abzuschicken. Keinen passenden Umschlag? Keine Briefmarke? Hier trübt sich meine Erinnerung...
 
-## Assembler 
+### Speicherplatz 
 
 Inzwischen sind wir etwas weiter. Beim Programmieren stellte ich allerdings fest, dass mein Programm zunehmend unübersichtlich wurde, insbesondere wegen des notwendigen Gebotes zur Sparsamkeit im Programm- und Registerspeicher. Register mussten mehrfach belegt werden, Subroutinen wurden recycelt für verschiedene Zwecke usw. Der 2090 hat übrigens keine ["Von-Neumann-Architektur"](https://de.wikipedia.org/wiki/Von-Neumann-Architektur), sondern eine ["Harvard-Architektur"](https://de.wikipedia.org/wiki/Harvard-Architektur) - Programmspeicher und Datenspeicher sind getrennt. Gespart werden muss aber bei beiden, denn mein Programm braucht mehr oder weniger den gesamten Programmspeicher, also alle 256 Programmschritte, sowie den größten Teil der Register. Wer den Microtronic kennt, weiß den Wert eines einzelnen Bytes noch zu schätzen. Wer das Byte nicht ehrt, ist des RAMs nicht wert... 
 
 Zum Glück ist das meine Seite, deswegen darf ich so viel abschweifen wie ich möchte. Also noch eine völlig unbedeutende Anekdote an dieser Stelle: Für den ZX81 (1 KB RAM!) schrieb nach meiner Erinnerung seinerzeit jemand mal ein [Schachprogramm](https://de.wikipedia.org/wiki/1K_ZX_Chess). Gerüchtehalber lief es wohl, aber war natürlich vollkommen unlesbar. Naja, und auch nicht sehr stark...
+
+### Assembler
 
 Leider vergisst der 2090 alle seine mühevoll von Menschenhirn ersonnenen und Menschenfinger eingegebenen Programmschritte, sobald (versehentlich natürlich) die Steckdose etwa dem Staubsauger weichen musste. Es wurde Zeit, die Programmentwicklung zu professionalisieren. Ein Simulator und/oder eine Speichermöglichkeit und/oder ein Assembler wären doch wirklich nützlich. Zum Glück hat [Martin Sauter](https://blog.wirelessmoves.com/) das Protokoll für das optional erhältliche [Kassetten-Interface 2095](https://blog.wirelessmoves.com/2017/06/emulating-a-busch-2090-tape-interface-part-1.html) _reverse-engineered_ und als Python-Programm für den Raspberry Pi zur Verfügung gestellt. Und auch einen [Assembler für den 2090](https://blog.wirelessmoves.com/2017/07/an-assembler-for-the-busch-2090.html) geschrieben, der auf Calc ([LibreOffice](https://de.libreoffice.org/)) läuft. 
 
@@ -151,7 +153,7 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
  König		     F
 ```
 
-## Programmablauf
+### Programmablauf
 
 1. Geldeinwurf
 2. Anzeige Münzspeicher
@@ -179,7 +181,7 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 
 Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-Zähler größer als 0 ist (also eine Serie gewonnen wurde oder schon läuft). Ansonsten wechselt die Anzeige zu oft und die Darstellung verwirrt zu sehr.
 
-## Display und Spielablauf
+### Display und Spielablauf
 
 Zu Beginn eines Spiels wird der 4-stellige Münzspeicher angezeigt, von dem dann der Einsatz von 20 Pf abgezogen wird, z.B.
 ```
