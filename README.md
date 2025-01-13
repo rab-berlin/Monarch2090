@@ -46,6 +46,8 @@ Der Kreis derjenigen, die ebenfalls einen 2090 hatten (und womöglich noch haben
 
 Aber egal, andere lösen Kreuzworträtsel oder Sudoku. Es ist, was es ist, sagte die Liebe.
 
+Übrigens war der größte Spaß an der ganzen Sache: Zeigen, dass es geht... Als ich - mehr oder weniger nichtsahnend - mit dem Projekt anfing, hab ich einfach mal drauflos programmiert. Immer mit dem Gedanken im Kopf, dass das eigentlich gar nicht reinpassen kann. Relativ schnell geriet ich in Schwierigkeiten mit dem verfügbaren Speicherplatz - zu wenig Programmschritte, zu wenig Register hatte der Microtronic. Dann eine Nacht drüber schlafen und am nächsten Tag einen neuen Ansatz probieren - und sich diebisch darüber freuen, wie ich wieder ein paar Instruktionen einsparen konnte. Solange, bis das Ding tatsächlich doch gepasst hat.
+
 ## Der Monarch
 
 Zuvor aber: [Wie funktioniert der Monarch?](https://github.com/rab-berlin/Monarch2090/blob/main/documents/MonarchTechnischeBeschreibung.pdf)
@@ -552,11 +554,6 @@ Bei der Darstellung der Walzen habe ich die doppelt vorhandenen - also häufiger
 # Was fehlt?
 
 Alle 256 Programmschritte sind mehr oder weniger verbraucht. ~~Wahrscheinlich~~ Mit Sicherheit kann man an der einen oder anderen Stelle noch etwas herausmelken, aber es wird schwierig. Falls sich doch jemand damit beschäftigen will, ich bin dankbar für jede Idee. Ich vermute z.B., dass die Auswertung des Tableaus bei Sonderspielen noch irgendwie optimiert werden kann.
-
-## Nachstarten 
-
-
-
 
 ## Sonderspiele-Stopp
 
