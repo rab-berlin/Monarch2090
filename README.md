@@ -214,7 +214,7 @@ Display			Bedeutung
 									(Z = rechts oben - RO)
 ```
 
-Zunächst wird die linke Walze ermittelt. Z.B. entsprechend der Symboltabelle:
+Zunächst wird die linke Walze ermittelt, z.B. (entsprechend der Symboltabelle):
 ```
 Display			Bedeutung
 -------			----------------------------------------------------------------------------------------
@@ -226,7 +226,7 @@ Display			Bedeutung
 			 -,40 				  XX
 ```
 
-Diese linke Walze kann (einmalig pro Spiel) erneut gestartet werden, indem du die rote Nachstart-Taste drückst. Danach könnte die Anzeige etwa so aussehen:
+Diese linke Walze kann (einmalig pro Spiel) erneut gestartet werden, indem man die rote Nachstart-Taste drückt. Danach könnte die Anzeige so aussehen:
 ```
 Display			Bedeutung
 -------			----------------------------------------------------------------------------------------
@@ -250,7 +250,7 @@ Display			Bedeutung
 			 -,40 				 -,40
 ```
 
-Nachdem auch die mittlere Walze gestoppt hat, ergibt sich folgendes Bild:
+Nachdem auch die mittlere Walze gestoppt hat, ergibt sich z.B. folgendes Bild:
 ```
 Display			Bedeutung
 -------			----------------------------------------------------------------------------------------
@@ -262,7 +262,7 @@ Display			Bedeutung
 			 -,40 				 -,40
 ```
 
-Wäre auf der mittleren Walze auch eine 4 gekommen, dann ergibt sich ein Gewinn über dreifache Kombination des gleichen Betrags: 
+Wäre auf der mittleren Walze auch eine 4 gekommen, dann ergäbe sich ein Gewinn (dreimal der gleiche Betrag): 
 ```
 Display			Bedeutung
 -------			----------------------------------------------------------------------------------------
@@ -312,9 +312,9 @@ Display			Bedeutung
    140			1,40 DM gewonnen
 ```
 
-Danach wird der Gewinn aufgebucht (ohne Anzeige des Münzspeichers).
+Danach wird der Gewinn intern aufgebucht (ohne Anzeige des Münzspeichers).
 
-Sollte aktuell eine Serie laufen oder gewonnen worden sein, werden die gewonnenen Sonderspiele 2-stellig angezeigt (und anschließend intern aufgebucht): 
+Sollte aktuell eine Serie laufen oder gewonnen worden sein, werden die gewonnenen Sonderspiele 2-stellig angezeigt (und ebenfalls intern aufgebucht): 
 ```
 Display			Bedeutung
 -------			----------------------------------------------------------------------------------------
@@ -436,7 +436,7 @@ Doch, so hab ich´s gemacht. Durch eine Start- und Stop-Möglichkeit des Zufalls
 
 ## Nachstarten
 
-Der echte Monarch bietet die Möglichkeit, die erste Walze einmalig in jedem Spiel nochmal zu starten, wenn die angezeigte Kombination nicht gefällt. Man kann also gezielt "auf Sonderspiele" spielen, weil man dafür ja König oder Krone als Symbol auf der ersten Walze haben will. 
+Der echte Monarch bietet die Möglichkeit, die erste Walze einmalig in jedem Spiel erneut zu starten, wenn die angezeigte Kombination nicht gefällt. Man kann also gezielt "auf Sonderspiele" spielen, weil man dafür ja entweder König oder Krone als Symbol auf der ersten Walze haben will. 
 
 Um diese Nachstart-Funktion zu realisieren, ist es nötig, innerhalb des Anzeige-Intervalls einen potentiellen Tastendruck zu registrieren (ohne Programm-Pause). Schwierigkeit dabei: Alle vier Eingänge sind schon vom Zufallszahlen-Lieferanten belegt.
 
@@ -457,7 +457,7 @@ Letztenendes kontrolliert der Monarch den Zufallszahlen-Generator (egal ob Ardui
 - Ausgang 4 auf High stoppt den Generator zur Lieferung einer Zufallszahl. Damit sind alle möglichen Timing-Probleme gelöst.
 - Ausgang 3 auf High stoppt den Generator, nullt ihn, wartet auf einen eventuellen Tastendruck und liefert das Ergebnis an die Eingänge des 2090.
 
-Insbesondere auf meine Schaltung "2090 und 2075" bin ich ein bisschen stolz. :-)
+Insbesondere auf meine Schaltung ["Busch 2090 und 2075"](/program/2090und2075) bin ich ein bisschen stolz. :-)
 
 ## Addition und Subtraktion, Schiebung und Anzeige
 
