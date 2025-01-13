@@ -6,7 +6,7 @@ Eine Simulation des legendären Spielautomaten [Rotomat Monarch](http://www.rd-b
 
 Das ist mir alles zu viel zu lesen, ich will spielen! 
 
-Gut, du solltest aber wenigstens die Abschnitte "Walzensymbole" und "Spielablauf und Display" lesen, sonst ist das Ganze für dich nur willkürliche Zahlen auf einem viel zu kleinen Display.
+Gut, du solltest aber wenigstens die Abschnitte "Walzensymbole" und "Spielablauf und Display" lesen, sonst ist das Ganze für dich nur ein viel zu kleines Display mit willkürlich erscheinenden Zahlen... Beachte auch, dass du ein bisschen Peripherie aufbauen musst (z.B. Piezo und Taster anschließen). 
 
 In jedem Fall musst du die richtige Version eintippen (bzw. hochladen) - je nachdem, welche Hardware-Möglichkeiten dir zur Verfügung stehen:
 
