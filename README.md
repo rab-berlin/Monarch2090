@@ -18,6 +18,8 @@ Für jede Version findest du eine Datei _monarch.mic_ im jeweiligen Verzeichnis 
 
 Wer den Programmcode nachvollziehen möchte, schaut sich besser die PDF-Datei im jeweiligen Ordner an. Ich finde, ich hab das alles dort ordentlich dokumentiert :-) 
 
+Gestartet wird der Monarch mit **HALT - NEXT - 03 - RUN**. Zu Beginn muss Geld eingeworfen werden. Dazu eine Ziffer auf der Tastatur drücken - z.B. 5 für 5 DM.
+
 ## Was soll das Ganze?
 
 I.
@@ -148,16 +150,16 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 3. Abbuchung 20 Pf Spieleinsatz
 4. Wenn kein Geld auf dem Münzspeicher war,
     - zurück zu Geldeinwurf (1.)
-5. Wenn Serie läuft,
-    - Anzeige Sonderspiele-Zähler
+5. Wenn Sonderspiele laufen,
+    - Anzeige Zählerstand Sonderspiele
 6. Anzeige der Walzen
 7. Ermittlung linke Walze
 8. Wenn Nachstart-Taste gedrückt wird,
-    - zurück zu Ermittlung linke Walze (einmalig)
+    - einmalig zurück zu Ermittlung linke Walze (7.)
 9. Ermittlung rechte Walze
 10. Ermittlung mittlere Walze
 11. Gewinnauswertung Betrag-Kombination
-12. Anzeige Gewinn (meistens 0) und ggf. Ton
+12. Anzeige Gewinn (meistens 0) und ggf. Tonausgabe
 13. Aufbuchung Gewinn
 14. Wenn Sonderspiele laufen,
     - Auswertung Verlängerungs-Tableau
@@ -218,12 +220,31 @@ Display			Bedeutung
 			 -,40 				  XX
 ```
 
-Diese linke Walze kann (einmalig pro Spiel) erneut gestartet werden, indem du die rote Nachstart-Taste drückst (bzw. die Taste F bei der "Microtronic-pur"-Version). 
+Diese linke Walze kann (einmalig pro Spiel) erneut gestartet werden, indem du die rote Nachstart-Taste drückst. Danach könnte die Anzeige etwa so aussehen:
+```
+Display			Bedeutung
+-------			----------------------------------------------------------------------------------------
 
-...
+			links		Mitte		rechts
+			------		-----		------
+			 1,60				  XX
+ C4000					  XX				(XX = noch nicht gestoppt)
+			 -,40 				  XX
+```
 
+Danach stoppt die rechte Walze. Diese Walze kann nicht erneut gestartet werden.
+```
+Display			Bedeutung
+-------			----------------------------------------------------------------------------------------
 
-Nachdem alle Walzen gestoppt haben, ergibt sich z.B. folgendes Bild:
+			links		Mitte		rechts
+			------		-----		------
+			 1,60				 -,80
+ C4048					  XX				(XX = noch nicht gestoppt)
+			 -,40 				 -,40
+```
+
+Nachdem auch die mittlere Walze gestoppt hat, ergibt sich folgendes Bild:
 ```
 Display			Bedeutung
 -------			----------------------------------------------------------------------------------------
@@ -235,7 +256,7 @@ Display			Bedeutung
 			 -,40 				 -,40
 ```
 
-Ein Gewinn über dreifache Kombination des gleichen Betrags: 
+Wäre auf der mittleren Walze auch eine 4 gekommen, dann ergibt sich ein Gewinn über dreifache Kombination des gleichen Betrags: 
 ```
 Display			Bedeutung
 -------			----------------------------------------------------------------------------------------
