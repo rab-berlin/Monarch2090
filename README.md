@@ -4,7 +4,9 @@ Eine Simulation des legendären Spielautomaten [Rotomat Monarch](http://www.rd-b
 
 ## tl;dr
 
-Das ist mir alles zu viel zu lesen, ich will spielen! - Ok, dann solltest du nur die richtige Version eintippen (bzw. hochladen):
+Das ist mir alles zu viel zu lesen, ich will spielen! Gut, du solltest aber wenigstens den Abschnitt "Spielablauf und Display" lesen, sonst sind das für dich nur willkürliche Zahlen auf einem Display.
+
+In jedem Fall musst du die richtige Version eintippen (bzw. hochladen) - je nach dem, welche Hardware-Möglichkeiten dir zur Verfügung stehen:
 
 - [Busch 2090](/program/2090ohnePeripherie): Wenn du einen "blanken" Microtronic hast, dann brauchst du eine Version, bei der du vor jedem Lauf einer Walze eine Taste drücken musst - sonst ist der Zufallsgenerator nicht zufällig genug.
 - [Busch 2090 emuliert](/program/2090Emulator): Wenn du einen Emulator benutzt, dann hast du dieses Problem nicht; der Zufall ist gut genug.
@@ -100,7 +102,7 @@ Diese Strategie geht dann aber auf Kosten der "Kleingewinne", mit denen man ja d
 
 ## Microtronic 2090
 
-Der Befehlssatz des 2090 ist nach allem, was ich bescheiden dazu sagen kann, wirklich durchdacht. Kudos an Jörg Vallen, den Vater des Microtronic, der das System im Rahmen seiner Diplomarbeit entscheidend mitentwickelt hatte. Man kann damit tatsächlich Programme schreiben, auch wenn man echt viel knobeln muss - und praktisch ständig mit den ganzen Sprungbefehlen GOTO, BRZ, BRC und CALL durcheinander kommt. Es ist zwar nicht _Programmieren auf dem blanken Metall_, aber es kommt dem schon recht nahe. 
+Der Befehlssatz des 2090 ist nach allem, was ich bescheiden dazu sagen kann, wirklich durchdacht. Kudos an Jörg Vallen, den Vater des Microtronic, der das System und insbesondere die Dokumentation im Rahmen seiner Diplomarbeit entscheidend mitentwickelt hatte. Man kann damit tatsächlich Programme schreiben, auch wenn man echt viel knobeln muss - und praktisch ständig mit den ganzen Sprungbefehlen GOTO, BRZ, BRC und CALL durcheinander kommt. Es ist zwar nicht _Programmieren auf dem blanken Metall_, aber es kommt dem schon recht nahe. 
 
 Besonders mühsam war es, Änderungen am Code vorzunehmen, weil alle danach erfolgenden Sprünge im Programm neue Zieladressen erhalten mussten. Eine Arbeit für jemanden, der Vater und Mutter erschlug. Also war es gute Praxis, an kritischen Stellen eine Menge von NOPs in den Code einzufügen, damit man später noch genug Platz für seine brillanten Ideen hatte. Reichlich Karopapier, Bleistift, Radiergummi und Schokolade waren unerlässlich für eine funktionierende [_Toolchain_](https://github.com/rab-berlin/Monarch2090/blob/main/README.md#Toolchain) :-P
 
@@ -167,7 +169,7 @@ Jeder Walzenkörper des Monarchen hat 10 Positionen, auf denen Gewinnbeträge bz
 
 Sonderspiele und Sonderspiel-Gewinne werden nur angezeigt, wenn der Sonderspiel-Zähler größer als 0 ist (also eine Serie gewonnen wurde oder schon läuft). Ansonsten wechselt die Anzeige zu oft und die Darstellung verwirrt zu sehr.
 
-## Display
+## Display und Spielablauf
 
 Zu Beginn eines Spiels wird der 4-stellige Münzspeicher angezeigt, von dem dann der Einsatz von 20 Pf abgezogen wird, z.B.
 ```
@@ -204,16 +206,24 @@ Display			Bedeutung
 									(Z = rechts oben - RO)
 ```
 
-Zunächst wird die linke Walze ermittelt:
+Zunächst wird die linke Walze ermittelt. Z.B. entsprechend der Symboltabelle:
+```
+Display			Bedeutung
+-------			----------------------------------------------------------------------------------------
 
-...
+			links		Mitte		rechts
+			------		-----		------
+			 1,20				  XX
+ A4000					  XX				(XX = noch nicht gestoppt)
+			 -,40 				  XX
+```
 
 Diese linke Walze kann (einmalig pro Spiel) erneut gestartet werden, indem du die rote Nachstart-Taste drückst (bzw. die Taste F bei der "Microtronic-pur"-Version). 
 
 ...
 
 
-Nachdem alle Walzen gestoppt haben, ergibt sich entsprechend der o.a. Symboltabelle z.B. folgendes Bild:
+Nachdem alle Walzen gestoppt haben, ergibt sich z.B. folgendes Bild:
 ```
 Display			Bedeutung
 -------			----------------------------------------------------------------------------------------
