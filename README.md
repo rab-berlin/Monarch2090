@@ -42,7 +42,9 @@ Irgendwann reifte der kühne Plan: **Ich programmiere mir meinen Automaten selbs
 
 - **Und wen interessiert das?**\
 \
-Zunächst einmal dich, denn immerhin hast du bis hierher gelesen ;-) Aber sind wird mal ehrlich - der Kreis derjenigen, die ebenfalls einen 2090 hatten (und womöglich noch haben), dürfte reichlich überschaubar sein. Bildet man dann noch die Schnittmenge mit Personen, die bei elektro-mechanischen Geldspielgeräten in Verzückung geraten, wäre eine Abschätzung der verbleibenden Interessengruppe etwa mit der Größe 1 zu beziffern - also bin ich wohl alleine :-)\
+Zunächst einmal dich, denn immerhin hast du bis hierher gelesen ;-)\
+\
+Aber sind wird mal ehrlich - der Kreis derjenigen, die ebenfalls einen 2090 hatten (und womöglich noch haben), dürfte reichlich überschaubar sein. Bildet man dann noch die Schnittmenge mit Personen, die bei elektro-mechanischen Geldspielgeräten in Verzückung geraten, wäre eine Abschätzung der verbleibenden Interessengruppe etwa mit der Größe 1 zu beziffern - also bin ich wohl alleine :-)\
 \
 Aber egal, andere lösen Kreuzworträtsel oder Sudoku. Es ist, was es ist, sagte die Liebe.\
 \
