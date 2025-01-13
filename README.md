@@ -40,7 +40,9 @@ Irgendwann reifte der kühne Plan: **Ich programmiere mir meinen Automaten selbs
 
 Mit den mir damals zur Verfügung stehenden [Möglichkeiten](https://github.com/rab-berlin/Monarch2090/blob/main/README.md#Toolchain) hab ich das dann auch gemacht. 
 
-## Wen interessiert´s?
+III.
+
+Und wen interessiert das?
 
 Der Kreis derjenigen, die ebenfalls einen 2090 hatten (und womöglich noch haben), dürfte reichlich überschaubar sein. Bildet man dann noch die Schnittmenge mit Personen, die bei elektro-mechanischen Geldspielgeräten in Verzückung geraten, wäre eine Abschätzung der verbleibenden Interessengruppe etwa mit der Größe 1 zu beziffern - also bin ich wohl alleine :-) 
 
