@@ -2,7 +2,7 @@
 
 Eine Simulation des legendären Spielautomaten [Rotomat Monarch](http://www.rd-b.de/html/wulff_rotomat_monarch.html) (1972) auf dem [Microtronic 2090](https://www.busch-modell.de/information/Microtronic-Computer.aspx) (1981)
 
-## Tl;dr
+## tl;dr
 
 Das ist mir alles zu viel zu lesen, ich will spielen! - Ok, dann solltest du nur die richtige Version eintippen (bzw. hochladen):
 
