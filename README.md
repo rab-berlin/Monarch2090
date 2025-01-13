@@ -465,6 +465,8 @@ Insbesondere auf die Schaltung ["Busch 2090 und 2075"](/program/2090und2075) bin
 
 # Details der Programmierung
 
+Nachfolgend ein paar - wie ich finde - interessante Einzelheiten der Programmierung.  
+
 ## Addition und Subtraktion, Schiebung und Anzeige
 
 Im Programm müssen 
