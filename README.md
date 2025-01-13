@@ -4,9 +4,9 @@ Eine Simulation des legendären Spielautomaten [Rotomat Monarch](http://www.rd-b
 
 ## tl;dr
 
-Das ist mir alles zu viel zu lesen, ich will spielen! Gut, du solltest aber wenigstens den Abschnitt "Spielablauf und Display" lesen, sonst sind das für dich nur willkürliche Zahlen auf einem Display.
+Das ist mir alles zu viel zu lesen, ich will spielen! Gut, du solltest aber wenigstens die Abschnitte "Walzensymbole" und "Spielablauf und Display" lesen, sonst ist das Ganze für dich nur willkürliche Zahlen auf einem viel zu kleinen Display.
 
-In jedem Fall musst du die richtige Version eintippen (bzw. hochladen) - je nach dem, welche Hardware-Möglichkeiten dir zur Verfügung stehen:
+In jedem Fall musst du die richtige Version eintippen (bzw. hochladen) - je nachdem, welche Hardware-Möglichkeiten dir zur Verfügung stehen:
 
 - [Busch 2090](/program/2090ohnePeripherie): Wenn du einen "blanken" Microtronic hast, dann brauchst du eine Version, bei der du vor jedem Lauf einer Walze eine Taste drücken musst - sonst ist der Zufallsgenerator nicht zufällig genug.
 - [Busch 2090 emuliert](/program/2090Emulator): Wenn du einen Emulator benutzt, dann hast du dieses Problem nicht; der Zufall ist gut genug.
