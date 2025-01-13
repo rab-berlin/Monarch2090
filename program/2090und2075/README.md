@@ -4,7 +4,7 @@ In dieser Variante wird der Monarch durch den Zählerbaustein des 2075 mit den n
 
 ![Schaltplan](/pics/Schaltung2075.png)
 
-Dazu wird die bekannte Oszillator-Schaltung aus dem 2075-Baukasten ("Elektronisches Roulette") verwendet und deren Frequenz durch einen hinreichend kleinen Kondensator vergrößert. Zugegeben, ein 22 pF-Kondensator gehört nicht zum Lieferumfang des 2075. Zur Not aus einem anderen Kasten nehmen (z.B. 2 x 10 pF aus den "neueren" 2070, in denen der MW-Radio-IC schon beigelegt war, parallel schalten), aus dem China-Beutel rausfischen - oder selbst bauen aus Alufolie und Schaumstoff.
+Dazu wird die bekannte Oszillator-Schaltung aus dem 2075-Baukasten ("Elektronisches Roulette") verwendet und deren Frequenz durch einen hinreichend kleinen Kondensator erhöht. Zugegeben, ein 22 pF-Kondensator gehört nicht zum Lieferumfang des 2075. Zur Not aus einem anderen Kasten nehmen (z.B. 2 x 10 pF aus den "neueren" 2070, in denen der MW-Radio-IC schon beigelegt war, parallel schalten), aus dem China-Beutel rausfischen - oder selbst bauen aus Alufolie und Schaumstoff.
 
 ## Geschwindigkeit ist (k)eine Hexerei
 
