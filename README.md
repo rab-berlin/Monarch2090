@@ -322,7 +322,7 @@ Display			Bedeutung
     05			5 Sonderspiele gewonnen
 ```
 
-Anschließend zeigt das Programm wieder den 4-stelligen Münzspeicher und kehrt zum Anfang eines neuen Spiels zurück.
+Anschließend kehrt das Programm wieder zum Anfang eines neuen Spiels zurück (und zeigt dort den Münzspeicher an).
 
 ## Zufall
 
@@ -334,7 +334,7 @@ Kurz: der Zufall ist nicht zufällig genug.
 
 [Michael Wessel](https://github.com/lambdamikel/Busch-2090) hat mich darauf aufmerksam gemacht, dass ein anderer zu dieser Zeit ebenfalls erhältlicher Lerncomputer, der [Kosmos CP1](http://www.8bit-homecomputermuseum.at/computer/kosmos_computer_praxis_cp1.html), seine "Zufallszahlen" einfach durch obskure Verdrahtung seiner Aus- und Eingänge generiert. Worauf ich versprach, dass ich mich nie wieder über den RND-Befehl des 2090 beschweren wolle. Gleichwohl brauchte ich für mein Programm einen *zufälligeren Zufall*, sonst isses halt einfach zu langweilig. 
 
-Eine Möglichkeit ist, nach jeder zufälligen Aktion auf eine Benutzerreaktion zu warten (s.o.) - aber das würde den Charme der Simulation zerstören. Opa Erwin musste 1972 in der Gaststätte "Zu den drei Hasen" auch nicht nach jedem Walzenstopp irgendwas drücken, damit es weiterging. Er warf einfach einen Heiermann ein (für die jüngeren unter uns: ein 5-Mark-Stück - der Monarch war der erste Automat, der auch diese Münzen dankbar schluckte) und setzte sich wieder an seinen Tisch, während die Kiste von alleine weiterlief und gelegentlich durch einen charakteristischen Türgong auf einen Gewinn aufmerksam machte.
+Eine Möglichkeit ist, nach jeder zufälligen Aktion auf eine Benutzerreaktion zu warten (s.o.) - aber das zerstört den Charme der Simulation ein bisschen. Opa Erwin musste 1972 in der Gaststätte "Zu den drei Hasen" auch nicht nach jedem Walzenstopp irgendwas drücken, damit es weiterging. Er warf einfach einen Heiermann ein (für die jüngeren unter uns: ein 5-Mark-Stück - der Monarch war der erste Automat, der auch diese Münzen dankbar schluckte) und setzte sich wieder an seinen Tisch, während die Kiste von alleine weiterlief und gelegentlich durch einen charakteristischen Türgong auf einen Gewinn aufmerksam machte.
 
 Für diejenigen, die wirklich nur den 2090 haben, ist die [Variante mit "press a button to generate the next random number"](/program/2090ohnePeripherie) allerdings auch umgesetzt. 
 
@@ -452,12 +452,18 @@ Ein paar Ideen hatte ich dazu:
 
 ~~Ich denke darüber nach.~~ Hab ich.
 
-Letztenendes kontrolliert der Monarch den Zufallszahlen-Generator (egal ob Arduino, Raspi oder 2075) über die beiden Ausgänge 3 und 4: 
+## Neue alte Hardware
+
+Inzwischen war auch wieder ein 2075-Baukasten eingetroffen, den ich auf Kleinanzeigen ergattern konnte. Damit konnte ich meine Peripherie-Ideen praktisch testen und herausgekommen ist dann diese Design-Entscheidung:
+
+Der Monarch steuert den Zufallszahlen-Generator (egal ob Arduino, Raspi oder 2075) über die beiden Ausgänge 3 und 4: 
 
 - Ausgang 4 auf High stoppt den Generator zur Lieferung einer Zufallszahl. Damit sind alle möglichen Timing-Probleme gelöst.
 - Ausgang 3 auf High stoppt den Generator, nullt ihn, wartet auf einen eventuellen Tastendruck und liefert das Ergebnis an die Eingänge des 2090.
 
-Insbesondere auf meine Schaltung ["Busch 2090 und 2075"](/program/2090und2075) bin ich ein bisschen stolz. :-)
+Insbesondere auf die Schaltung ["Busch 2090 und 2075"](/program/2090und2075) bin ich ein bisschen stolz. :-)
+
+# Details der Programmierung
 
 ## Addition und Subtraktion, Schiebung und Anzeige
 
