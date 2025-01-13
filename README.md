@@ -543,13 +543,13 @@ Juhuu, eine Instruktion eingespart. Im Kopf können wir nicht so gut F von einem
 
 ## Nullerkennung
 
-Wir ziehen regelmäßig 20 Pf bzw. 1 Spiel von den Speichern für Geld und Sonderspiele ab. Wie können wir dann erkennen, ob einer von diesen Speichern leer ist? Denn dann müsste der Automat ja anhalten bzw. den Sonderspiele-Status zurücksetzen. Natürlich könnte ich alle 3 Register D-F einzeln auf Null testen in einer verschachtelten CMPI-Konstruktion... Aber wie viele Instruktionen das wieder kosten würde! :-(
+Wir ziehen regelmäßig 20 Pf vom Münzspeicher ab. Wie können wir dann erkennen, ob einer von diesen Speichern leer ist? Denn dann müsste der Automat ja anhalten, statt ein neues Spiel zu starten. Natürlich könnte ich alle 3 Register D-F einzeln auf Null testen in einer verschachtelten CMPI-Konstruktion... Aber wie viele Instruktionen das wieder kosten würde! :-(
 
-Es wird einfach die übliche Vor-dem-Spiel-Subtraktion erneut ausgeführt. Wenn einer dieser Speicher leer ist (also 0), dann entsteht durch die Subtraktion ein Wert "Fxx", also steht anschließend definitiv im Register F der Wert F. Und nur auf diesen müssen wir anschließend testen, um zu erkennen, dass der Speicher leer ist/war.  
+Es wird einfach die übliche Vor-dem-Spiel-Subtraktion erneut ausgeführt. Wenn der Münzspeicher leer ist (also 0), dann entsteht durch die Subtraktion ein Wert "Fxx", also steht anschließend definitiv im Register F der Wert F. Und nur auf diesen müssen wir anschließend testen, um zu erkennen, dass der Speicher vor Abzug des Spieleinsatzes leer ist/war.  
 
-Nun, da das Problem der Nullerkennung gelöst ist, bleibt noch das Aufräumen in den Speichern. Immerhin steht da ja hexadezimal irgendwas mit Fxx drin (über 380 DM). Man könnte alles wieder mit MOVI #0 löschen. Ist das nötig? 
+Nun, da das Problem der Nullerkennung gelöst ist, bleibt noch das Aufräumen in den Speichern. Immerhin steht nach der Subtraktion ja hexadezimal da irgendwas mit Fxx drin (über 380 DM). Man könnte alles wieder mit MOVI #0 löschen. Ist das nötig? 
 
-Nö. Für die Anzeige wird der hexadezimale Wert (Geld oder Sonderspiele) jeweils mit HXDZ in einen dezimalen umgewandelt. Undokumentiert ist folgendes Verhalten: HXDZ ist so freundlich, einen hexadezimal zu großen Wert (größer als 3E7, also dezimal 999) in den Registern D-F in eine komfortable 0 in all diesen Registern umzuwandeln. Also einfach nochmal anzeigen lassen, und schon wird aus einer theoretischen Null auch eine praktische Null. Check.
+Nö. In der Anzeige-Warteschleife wird der hexadezimale Wert jedesmal mit HXDZ in einen dezimalen umgewandelt. Undokumentiert ist folgendes Verhalten: HXDZ ist so freundlich, einen hexadezimal zu großen Wert (größer als 3E7, also dezimal 999) in den Registern D-F in eine komfortable 0 in all diesen Registern umzuwandeln. Also einfach nochmal anzeigen lassen, und schon wird aus einer theoretischen Null auch eine praktische Null. Löschen durch Überlauf. Check.
 
 Übrigens: Findige, mit der nötigen kriminellen Energie ausgestattete Menschen sollen natürlich versucht haben, mit allerlei Werkzeugen und Drähten das 10-DM-Relais beim Stand von 0 zu einem klitzekleinen weiteren Abzug-Impuls zu überreden. Und ruckzuck wurden aus 0,20 DM Guthaben dann 90,20 DM. Auszahlknopf gedrückt und nix wie raus aus der Kneipe... Hatte ich schon erwähnt, dass fast überall 230 Volt im Gerät anliegen?
 
@@ -557,7 +557,7 @@ Nö. Für die Anzeige wird der hexadezimale Wert (Geld oder Sonderspiele) jeweil
 
 ~~Ist nicht, musste dem Sparzwang geopfert werden. Denn 16 ist hexadezimal 10, das heißt im Delta-Register 5 steht eine Null - und genau dieses Register wird geprüft, ob ein Gewinn vorliegt. Natürlich könnte man die Prüfung allumfassend über beide Delta-Register vornehmen, aber dafür war kein Platz mehr.~~
 
-Doch, irgendwie ließen sich diese zwei Befehle auch noch reinquetschen, sodass jetzt auch 1,60 DM wie jeder andere Gewinn einen schönen Piezo-Pieps generieren.
+Doch, irgendwie ließen sich diese zwei Befehle noch reinquetschen, sodass jetzt auch 1,60 DM wie jeder andere Gewinn einen schönen Piezo-Pieps generieren.
 
 ## Kleinigkeiten
 
