@@ -26,25 +26,25 @@ Gestartet wird der Monarch mit **HALT-NEXT-03-RUN**. Zu Beginn muss Geld eingewo
 
 ## Was soll das Ganze?
 
-- In den 70er-Jahren...
+- In den 70er-Jahren...\
 waren sog. elektro-mechanische Spielautomaten in Kneipen und Restaurants weit verbreitet. Spielhallen gab es damals - zum Glück - noch nicht. Die Ablaufsteuerung dieser Automaten erfolgte über eine motorgetriebene, langsam rotierende Nockenwelle, an der Kontaktfedern zum jeweils richtigen Zeitpunkt Strompfade öffneten und schlossen - ganz ohne Computer konnten so komplexe Spielsysteme realisiert werden. Und anders als bei den kurz darauf aufkommenden computergesteuerten Spielautomaten war das Ergebnis tatsächlich noch "zufällig", da der Lauf der sich drehenden Walzen nicht determiniert war und insofern der Spielausgang rein (elektro-)mechanisch beeinflusst wurde. Im Vertrauen auf das Gesetz der großen Zahl haben die Automatenaufsteller dennoch gut verdient, nur 60% der Einsätze mussten (wahrscheinlichkeitstheoretisch) als Gewinne mindestens wieder ausgeworfen werden.\
 \
 Der erfolgreichste Vertreter dieser Generation von Spielautomaten war der [Rotomat Monarch](http://www.rd-b.de/html/wulff_rotomat_monarch.html) von der Firma Günter Wulff Apparatebau in Berlin, der 1972 auf den Markt kam - mit der sagenhaften Stückzahl von über 30.000 Geräten. Wegen der restriktiven Glücksspiel-Gesetzgebung musste ein Spiel mindestens 15 Sekunden dauern, der Höchsteinsatz pro Spiel lag bei 20 Pf und der Höchstgewinn betrug 2 DM. Um diese gesetzlichen Vorgaben formal einzuhalten und doch tricky-tricky zu umgehen, haben die Automatenbauer sich etwas geradezu Geniales einfallen lassen: _Sonderspiele_. Auch in diesen Spielen konnte man maximal 2 DM gewinnen, aber die Wahrscheinlichkeit für diesen Spielgewinn lag während der Sonderspiel-Dauer bedeutend höher (mehr als 50%). Wenn man den _höchst seltenen Fall_ erlebte, dass der Automat den Höchstgewinn von 50 Sonderspielen gab, konnten - unter völliger Einhaltung der gesetzlichen Bestimmungen - so aus 20 Pf mehr als 50 DM werden (50 mal Erwartungswert von ca. 1 DM). Eine Menge Geld im Jahr 1972, inflationsbereinigt über 100 Euro heute.\
 \
 Neben dem Reiz, den die Aussicht auf Geldgewinne für viele Menschen darstellt, war die [Geräuschkulisse solcher Automaten](https://www.youtube.com/watch?v=yDXITgWsWbw) wirklich faszinierend. Ein ständiges Rattern und Klingeln. Auch die Optik der Geräte ist ein schöner Spiegel der Zeit. Allerdings durften diese Maschinen nur 3 Jahre lang gewerblich im Einsatz sein, danach mussten sie aus dem Verkehr gezogen werden und waren eigentlich Elektroschrott. Sie wurden dann bestenfalls an Privatpersonen verkauft und hingen oft als Spardose für die nächste Party in Hobbykellern. Mit der Euro-Einführung waren diese Geräte dann wirklich nutzlos geworden und wurden an Selbstabholer (Gewicht über 40 Kilo!) über eBay vertickt. Auch heute noch sind solche Automaten mühelos zu bekommen und mit etwas technischem Geschick lassen sie sich sogar auf die Annahme von Euro und Cent umrüsten. Aber Vorsicht, im Inneren sind praktisch überall 230 Volt. Das kann lebensgefährlich tödlich sein!
 
-- Wie gerne...
-hätte ich damals (80er) auch so einen Automaten in meinem Zimmer gehabt! Aber eBay gab´s damals nicht und offenbar kannte ich nicht die richtigen Leute. Matthias hatte einen [Rotomat Trianon](https://www.goldserie.de/index.php/galerien/4003-trianon) und Jürgen einen [Rotomat Exquisit Gold](https://www.goldserie.de/index.php/galerien/2520-exquisit-gold), mit denen sie uns das Taschengeld abluchsten. Aber ich hatte... zuerst ein [Yps-Radio für 6,50 DM](https://www.ypsfanpage.de/hefte/gross/extra01.jpg), dann zu Weihnachten einen [Philips EE2050 Elektronik-Baukasten](http://norbert.old.no/kits/ee2000/ee2050.html), danach schrittweise die ganze Palette [Baukästen von Busch](https://rigert.com/ee-wiki/index.php?title=Busch) und schließlich - den [Microtronic 2090](https://www.busch-modell.de/information/Microtronic-Computer.aspx). Ein Lerncomputer, mit dem man selbst programmieren (lernen) konnte. Und das konnte man wirklich, weil auch die [Handbücher zu diesem Lerncomputer](https://github.com/lambdamikel/Busch-2090/blob/master/manuals/anl2090-1.pdf) wirklich gut gemacht waren.
-
-Irgendwann reifte der kühne Plan: **Ich programmiere mir meinen Automaten selbst!**
-
+- Wie gerne...\
+hätte ich damals (80er) auch so einen Automaten in meinem Zimmer gehabt! Aber eBay gab´s damals nicht und offenbar kannte ich nicht die richtigen Leute. Matthias hatte einen [Rotomat Trianon](https://www.goldserie.de/index.php/galerien/4003-trianon) und Jürgen einen [Rotomat Exquisit Gold](https://www.goldserie.de/index.php/galerien/2520-exquisit-gold), mit denen sie uns das Taschengeld abluchsten. Aber ich hatte... zuerst ein [Yps-Radio für 6,50 DM](https://www.ypsfanpage.de/hefte/gross/extra01.jpg), dann zu Weihnachten einen [Philips EE2050 Elektronik-Baukasten](http://norbert.old.no/kits/ee2000/ee2050.html), danach schrittweise die ganze Palette [Baukästen von Busch](https://rigert.com/ee-wiki/index.php?title=Busch) und schließlich - den [Microtronic 2090](https://www.busch-modell.de/information/Microtronic-Computer.aspx). Ein Lerncomputer, mit dem man selbst programmieren (lernen) konnte. Und das konnte man wirklich, weil auch die [Handbücher zu diesem Lerncomputer](https://github.com/lambdamikel/Busch-2090/blob/master/manuals/anl2090-1.pdf) wirklich gut gemacht waren.\
+\
+Irgendwann reifte der kühne Plan: **Ich programmiere mir meinen Automaten selbst!**\
+\
 Mit den mir damals zur Verfügung stehenden [Möglichkeiten](#microtronic-2090) hab ich das dann auch gemacht. 
 
-- Und wen interessiert das?
-Der Kreis derjenigen, die ebenfalls einen 2090 hatten (und womöglich noch haben), dürfte reichlich überschaubar sein. Bildet man dann noch die Schnittmenge mit Personen, die bei elektro-mechanischen Geldspielgeräten in Verzückung geraten, wäre eine Abschätzung der verbleibenden Interessengruppe etwa mit der Größe 1 zu beziffern - also bin ich wohl alleine :-) 
-
-Aber egal, andere lösen Kreuzworträtsel oder Sudoku. Es ist, was es ist, sagte die Liebe.
-
+- Und wen interessiert das?\
+Der Kreis derjenigen, die ebenfalls einen 2090 hatten (und womöglich noch haben), dürfte reichlich überschaubar sein. Bildet man dann noch die Schnittmenge mit Personen, die bei elektro-mechanischen Geldspielgeräten in Verzückung geraten, wäre eine Abschätzung der verbleibenden Interessengruppe etwa mit der Größe 1 zu beziffern - also bin ich wohl alleine :-)\
+\
+Aber egal, andere lösen Kreuzworträtsel oder Sudoku. Es ist, was es ist, sagte die Liebe.\
+\
 Übrigens war der größte Spaß an der ganzen Sache: Zeigen, dass es geht... Als ich - mehr oder weniger nichtsahnend - mit dem Projekt anfing, hab ich einfach mal drauflos programmiert. Immer mit dem Gedanken im Kopf, dass das Ganze eigentlich gar nicht funktionieren kann. Prompt und wie erwartet tauchten Schwierigkeiten mit dem verfügbaren Speicherplatz auf - zu wenig verfügbare Programmschritte, zu wenig Register hatte der Microtronic. Dann eine Nacht drüber schlafen und am nächsten Tag einen neuen Ansatz probieren - und sich diebisch darüber freuen, wie wieder ein paar Instruktionen eingespart werden konnten. Solange, bis das Ding am Ende tatsächlich doch gepasst hat. Hurra.
 
 ## Der Monarch
