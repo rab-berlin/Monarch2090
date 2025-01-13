@@ -202,7 +202,16 @@ Display			Bedeutung
 									(Z = rechts oben - RO)
 ```
 
-Entsprechend der o.a. Symboltabelle ergibt sich z.B. folgendes Bild:
+Zunächst wird die linke Walze ermittelt:
+
+...
+
+Diese linke Walze kann (einmalig pro Spiel) erneut gestartet werden, indem du die rote Nachstart-Taste drückst (bzw. die Taste F bei der "Microtronic-pur"-Version). 
+
+...
+
+
+Nachdem alle Walzen gestoppt haben, ergibt sich entsprechend der o.a. Symboltabelle z.B. folgendes Bild:
 ```
 Display			Bedeutung
 -------			----------------------------------------------------------------------------------------
@@ -294,7 +303,7 @@ Für diejenigen, die wirklich nur den 2090 haben, ist die [Variante mit "press a
 
 Der erste Gedanke war, den Busch-Baukasten Digitaltechnik 2075 zu nutzen. Damit wäre ich auch schön im Busch-Universum geblieben. Theoretisch ein Rauschen auf den Takteingang des Zählerbausteins und seine Ausgänge A-D dann auf die Eingänge des 2090 legen. Aber... ich konnte ihn im Keller nicht mehr finden. Irgendwie hat meine Busch-Kiste einen der letzten Umzüge nicht überlebt oder wurde aus dem Keller geklaut. Falls letzteres, wer tut sowas? Möge der Blitz dich beim ~~Schei~~ was-auch-immer treffen. Das ist ein echter Verlust für mich :-(((
 
-Was gibt die Schublade her? Da fanden sich doch tatsächlich noch ein paar Arduino Nanos (Arduini Nani?) 128p, die ich eigentlich schon abgeschrieben hatte, da ein arglistiger Händler aus Fernost mir jene statt der gewünschten und bestellten 328p geliefert hatte. Aber um mal eben schnell ne Zufallszahl zu erzeugen, müssten die doch...
+Was gibt die Schublade her? Da fanden sich doch tatsächlich noch ein paar Arduino Nanos (Arduini Nani?) 168p, die ich eigentlich schon abgeschrieben hatte, da ein arglistiger Händler aus Fernost mir jene statt der gewünschten und bestellten 328p geliefert hatte. Aber um mal eben schnell ne Zufallszahl zu erzeugen, müssten die doch...
 
 ```
 unsigned int z;
@@ -327,16 +336,13 @@ void loop() {
 }
 ```
 
-Funktioniert. Damit die Zahlen auch schön zufällig sind, wird der Zufallsgenerator anfangs mit dem offenen analogen Eingang A0 _geseeded_. Das Gequassel auf der seriellen Schnittstelle ist für´s Debugging nützlich, wird aber für den produktiven Einsatz abgeschaltet. Und das Gute bei allem: der Arduino arbeitet mit 5 Volt auf Ein- und Ausgängen, genauso wie der 2090. Kein Level-Shifting nötig, kann direkt verbunden werden.
-
-
-
+Proof of concept delivered. Damit die Zahlen auch schön zufällig sind, wird der Zufallsgenerator anfangs mit dem offenen analogen Eingang A0 _geseeded_. Das Gequassel auf der seriellen Schnittstelle ist für´s Debugging nützlich, wird aber für den produktiven Einsatz abgeschaltet. Und das Gute bei allem: der Arduino arbeitet mit 5 Volt auf Ein- und Ausgängen, genauso wie der 2090. Kein Level-Shifting nötig, kann direkt verbunden werden.
 
 ### Timing des Arduino/Raspi
 
-Der 2090 ist nicht schnell. Michael hat ein paar [Performance-Tests](https://www.youtube.com/watch?v=e8KJ-cnX9bU) durchgeführt und als Ergebnis maximal 114 Operationen pro Sekunde (1,14 HIPS) ermittelt. Da in meinem Programm das Display meistens aktiv ist, dürfte eher ein Wert von 40 _Instructions per second_ (0,4 HIPS) zu erwarten sein. Welche Dauer der Befehl DIN zum Einlesen der 4 Bits an den Eingängen beansprucht und wie er ausgeführt wird (sequentiell, parallel, quantenmechanisch o.ä.), ist im Detail nicht bekannt, aber es ist klar, dass Timing ein Faktor sein kann. Wenn die Peripherie die Zufallszahlen zu langsam liefert, wird der gleiche Wert mehrfach im Programm eingelesen, wenn die Zufallszahlen hingegen zu schnell geliefert werden, wird der Wert während des Einlesens möglicherweise "verschmiert", da sich die Bits durch eine in der Zwischenzeit neu erzeugte Zufallszahl verändern können.
+Der 2090 ist nicht schnell. Michael hat ein paar [Performance-Tests](https://www.youtube.com/watch?v=e8KJ-cnX9bU) durchgeführt und als Ergebnis maximal 114 Operationen pro Sekunde (1,14 HIPS) ermittelt. Da in meinem Programm das Display meistens aktiv ist, dürfte eher ein Wert von 40 _Instructions per second_ (0,4 HIPS) zu erwarten sein. Welche Dauer der Befehl DIN zum Einlesen der 4 Bits an den Eingängen beansprucht und wie er ausgeführt wird (sequentiell, parallel, quantenmechanisch o.ä.), ist im Detail nicht bekannt, aber es ist klar, dass Timing ein Faktor sein kann. 
 
-Eine saubere Lösung, um Timing-Probleme zu vermeiden, wäre: Immer wenn eine Zufallszahl benötigt wird, geben wir dem Zahlen-Lieferanten ein Signal. Der _Raspuino_<sup>TM</sup> erzeugt die Zahl, liefert sie über seine GPIO an die Eingänge des 2090, hält sie da ausreichend lange stabil und wartet dann einfach auf die nächste Zahlen-Bestellung. Das erforderte aber zusätzliche Befehle im Programmcode des 2090 (Wert in Register speichern, Register auf Ausgang legen, ggf. warten auf die Lieferung usw.) Und ein extra Kabel. Und ein wertvolles Register - wir haben nur 16 Stück brauchbare. Nope, scheidet (erstmal) aus.
+Wenn die Peripherie die Zufallszahlen zu langsam liefert, wird der gleiche Wert mehrfach im Programm eingelesen, wenn die Zufallszahlen hingegen zu schnell geliefert werden, wird der Wert während des Einlesens möglicherweise "verschmiert", da sich die Bits durch eine in der Zwischenzeit neu erzeugte Zufallszahl verändern können.
 
 ### Testen ist am besten
 
@@ -383,9 +389,36 @@ if __name__ == "__main__":
     main()
 ```
 
-### Annahmen
+Durch eine umfangreiche Testreihe konnte ich ermitteln, dass das beste Lieferintervall bei 50 Millisekunden liegt.
 
-What if? Zahlen von 0-9 werden geliefert. Aber werden sie auch eingelesen? ASSERT gibt es im Microtronic Befehlssatz nicht. Im Programmcode wird auf das letzte CMPI verzichtet, weil andernfalls "es ja eine Null/Neun sein muss". Aber was wenn nicht? 
+Eine saubere Lösung, um jegliche Timing-Probleme zu vermeiden, ist: Immer wenn eine Zufallszahl benötigt wird, geben wir dem Zahlen-Lieferanten ein Signal. Der _Raspuino_<sup>TM</sup> erzeugt die Zahl, liefert sie über seine GPIO an die Eingänge des 2090, hält sie da ausreichend lange stabil und wartet dann einfach auf die nächste Zahlen-Bestellung. Das erfordert allerdings zusätzliche Befehle im Programmcode des 2090 (Register auf Ausgang legen, ggf. warten auf die Lieferung usw.) Und ein extra Kabel. Und ein wertvolles Register - wir haben nur 16 Stück brauchbare. ~~Nope, scheidet (erstmal) aus.~~ 
+
+Doch, so hab ich´s gemacht. Durch eine Start- und Stop-Möglichkeit des Zufallszahlen-Generators kann auch die Nachstart-Logik in die Peripherie eingebaut werden. 
+
+## Nachstarten
+
+Der echte Monarch bietet die Möglichkeit, die erste Walze einmalig in jedem Spiel nochmal zu starten, wenn die angezeigte Kombination nicht gefällt. Man kann also gezielt "auf Sonderspiele" spielen, weil man dafür ja König oder Krone als Symbol auf der ersten Walze haben will. 
+
+Um diese Nachstart-Funktion zu realisieren, ist es nötig, innerhalb des Anzeige-Intervalls einen potentiellen Tastendruck zu registrieren (ohne Programm-Pause). Schwierigkeit dabei: Alle vier Eingänge sind schon vom Zufallszahlen-Lieferanten belegt.
+
+Ein paar Ideen hatte ich dazu:
+
+~~- Der Raspuino möge schweigen, solange er nicht gebraucht wird. Das bedeutet, er bekommt über einen Ausgang das Signal, eine Zufallszahl zu liefern. Würde wahrscheinlich auch alle möglichen Timing-Probleme lösen. Dann könnte man eine Taste "parallel" auf einen der Eingänge legen, und dieser Eingang wird dann während der Warteschleife geprüft, ob Taste gedrückt oder nicht... Aaaber. Jede Erzeugung einer Zufallszahl erforderte dann mindestens 2 Befehle (statt bisher einen). Ein Kabel zusätzlich wäre auch nötig.~~ Das ging schonmal in die richtige Richtung.
+
+~~- Der Raspuino liefert nur Zufallszahlen von 0-7. Das würde reichen, denn mehr als 8 Symbolkombinationen gibt es auf keiner Walze. Man müsste die Walzen-Wahrscheinlichkeitsverteilung dann dem Raspuino überlassen, also bestimmte Zufallszahlen müssten doppelt so häufig wie andere erzeugt werden (da 2x auf der Walze vorhanden). Dann müsste man dem Zahlen-Lieferanten aber auch mitteilen, für welche Walze die nächste Zufallszahl erzeugt werden soll, da die Kombinationen auf den Walzen unterschiedliche Häufigkeiten haben. Auch hier wird ein "Rückkanal" vom 2090 zur Peripherie benötigt.~~ Das wird nix, insbesondere der 2075-Zählerbaustein kann diese komplexe Logik nicht reproduzieren.
+
+~~- Die Taste wird an einen Eingang des Raspuino gelegt. Wenn gedrückt, erzeugt der Raspuino eine "unmögliche" Zahl für die zweite Walze, z.B. "F", welche dann vom Programm erkannt wird und einen Sprung zurück zu Walze 1 auslöst. Ebenso: Rückmeldung nötig.~~ Gute Idee, aber - kombiniert mit der ersten Idee - geht es einfacher.
+
+~~In jedem Fall wäre es wahrscheinlich gut, wenn der Raspuino wüsste, welche Walze gerade mit einer Zufallszahl zu versorgen ist. Allerdings - und das ist der Nachteil - könnte man dann ja auch gleich die ganze Simulation auf dem Raspuino laufen lassen .-(~~ Nicht verzweifeln, so schlimm ist´s nicht.
+
+~~Ich denke darüber nach.~~ Hab ich.
+
+Letztenendes kontrolliert der Monarch den Zufallszahlen-Generator (egal ob Arduino, Raspi oder 2075) über die beiden Ausgänge 3 und 4: 
+
+- Ausgang 4 auf High stoppt den Generator zur Lieferung einer Zufallszahl. Damit sind alle möglichen Timing-Probleme gelöst.
+- Ausgang 3 auf High stoppt den Generator, nullt ihn, wartet auf einen eventuellen Tastendruck und liefert das Ergebnis an die Eingänge des 2090.
+
+Insbesondere auf meine Schaltung "2090 und 2075" bin ich ein bisschen stolz. :-)
 
 ## Addition und Subtraktion, Schiebung und Anzeige
 
@@ -487,21 +520,7 @@ Alle 256 Programmschritte sind mehr oder weniger verbraucht. ~~Wahrscheinlich~~ 
 
 ## Nachstarten 
 
-Der echte Monarch bietet die Möglichkeit, die erste Walze einmalig in jedem Spiel nochmal zu starten, wenn die angezeigte Kombination nicht gefällt. Man kann also gezielt "auf Sonderspiele" spielen, weil man dafür ja König oder Krone als Symbol auf der ersten Walze haben will. 
 
-Um diese Funktion auch noch zu integrieren, wäre es nötig, innerhalb der Warteschleife auf einen Tastendruck an einem Eingang (also ohne Anhalten des Programms) zu warten. Aber alle vier Eingänge sind derzeit schon vom Zufallszahlen-Lieferanten belegt.
-
-Ein paar Ideen hab ich dazu:
-
-- Der Raspuino möge schweigen, solange er nicht gebraucht wird. Das bedeutet, er bekommt über einen Ausgang das Signal, eine Zufallszahl zu liefern. Würde wahrscheinlich auch alle möglichen Timing-Probleme lösen. Dann könnte man eine Taste "parallel" auf einen der Eingänge legen, und dieser Eingang wird dann während der Warteschleife geprüft, ob Taste gedrückt oder nicht... Aaaber. Jede Erzeugung einer Zufallszahl erforderte dann mindestens 2 Befehle (statt bisher einen). Ein Kabel zusätzlich wäre auch nötig.  
-
-- Der Raspuino liefert nur Zufallszahlen von 0-7. Das würde reichen, denn mehr als 8 Symbolkombinationen gibt es auf keiner Walze. Man müsste die Walzen-Wahrscheinlichkeitsverteilung dann dem Raspuino überlassen, also bestimmte Zufallszahlen müssten doppelt so häufig wie andere erzeugt werden (da 2x auf der Walze vorhanden). Dann müsste man dem Zahlen-Lieferanten aber auch mitteilen, für welche Walze die nächste Zufallszahl erzeugt werden soll, da die Kombinationen auf den Walzen unterschiedliche Häufigkeiten haben. Auch hier wird ein "Rückkanal" vom 2090 zur Peripherie benötigt.
-
-- Die Taste wird an einen Eingang des Raspuino gelegt. Wenn gedrückt, erzeugt der Raspuino eine "unmögliche" Zahl für die zweite Walze, z.B. "F", welche dann vom Programm erkannt wird und einen Sprung zurück zu Walze 1 auslöst. Ebenso: Rückmeldung nötig.
-
-In jedem Fall wäre es wahrscheinlich gut, wenn der Raspuino wüsste, welche Walze gerade mit einer Zufallszahl zu versorgen ist. Allerdings - und das ist der Nachteil - könnte man dann ja auch gleich die ganze Simulation auf dem Raspuino laufen lassen .-(
-
-Ich denke darüber nach.
 
 
 ## Sonderspiele-Stopp
