@@ -8,7 +8,7 @@ Hier werden nur der Piezo-Summer an Ausgang 1 und die beiden roten Taster mit Vo
 
 Damit der 2090-eigene Zufallsgenerator auch zufällige Zahlen ausspuckt, muss vor jedem Walzenstopp (links, rechts und in der Mitte) jeweils eine Taste gedrückt werden.
 
-Nach Anzeige des Münzspeichers zeigt der Monarch 00000 und wartet auf einen Tastendruck, damit die erste Walze ausgewürfelt wird. Die linke Walze kann anschließend - einmalig pro Spiel - erneut gestartet werden, wenn man den rechten roten Taster H drückt. Der linke rote Taster G hingegen lässt den Monarchen immer die nächstfolgende Walze ermitteln. 
+Zu Beginn eines Spiels zeigt der Monarch - nach kurzem Einblenden des Münzspeichers - **00000** auf dem Display und wartet auf einen Tastendruck, damit die erste Walze ausgewürfelt wird. Die linke Walze kann anschließend - einmalig pro Spiel - erneut gestartet werden, wenn man den rechten roten Taster H drückt. Der linke rote Taster G hingegen lässt den Monarchen immer die nächstfolgende Walze ermitteln. 
 
 Alternativ kannst du die roten Taster übrigens auch weglassen und stattdessen die Tastatur des Microtronic verwenden. Dazu musst du eine kleine Programmänderung an den Adressen F6 und F7 vornehmen. Statt
 ```
@@ -21,7 +21,7 @@ F6 FF9
 F7 F01      
 ```
 
-Nach Ermittlung aller Walzen wird die normale Gewinnabfrage, -anzeige und -verbuchung durchgeführt und anschließend wieder zur Anzeige des Münzspeichers zurückgekehrt.
+Nach Ermittlung aller drei Walzen wird die normale Gewinnabfrage, -anzeige und -verbuchung durchgeführt und anschließend wieder ein neues Spiel gestartet (sofern man noch Geld auf dem Münzspeicher hat).
 
 ## Zufall
 
