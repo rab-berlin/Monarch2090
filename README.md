@@ -48,7 +48,7 @@ Aber sind wird mal ehrlich - der Kreis derjenigen, die ebenfalls einen 2090 hatt
 \
 Aber egal, andere lösen Kreuzworträtsel oder Sudoku. Es ist, was es ist, sagte die Liebe.\
 \
-Übrigens war der größte Spaß an der ganzen Sache: Zeigen, dass es geht... Als ich - mehr oder weniger nichtsahnend - mit dem Projekt anfing, hab ich einfach mal drauflos programmiert. Immer mit dem Gedanken im Kopf, dass das Ganze eigentlich Mumpitz ist und sowieso gar nicht funktionieren kann. Prompt und wie erwartet tauchten Schwierigkeiten mit dem verfügbaren Speicherplatz auf - zu wenig verfügbare Programmschritte, zu wenig Register hatte der Microtronic. Dann eine Nacht drüber schlafen und am nächsten Tag einen neuen Ansatz probieren - und sich diebisch darüber freuen, dass wieder ein paar Instruktionen eingespart werden konnten. Solange, bis das Ding am Ende tatsächlich doch gepasst hat. Hurra.
+Übrigens war der größte Spaß an der ganzen Sache: Zeigen, dass es geht... Als ich - mehr oder weniger nichtsahnend - mit dem Projekt anfing, hab ich einfach mal drauflos programmiert. Immer mit dem Gedanken im Kopf, dass das Ganze eigentlich Mumpitz ist und sowieso gar nicht funktionieren kann. Prompt und wie erwartet tauchten Schwierigkeiten mit dem verfügbaren Speicherplatz auf - zu wenig verfügbare Programmschritte, zu wenig Register hatte der Microtronic. Dann eine Nacht drüber schlafen und am nächsten Tag einen neuen Ansatz probieren - und sich (beinahe schon krankhaft) darüber freuen, dass wieder ein paar Instruktionen eingespart werden konnten. Solange, bis das Ding am Ende tatsächlich doch gepasst hat. Hurra.
 
 ## Der Monarch
 
