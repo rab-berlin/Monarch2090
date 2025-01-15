@@ -1,8 +1,8 @@
-# Monarch2090 pur - also ohne zusätzliche Baukästen oder Arduino bzw. Raspberry
+# Monarch2090 pur
 
 Hier werden nur der Piezo-Summer an Ausgang 1 angeschlossen und die beiden roten Taster mit Vorwiderständen (4,7 kOhm) über die Eingänge 1 und 2 verbunden. Da die Schaltung keinen Strom verbraucht, solange kein Taster gedrückt wird, kann problemlos eine 9V-Batterie verwendet werden. 
 
-# Taster zum Walzenstopp
+## Taster zum Walzenstopp
 
 Damit der 2090-eigene Zufallsgenerator auch zufällige Zahlen ausspuckt, muss vor jedem Walzenstopp (links, rechts und in der Mitte) jeweils eine Taste gedrückt werden.
 
