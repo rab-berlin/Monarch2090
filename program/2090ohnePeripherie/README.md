@@ -1,15 +1,29 @@
-Hier wird nur der Piezo-Summer an Ausgang 1 angeschlossen.
+# Monarch2090 pur - also ohne zusätzliche Baukästen oder Arduino bzw. Raspberry
+
+Hier werden nur der Piezo-Summer an Ausgang 1 angeschlossen und die beiden roten Taster mit Vorwiderständen (4,7 kOhm) über die Eingänge 1 und 2 verbunden. Da die Schaltung keinen Strom verbraucht, solange kein Taster gedrückt wird, kann problemlos eine 9V-Batterie verwendet werden. 
+
+# Taster zum Walzenstopp
 
 Damit der 2090-eigene Zufallsgenerator auch zufällige Zahlen ausspuckt, muss vor jedem Walzenstopp (links, rechts und in der Mitte) jeweils eine Taste gedrückt werden.
 
-Nach Anzeige des Münzspeichers zeigt der Monarch 00000 und wartet auf eine Taste, damit die erste Walze ermittelt wird. Die linke Walze kann dann - einmalig pro Spiel - erneut gestartet werden, wenn man die Taste F drückt. Jede andere Taste lässt den Monarchen die rechte Walze ermitteln. 
+Nach Anzeige des Münzspeichers zeigt der Monarch 00000 und wartet auf einen Tastendruck, damit die erste Walze ausgewürfelt wird. Die linke Walze kann dann - einmalig pro Spiel - erneut gestartet werden, wenn man den rechten roten Taster H drückt. Der linke rote Taster G hingegen lässt den Monarchen immer die nächstfolgende Walze ermitteln. 
 
-Rechte und mittlere Walze können nicht erneut gestartet werden. 
+Alternativ kannst du die roten Taster übrigens auch weglassen und stattdessen die Tastatur des Microtronic verwenden. Dazu musst du eine kleine Programmänderung an Adresse F6 und F7 vornehmen. Statt
+```
+F6 FD9     
+F7 EF6      
+```
+lauten die entsprechenden Befehle dann
+```
+F6 FF9     
+F7 F01      
+```
 
-Nach Ermittlung aller Walzen wird die normale Gewinnabfrage und -anzeige durchgeführt und anschließend wieder zur Anzeige des Münzspeichers zurückgekehrt.
+Nach Ermittlung aller Walzen wird die normale Gewinnabfrage, -anzeige und -verbuchung durchgeführt und anschließend wieder zur Anzeige des Münzspeichers zurückgekehrt.
 
-Übrigens: Ganz zufällig ist auch diese Variante nicht, denn...
+## Zufall
 
+Ganz zufällig ist auch diese Variante nicht, denn...
 ```
 KIN TASTE
 RND
