@@ -27,11 +27,12 @@ Nach Ermittlung aller drei Walzen wird die normale Gewinnabfrage, -anzeige und -
 
 Ganz zufällig ist auch diese Variante nicht, denn...
 ```
-KIN TASTE
-RND
-CMPI #9,rD
-BRC Würfel
-RET
+HoleZahl    DIN TASTE
+            BRZ HoleZahl
+Würfel      RND
+            CMPI #9,rD
+            BRC Würfel
+            RET
 ```
 
 - Der RND-Befehl sorgt für eine hexadezimale Ziffer im Register D.
