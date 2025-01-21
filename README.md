@@ -22,7 +22,7 @@ Für jede Version findest du eine Datei _monarch.mic_ im jeweiligen Verzeichnis 
 
 Wer den Programmcode nachvollziehen möchte, schaut sich besser die PDF-Datei im jeweiligen Ordner an. Ich finde, ich hab das alles dort ordentlich dokumentiert :-) 
 
-Gestartet wird der Monarch mit **HALT-NEXT-03-RUN**. Zu Beginn muss Geld eingeworfen werden. Dazu eine Ziffer auf der Tastatur drücken - z.B. 5 für 5 DM.
+Gestartet wird der Monarch mit **HALT-NEXT-00-RUN**. Zu Beginn muss Geld eingeworfen werden. Dazu eine Ziffer auf der Tastatur drücken - z.B. 5 für 5 DM.
 
 ## Was soll das Ganze?
 
