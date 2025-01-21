@@ -338,7 +338,7 @@ Kurz: der Zufall ist nicht zufällig genug.
 
 Eine Möglichkeit ist, nach jeder zufälligen Aktion auf eine Benutzerreaktion zu warten (s.o.) - aber das zerstört den Charme der Simulation ein bisschen. Opa Erwin musste 1972 in der Gaststätte "Zu den drei Hasen" auch nicht nach jedem Walzenstopp irgendwas drücken, damit es weiterging. Er warf einfach einen Heiermann ein (für die jüngeren unter uns: ein 5-Mark-Stück - der Monarch war der erste Automat, der auch diese Münzen dankbar schluckte) und setzte sich wieder an seinen Tisch, während die Kiste von alleine weiterlief und gelegentlich durch einen charakteristischen Türgong auf einen Gewinn aufmerksam machte.
 
-Für diejenigen, die wirklich nur den 2090 haben, ist die [Variante mit "press a button to generate the next random number"](/program/2090ohnePeripherie) allerdings auch umgesetzt. 
+Für diejenigen, die wirklich nur den 2090 haben, ist die [Variante mit "press a button to generate the next random number"](/program/2090pur) allerdings auch umgesetzt. 
 
 ### Peripherie muss her
 
