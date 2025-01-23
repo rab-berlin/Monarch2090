@@ -16,5 +16,5 @@ L_fertig	SUBI #1,ZÄHLER2		ZÄHLER2 enthält zu Beginn 0
 		BRZ L_fertig		Wenn keine Taste, dann Schleifenanfang
 		ADDI #8,TASTENFLAG	Wurde Taste zum 2. Mal gedrückt?
 		BRC stopR		Dann Taste ignorieren und rechte Walze
-		GOTO stopL		Sonst linke Walze erneut starten
+		GOTO stopL		Sonst linke Walze nachstarten
 ```
