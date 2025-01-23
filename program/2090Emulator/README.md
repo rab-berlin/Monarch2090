@@ -18,3 +18,9 @@ L_fertig	SUBI #1,ZÄHLER2		ZÄHLER2 enthält zu Beginn 0
 		BRC stopR		Dann Taste ignorieren und rechte Walze
 		GOTO stopL		Sonst linke Walze nachstarten
 ```
+
+- Für die Tonausgabe bei Gewinn kam mir der erweiterte Befehlssatz des Emulators sehr entgegen:
+```
+Ton		SUBI #0,rF		Sound erzeugen (spez. OpCode)
+		MOV r0,r0		Sound stoppen (spez. OpCode)
+```
