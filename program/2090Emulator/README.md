@@ -9,15 +9,11 @@ Dann schließt du einen roten Taster an Eingang 1 ein, das ist deine Taste zum N
 
 - Bei den Varianten 2075/Arduino "merkt" sich die Peripherie, ob der rote Taster zum Nachstarten während der Anzeigezeit der ersten Walze gedrückt wurde. Der Emulator hat jedoch keine solche "Gedächtnis-Peripherie", daher wird eine eigene Warteschleife für die Anzeige verwendet.
 ```
-L_fertig      SUBI #F,rC	                (rC enthält zu Beginn 0)
-	            BRZ stopR	                  
-	            DIN TASTE	
-	            BRZ L_fertig	
-	            ADDI #8,GEWINNSYMBOL	      Taste wurde 2. Mal gedrückt?
-	            BRC stopR	                  Dann Taste ignorieren und rechte Walze ermittlen
-	            GOTO stopL	                Sonst linke Walze nochmal starten
+L_fertig	SUBI #F,rC		(rC enthält zu Beginn 0)
+		BRZ stopR		Wenn Wartezeit vorbei, dann rechte Walze      
+		DIN TASTE
+		BRZ L_fertig		Wenn keine Taste, dann Schleifenanfang
+		ADDI #8,GEWINNSYMBOL	Wurde Taste zum 2. Mal gedrückt?
+		BRC stopR		Dann Taste ignorieren und rechte Walze 
+		GOTO stopL		Sonst linke Walze erneut starten
 ```
-die sofort verlassen wird, wenn
-  - wenn die Wartezeit abgelaufen ist oder
-  - wenn der Taster gedrückt wurde.
-
