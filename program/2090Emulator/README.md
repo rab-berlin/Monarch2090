@@ -8,7 +8,7 @@ Du schließt einen roten Taster zwischen Eingang 1 und +3V an, das ist deine Tas
 
 - Der Zufallsgenerator RND "zerstört" die drei Register D-F, daher müssen wir den Inhalt dieser Register (also den Münzspeicher) vorher retten und nach Ermittlung aller drei Walzen wieder zurückschieben - das kostet leider 2 x 3 = 6 Programmschritte. Passt aber noch gerade so rein... :-)
 
-- Bei den Varianten 2075/Arduino "merkt" sich die Peripherie, ob der rote Taster zum Nachstarten während der Anzeigezeit der ersten Walze gedrückt wurde. Der Emulator hat jedoch keine solche angeschlossene "Gedächtnis-Peripherie", daher wird statt des normalen Unterprogramms _Warteschleife_ eine eigene Warteschleife für die Anzeige verwendet:
+- Bei den Varianten 2075/Arduino "merkt" sich die Peripherie, ob der rote Taster zum Nachstarten während der Anzeigezeit der ersten Walze gedrückt wurde. Der Emulator hat jedoch keine solche angeschlossene "Gedächtnis-Peripherie", daher wird statt des normalen Unterprogramms _Warteschleife_ eine spezielle Warteschleife für die Anzeige verwendet:
 ```
 L_fertig	SUBI #1,ZÄHLER2		ZÄHLER2 enthält zu Beginn 0
 		BRZ stopR		Wenn Wartezeit vorbei, dann rechte Walze  
