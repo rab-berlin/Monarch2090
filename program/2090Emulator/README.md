@@ -1,6 +1,6 @@
 # Monarch2090 mit Emulator [Microtronic NextGen](https://github.com/lambdamikel/Busch-2090/tree/master/microtronic-nextgen-sh1106-spi)
 
-Du schließt einen roten Taster zwischen Eingang 1 und +3V an, das ist deine Taste zum Neustarten der linken Walze.
+Du schließt einen roten Taster zwischen Eingang 1 und +3V an, das ist deine Taste zum Nachstarten der linken Walze.
 
 ![Schaltplan](/pics/MonarchEmulator.jpg)
 
